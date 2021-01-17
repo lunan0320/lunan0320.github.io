@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>re2</title>
+      <link href="/lunan0320.github.io/2021/01/17/re2/"/>
+      <url>/lunan0320.github.io/2021/01/17/re2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h1><p><img src="/lunan0320.github.io/2021/01/17/re2/1.png"></p><p>​    进入ida调试，依次分析三个主函数，第一个函数深度挖掘发现是一个输入函数，第二个慢慢发现只是一个测长度的函数，容易发现第三个才是主要的函数</p><p>  <img src="/lunan0320.github.io/2021/01/17/re2/2.png"></p><p>​    进入分析第三个，发现到最后的一个函数是主要的判断和输出正确结果的函数</p><p><img src="/lunan0320.github.io/2021/01/17/re2/3.png"></p><p>  依次查看，发现第一个是进行的大小写转换的操作，第二个则是用一种另外的操作，第三个是一个换表，第四个是大小写转换。</p><p><img src="/lunan0320.github.io/2021/01/17/re2/4.png"></p><p>  对于base换表根据txt文件种的原始值换表后，写出代码</p><p><img src="/lunan0320.github.io/2021/01/17/re2/5.png"></p><p>最后输出的结果是7ea10b5233a85059a4feb250dc552703</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>re1</title>
       <link href="/lunan0320.github.io/2021/01/17/re1/"/>
       <url>/lunan0320.github.io/2021/01/17/re1/</url>
