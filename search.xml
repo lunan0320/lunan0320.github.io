@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Misc1</title>
+      <link href="/lunan0320.github.io/2021/01/17/misc1/"/>
+      <url>/lunan0320.github.io/2021/01/17/misc1/</url>
+      
+        <content type="html"><![CDATA[<p>What-is-this wp🤠</p><p>题目来源：攻防世界—misc -进阶题</p><p>   我们先下载附件，发现是一个.gz的压缩包，先解压它，发现里面有两个.jpg的图片文件。</p><p><img src="/lunan0320.github.io/2021/01/17/misc1/1.png"></p><p>​    然后后一次点开两张图片，发现没有什么规律。</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/2.png">!</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/4.png"></p><p>​    根据经验两张图片可能是将他们合并，然后我们使用Stegsolve这个软件的图片合并功能，将图片合并。发现来flag。</p><p>​    </p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Misc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Crypto3</title>
+      <link href="/lunan0320.github.io/2021/01/17/crypto3/"/>
+      <url>/lunan0320.github.io/2021/01/17/crypto3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Crypto3"><a href="#Crypto3" class="headerlink" title="Crypto3"></a>Crypto3</h1><p>Easychallenge wp😊</p><p>题目来源：攻防世界—crypto  </p><p>下载附件，我们发现是一个.pyc文件，我们找个在线反编译网站，反编译出如下python代码：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto3/1.png"></p><p>然后理清变换过程，写出得到flag的程序，就可以的到flag了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>re2</title>
       <link href="/lunan0320.github.io/2021/01/17/re2/"/>
       <url>/lunan0320.github.io/2021/01/17/re2/</url>
