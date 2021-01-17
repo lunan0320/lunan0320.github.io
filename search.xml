@@ -21,7 +21,7 @@
       <link href="/lunan0320.github.io/2021/01/17/crypto1/"/>
       <url>/lunan0320.github.io/2021/01/17/crypto1/</url>
       
-        <content type="html"><![CDATA[<h1 id="Crypto1"><a href="#Crypto1" class="headerlink" title="Crypto1"></a>Crypto1</h1><p>题目来源：XCTF</p><p><img src="/lunan0320.github.io/2021/01/17/crypto1/1.png" alt="1"></p><blockquote><p>首先对N分解</p><p>可以得到p和q</p><p>q = 366669102002966856876605669837014229419</p><p>p = 282164587459512124844245113950593348271</p><p>然后就写脚本来解密</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="Crypto1"><a href="#Crypto1" class="headerlink" title="Crypto1"></a>Crypto1</h1><p>题目来源：XCTF</p><p><img src="/lunan0320.github.io/2021/01/17/crypto1/1.png"></p><blockquote><p>首先对N分解</p><p>可以得到p和q</p><p>q = 366669102002966856876605669837014229419</p><p>p = 282164587459512124844245113950593348271</p><p>然后就写脚本来解密</p></blockquote>]]></content>
       
       
       
