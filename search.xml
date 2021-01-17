@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>re1</title>
+      <link href="/lunan0320.github.io/2021/01/17/re1/"/>
+      <url>/lunan0320.github.io/2021/01/17/re1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p><p><img src="/lunan0320.github.io/2021/01/17/re1/1.png"></p><p>​    点进这个sub_401500(aAbcdefghijklmn)函数我们发现是对aAbcdefghijklmn的一些操作，然后看他的汇编代码我们会发现有一个表，猜测是用base64进行处理的，而且对表进行操作过，就可以知道进行了就可以直到进行了换表操作。</p><p><img src="/lunan0320.github.io/2021/01/17/re1/2.png"></p><p>  然后我们对其进行调试在执行换表操作的下一个语句设置断点，调试完成后我们会到那个表的位置发现表换成了ghijklmnopqrstuvwxyz0123456789+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef这个，然会我们写个脚本把5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld换成标准的base64生成的值，然后找个base64的解密网站破解一下就可以得到flag。</p><p>  <img src="/lunan0320.github.io/2021/01/17/re1/3.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Crypto2</title>
       <link href="/lunan0320.github.io/2021/01/17/crypto2/"/>
       <url>/lunan0320.github.io/2021/01/17/crypto2/</url>
