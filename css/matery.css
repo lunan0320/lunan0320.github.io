@@ -33,13 +33,33 @@
     }
 }
 
+
+
 body {
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) ) 0% 0% /     cover, url("https://x.png"), url("https://x.jpg") 0px 0px;
+    background-attachment: fixed;
     margin: 0;
-    color: #34495e;
-    overflow-x: hidden;
-    overflow-y: auto;
+    color: #7F95D1;
 }
+
+/*修改滑动条*/
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #FF2A68;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: #ffcacaff;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
+}
+
+
 
 h1 {
     margin: 48px 0 22px -5px;
@@ -241,7 +261,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #3f1b07 0%, #3f1b07 100%);/*咖啡色*/
+    opacity: 0.8; 
 }
 
 .text-color {
@@ -592,9 +613,13 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
+.bg-color {
+    background-image: 
+    linear-gradient(to right, #3f1b07 0%, #3f1b07 100%);/*咖啡色*/
+}
 
 @-webkit-keyframes rainbow {
-
+/*
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -636,11 +661,11 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 }
 
 @keyframes rainbow {
-
+/*
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -682,7 +707,7 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 }
 
 .index-card {
