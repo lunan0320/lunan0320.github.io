@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Web1</title>
+      <link href="/lunan0320.github.io/2021/01/17/web1/"/>
+      <url>/lunan0320.github.io/2021/01/17/web1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h4 id="题目来源：XCTF-Web-进阶区-Cat"><a href="#题目来源：XCTF-Web-进阶区-Cat" class="headerlink" title="题目来源：XCTF Web 进阶区 Cat"></a><strong>题目来源：XCTF Web 进阶区 Cat</strong></h4><p>​    根据题目要求，要求输入域名，我们试着输入127.0.0.1</p><p><img src="/lunan0320.github.io/2021/01/17/web1/1.png"></p><p>接着试着用管道执行命令，输入127.0.0.1 | ls，返回Invalid URL</p><p>因为该题目是通过url参数传递数据，所以应该可以传递url编码</p><p>试着%70是没问题可以正常传输的，此时显示的是 url=p，如图：</p><p><img src="/lunan0320.github.io/2021/01/17/web1/2.png"></p><p>但当我们试着采用url=%80时候，出现了报错</p><p><img src="/lunan0320.github.io/2021/01/17/web1/3.png"></p><p>从报错信息可以发现，后台至少运行了php和django，如图：</p><p><img src="/lunan0320.github.io/2021/01/17/web1/4.png"></p><p>经了解，</p><blockquote><p>全部数据使用HTTP协议中的 “POST” 操作来发送。 要发送文件，在文件名前面加上@前缀并使用完整路径。 文件类型可在文件名后以  ‘;type=mimetype’ 的格式指定。 这个参数可以是 urlencoded  后的字符串，类似’para1=val1&amp;para2=val2&amp;…’，也可以使用一个以字段名为键值，字段数据为值的数组。  如果value是一个数组，Content-Type头将会被设置成multipart/form-data。 从 PHP 5.2.0 开始，使用 @ 前缀传递文件时，value 必须是个数组。 从 PHP 5.5.0 开始, @ 前缀已被废弃，文件可通过 CURLFile 发送。 设置  CURLOPT_SAFE_UPLOAD 为 TRUE 可禁用 @ 前缀发送文件，以增加安全性。</p></blockquote><p>那么此时我们就可以看看django的配置文件，通过url搭配@来查看，后缀为：</p><pre class=" language-php"><code class="language-php"><span class="token operator">?</span>url<span class="token operator">=</span>@<span class="token operator">/</span>opt<span class="token operator">/</span>api<span class="token operator">/</span>api<span class="token operator">/</span>settings<span class="token punctuation">.</span>py</code></pre><p>此时可以打开这个settings文件，我们直接CTRL+F来查看database，如图：</p><p><img src="/lunan0320.github.io/2021/01/17/web1/5.png"></p><p>可以看到，数据库为sqlite3，那么我们直接再来看看它的数据库，同样，通过url和@来查看</p><pre class=" language-php"><code class="language-php"><span class="token operator">?</span>url<span class="token operator">=</span>@<span class="token operator">/</span>opt<span class="token operator">/</span>api<span class="token operator">/</span>database<span class="token punctuation">.</span>sqlite3</code></pre><p><img src="/lunan0320.github.io/2021/01/17/web1/6.png"></p><p>同样，直接CTRL+F来看看有没有CTF的 信息</p><p><img src="/lunan0320.github.io/2021/01/17/web1/7.png"></p><p>因此，拿到了falg：WHCTF{yoooo_Such_A_G00D_@}</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>re5</title>
       <link href="/lunan0320.github.io/2021/01/17/re5/"/>
       <url>/lunan0320.github.io/2021/01/17/re5/</url>
