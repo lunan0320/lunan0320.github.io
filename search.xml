@@ -4,11 +4,87 @@
   
     
     <entry>
+      <title>re5</title>
+      <link href="/lunan0320.github.io/2021/01/17/re5/"/>
+      <url>/lunan0320.github.io/2021/01/17/re5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re5"><a href="#re5" class="headerlink" title="re5"></a>re5</h1><p>​    题目来源：XCTF Shuffle</p><p>​    运行程序发现在IDA中调试时候是一个32位的程序，需要在IDA32中打开</p><p><img src="/lunan0320.github.io/2021/01/17/re5/1.png"></p><p>​    看到后尝试反编译</p><p><img src="/lunan0320.github.io/2021/01/17/re5/2.png"></p><p>​    观察汇编代码，根据题目的提示信息可以看到，乱码的原因是因为v5和v6是随机生成的两个数，并且每次都将v5和v6的字符交换</p><p>​    所以直接将伪代码中的16进制字符转换为字符即可</p><p><img src="/lunan0320.github.io/2021/01/17/re5/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Crypto4</title>
+      <link href="/lunan0320.github.io/2021/01/17/crypto4/"/>
+      <url>/lunan0320.github.io/2021/01/17/crypto4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Crypto4"><a href="#Crypto4" class="headerlink" title="Crypto4"></a>Crypto4</h1><p>题目来源：XCTF 不仅仅是Morse</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/1.png"></p><p>​    首先看到题目是morse密码的格式，直接在线解密工具</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/2.png"></p><p>​    观察破解出来的后半部分，只有A和B两个组成，通过这个特征，容易想到培根密码的形式</p><p>AAAAABAABBBAABBAAAAAAAABAABABAAAAAAABBABAAABBAAABBAABAAAABABAABAAABBABAAABAAABAABABBAABBBABAAABABABBAAABBABAAABAABAABAAAABBABBAABBAABAABAAABAABAABAABABAABBABAAAABBABAABBA</p><p>​    在线培根密码对后半部分解密之后可以得到结果：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto4/3.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re4</title>
+      <link href="/lunan0320.github.io/2021/01/17/re4/"/>
+      <url>/lunan0320.github.io/2021/01/17/re4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re4"><a href="#re4" class="headerlink" title="re4"></a>re4</h1><p>​    题目来源：XCTF  re4-unvm-me</p><p>​    下载文件后发现这是一个pyc文件，对pyc文件解码后生成的是一个pytc_dis文件</p><p><img src="/lunan0320.github.io/2021/01/17/re4/1.png"></p><p>​    使用notepad++打开之后，解出了c的代码，可以看到是md5的加密过程。</p><p><img src="/lunan0320.github.io/2021/01/17/re4/2.png"></p><p>​    观察代码，可以看出我们的输入必须小于69且是5的倍数。for循环语句里的内容是将输入5个5个分为一组，每5个进行一次md5变换，得到的值和md5s数组中相应的元素进行比较，全部相等即可。</p><p>​    找到在线解密网站依次解密可得：</p><p>ALEXCTF{dv5d4s2vj8nk43s8d8l6m1n5l67ds9v41n52nv37j481h3d28n4b6v3k}</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re3</title>
+      <link href="/lunan0320.github.io/2021/01/17/re3/"/>
+      <url>/lunan0320.github.io/2021/01/17/re3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="re3"><a href="#re3" class="headerlink" title="re3"></a>re3</h1><p>题目描述：md5😵</p><p>题目来源：XCTF -reverse</p><p>首先看到题目会想到是md5的加密，打开main函数</p><p><img src="/lunan0320.github.io/2021/01/17/re3/1.png"></p><p>看到核心部分，确实是md5的加密过程，从if 的判断条件可以得到加密后的密文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/2.png"></p><p>据此，我们可以写出代码来求出真实的密文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/3.png"></p><p>得到的密文结果是：780438d5b6e29db0898bc4f0225935c0</p><p><img src="/lunan0320.github.io/2021/01/17/re3/4.png"></p><p>本以为可以直接解密成功，结果一直卡在这里，发现这个是对md5的二次加密😭😭😭</p><p>并且可以知道，彻底解密后的结果是grape，但是我们的flag应该是对grape的一次加密</p><p>因此，在线加密md5的grape明文</p><p><img src="/lunan0320.github.io/2021/01/17/re3/5.png"></p><p>得到的加密值：b781cbb29054db12f88f08c6e161c199</p><p>此即为最终flag的结果。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Misc1</title>
       <link href="/lunan0320.github.io/2021/01/17/misc1/"/>
       <url>/lunan0320.github.io/2021/01/17/misc1/</url>
       
-        <content type="html"><![CDATA[<p>What-is-this wp🤠</p><p>题目来源：攻防世界—misc -进阶题</p><p>   我们先下载附件，发现是一个.gz的压缩包，先解压它，发现里面有两个.jpg的图片文件。</p><p><img src="/lunan0320.github.io/2021/01/17/misc1/1.png"></p><p>​    然后后一次点开两张图片，发现没有什么规律。</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/2.png">!</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/4.png"></p><p>​    根据经验两张图片可能是将他们合并，然后我们使用Stegsolve这个软件的图片合并功能，将图片合并。发现来flag。</p><p>​    </p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/3.png"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Misc1"><a href="#Misc1" class="headerlink" title="Misc1"></a>Misc1</h1><p>What-is-this wp🤠</p><p>题目来源：攻防世界—misc -进阶题</p><p>   我们先下载附件，发现是一个.gz的压缩包，先解压它，发现里面有两个.jpg的图片文件。</p><p><img src="/lunan0320.github.io/2021/01/17/misc1/1.png"></p><p>​    然后后一次点开两张图片，发现没有什么规律。</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/2.png">!</p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/4.png"></p><p>​    根据经验两张图片可能是将他们合并，然后我们使用Stegsolve这个软件的图片合并功能，将图片合并。发现来flag。</p><p>​    </p><p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/3.png"></p>]]></content>
       
       
       
@@ -50,6 +126,12 @@
       
       
       
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -63,6 +145,12 @@
       
       
       
+        <tags>
+            
+            <tag> Reverse </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -72,9 +160,15 @@
       <link href="/lunan0320.github.io/2021/01/17/crypto2/"/>
       <url>/lunan0320.github.io/2021/01/17/crypto2/</url>
       
-        <content type="html"><![CDATA[<h1 id="Crypto2"><a href="#Crypto2" class="headerlink" title="Crypto2"></a>Crypto2</h1><blockquote><p>20007978758166309930265697614982513218273073454928983660048528331097010828958096468299776488744993182315936148627876851809422331280471073551417956563668197068676126722734534188127471611402864677938887115908916553544845110143563736559450970252229445667691496767868123951081712872604935508183737147849971835008184807472987711316180320099624812832405397468923025162496735247263616654895797084799784974584932678025655358910480843010221725985491740823985360121695310692419773463141212113933823487148306326402421665145808422963033346161969635009951581265915013730077344870284008003690168143322781170105437085918993663</p><p>c = 0x10652CDFAA8D984F5B582D65A9357ADA464CA4E9BF0C3914A5AD2DC291D9EC8310E9BFF83E4B0545B61806A4FC0DAC3FCA5A0917D98052320317208292B6F4B472AA032D4E48CFFEAFF387A44F7FCDD91DC103BB2B9C66FFA987C4A3E038F65C46CC66A00965</p><p>e = 3</p></blockquote><p>根据此可以写出脚本：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto2/1.png" alt="1"></p><p>​    </p><p>输入相关数据</p><p>得到flag{you_are_clever_than_i_thount}</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Crypto2"><a href="#Crypto2" class="headerlink" title="Crypto2"></a>Crypto2</h1><blockquote><pre class=" language-c"><code class="language-c"><span class="token operator">></span> <span class="token number">20007978758166309930265697614982513218273073454928983660048528331097010828958096468299776488744993182315936148627876851809422331280471073551417956563668197068676126722734534188127471611402864677938887115908916553544845110143563736559450970252229445667691496767868123951081712872604935508183737147849971835008184807472987711316180320099624812832405397468923025162496735247263616654895797084799784974584932678025655358910480843010221725985491740823985360121695310692419773463141212113933823487148306326402421665145808422963033346161969635009951581265915013730077344870284008003690168143322781170105437085918993663</span><span class="token operator">></span><span class="token operator">></span> c <span class="token operator">=</span> <span class="token number">0x10652CDFAA8D984F5B582D65A9357ADA464CA4E9BF0C3914A5AD2DC291D9EC8310E9BFF83E4B0545B61806A4FC0DAC3FCA5A0917D98052320317208292B6F4B472AA032D4E48CFFEAFF387A44F7FCDD91DC103BB2B9C66FFA987C4A3E038F65C46CC66A00965</span><span class="token operator">></span><span class="token operator">></span> e <span class="token operator">=</span> <span class="token number">3</span></code></pre></blockquote><p>根据此可以写出脚本：</p><p><img src="/lunan0320.github.io/2021/01/17/crypto2/1.png" alt="1"></p><p>​    </p><p>输入相关数据</p><p>得到flag{you_are_clever_than_i_thount}</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+        </tags>
       
     </entry>
     
@@ -88,6 +182,12 @@
         <content type="html"><![CDATA[<h1 id="Crypto1"><a href="#Crypto1" class="headerlink" title="Crypto1"></a>Crypto1</h1><p>题目来源：XCTF</p><p><img src="/lunan0320.github.io/2021/01/17/crypto1/1.png"></p><blockquote><p>首先对N分解</p><p>可以得到p和q</p><p>q = 366669102002966856876605669837014229419</p><p>p = 282164587459512124844245113950593348271</p><p>然后就写脚本来解密</p></blockquote>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+        </tags>
       
     </entry>
     
