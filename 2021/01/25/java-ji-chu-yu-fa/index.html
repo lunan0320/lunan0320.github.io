@@ -440,8 +440,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java基本语法"><a href="#Java基本语法" class="headerlink" title="Java基本语法"></a>Java基本语法</h1><p>[TOC]</p>
-<h3 id="第五章-继承、接口和抽象类"><a href="#第五章-继承、接口和抽象类" class="headerlink" title="第五章 继承、接口和抽象类"></a>第五章 继承、接口和抽象类</h3><h4 id="1、继承"><a href="#1、继承" class="headerlink" title="1、继承"></a>1、继承</h4><blockquote>
+                <h1><span id="java基本语法">Java基本语法</span></h1><p>[TOC]</p>
+<h3><span id="第五章-继承-接口和抽象类">第五章 继承、接口和抽象类</span></h3><h4><span id="1-继承">1、继承</span></h4><blockquote>
 <p>将共同点提取出来，即形成了父类/基类/超类。</p>
 <p>其他类自动成为子类/派生类</p>
 <p>子类继承父类的所有属性和方法，但不能直接访问private成员。（可以通过父类的方法去访问private成员）</p>
@@ -453,7 +453,7 @@
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/7.png"></p>
 <p><strong>子类调用父类方法去访问父类的private成员：</strong></p>
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/8.png"></p>
-<h4 id="2、抽象类"><a href="#2、抽象类" class="headerlink" title="2、抽象类"></a>2、抽象类</h4><blockquote>
+<h4><span id="2-抽象类">2、抽象类</span></h4><blockquote>
 <p>完整的类：所有的方法都有实现（方法体）</p>
 <p>抽象类也是类</p>
 <p><strong>注：只有一个完整的类才能被实例化，被new出来</strong></p>
@@ -463,7 +463,7 @@
 <p>​    抽象类关键字abstract声明，抽象类中的<strong>未被实现的函数</strong>也同样需要通过abstract来声明。</p>
 <p>​    子类如果继承于抽象类，那么一定要<strong>实现父类所有的abstract的方法</strong>，否则子类也应该声明为抽象类。</p>
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/3.png"></p>
-<h4 id="3、接口"><a href="#3、接口" class="headerlink" title="3、接口"></a>3、接口</h4><p>​    如果一个类中<strong>所有的方法都没有实现</strong>，那么这个类就可以称作为一个<strong>接口（interface）</strong>。</p>
+<h4><span id="3-接口">3、接口</span></h4><p>​    如果一个类中<strong>所有的方法都没有实现</strong>，那么这个类就可以称作为一个<strong>接口（interface）</strong>。</p>
 <blockquote>
 <p>​    interface 不算类，或者说也是一种特殊的类。</p>
 <p>​    <strong>类只能继承(extends)一个类，但是可以实现（implements）多个接口</strong>，继承和实现可以同时进行。</p>
@@ -481,7 +481,7 @@
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/5.png"></p>
 <p><strong>一个类实现一个接口（CatFamily），该接口是继承了两个接口（Animal，ClimbTree）：</strong></p>
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/6.png"></p>
-<h4 id="4、总结"><a href="#4、总结" class="headerlink" title="4、总结"></a>4、总结</h4><p><strong>抽象类和接口的比较：</strong></p>
+<h4><span id="4-总结">4、总结</span></h4><p><strong>抽象类和接口的比较：</strong></p>
 <p><strong>—-相同点：</strong></p>
 <p><strong>两者都不能被实例化，不能new操作；</strong></p>
 <p><strong>—-不同点：</strong></p>
@@ -490,10 +490,10 @@
 <p><strong>一个接口也可以继承（extends）多个接口。</strong></p>
 <p>抽象类有构造函数，接口没有构造函数。</p>
 <p>抽象类可以有main，也能运行，接口没有main函数。</p>
-<h4 id="5、类转型"><a href="#5、类转型" class="headerlink" title="5、类转型"></a>5、类转型</h4><p><strong>子类可以转换成父类（向上转型可以），而父类不能转换为子类</strong>（除非该父类对象本身就是一个子类对象）</p>
+<h4><span id="5-类转型">5、类转型</span></h4><p><strong>子类可以转换成父类（向上转型可以），而父类不能转换为子类</strong>（除非该父类对象本身就是一个子类对象）</p>
 <pre class=" language-java"><code class="language-java">Human obj1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Man</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">(</span>正确<span class="token punctuation">)</span>
 Man obj2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Human</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">(</span>错误<span class="token punctuation">)</span></code></pre>
-<h4 id="6、多态"><a href="#6、多态" class="headerlink" title="6、多态"></a>6、多态</h4><p>类型转换带来的作用就是多态。</p>
+<h4><span id="6-多态">6、多态</span></h4><p>类型转换带来的作用就是多态。</p>
 <p>子类继承父类的所有方法，但子类可以对父类的方法进行<strong>重写</strong>，即<strong>一个方法可以替换父类的一个方法</strong>。（注：**<em>子类方法的优先级是高于父类的**</em>）</p>
 <blockquote>
 <p><strong>作用</strong>：</p>
@@ -501,10 +501,10 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <p><em>对象之间的解耦</em></p>
 </blockquote>
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/9.png"></p>
-<h4 id="7、契约设计"><a href="#7、契约设计" class="headerlink" title="7、契约设计"></a>7、契约设计</h4><p>契约：规定规范了对象应该包含的行为方法。</p>
+<h4><span id="7-契约设计">7、契约设计</span></h4><p>契约：规定规范了对象应该包含的行为方法。</p>
 <p>接口定义了方法的名称、参数和返回值，规范了派生类的行为。</p>
 <p>基于接口，利用转型和多态，不影响真正方法的调用，成功将调用类和被调用类解耦。</p>
-<h3 id="第六章、static、final和常量设计"><a href="#第六章、static、final和常量设计" class="headerlink" title="第六章、static、final和常量设计"></a>第六章、static、final和常量设计</h3><h4 id="1、static"><a href="#1、static" class="headerlink" title="1、static"></a>1、static</h4><p>静态变量，<strong>类共有成员</strong>，所有的对象实例<strong>只有一个静态变量的拷贝</strong>。</p>
+<h3><span id="第六章-static-final和常量设计">第六章、static、final和常量设计</span></h3><h4><span id="1-static">1、static</span></h4><p>静态变量，<strong>类共有成员</strong>，所有的对象实例<strong>只有一个静态变量的拷贝</strong>。</p>
 <p>static可以<strong>依赖于类存在，是类中的一个独立的存在</strong>。</p>
 <p>可以<strong>通过类直接访问</strong>，如下的Potato.price</p>
 <p><img src="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/10.png"></p>
@@ -522,10 +522,10 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <p>static块/静态代码块</p>
 <p>只在类第一次被加载时调用，即这段代码只执行一次。</p>
 <p>优先级顺序：static块&gt;匿名块&gt;构造函数</p>
-<h4 id="2、单例模式"><a href="#2、单例模式" class="headerlink" title="2、单例模式"></a>2、单例模式</h4><p>又称为单态模式Singleton，即<strong>内存空间中一个类只有一个对象存在</strong>。</p>
+<h4><span id="2-单例模式">2、单例模式</span></h4><p>又称为单态模式Singleton，即<strong>内存空间中一个类只有一个对象存在</strong>。</p>
 <p><strong>—-采用static来共享对象实例</strong></p>
 <p><strong>—-使用private构造函数，防止外界new操作</strong></p>
-<h4 id="3、final"><a href="#3、final" class="headerlink" title="3、final"></a>3、final</h4><blockquote>
+<h4><span id="3-final">3、final</span></h4><blockquote>
 <p>final类：没有子类继承。</p>
 <p>final字段：不能被子类改写。</p>
 <p>final字段：基本类型不能修改值，对象类型不能修改指针。</p>
@@ -533,7 +533,7 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <p><strong>final的类，不能被继承</strong></p>
 <p><strong>子类中不能修改父类final的方法。</strong></p>
 <p><strong>final的变量不能被再次赋值。</strong>如果是基本类型，则不能修改其值。如果是指针类型，则地址不能修改，内容可以修改。</p>
-<h4 id="4、常量设计"><a href="#4、常量设计" class="headerlink" title="4、常量设计"></a>4、常量设计</h4><blockquote>
+<h4><span id="4-常量设计">4、常量设计</span></h4><blockquote>
 <p>—-不能修改：final（相当于是const）</p>
 <p>—-不会修改/只读/只要一份：static</p>
 <p>—-方便访问：public</p>
@@ -549,7 +549,7 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <p>—-Short,Int,Long:-128~127</p>
 <p><strong><em>Java为常量字符串都建立常量池缓存机制</em></strong>。</p>
 </blockquote>
-<h4 id="5、不可变对象和字符串"><a href="#5、不可变对象和字符串" class="headerlink" title="5、不可变对象和字符串"></a>5、不可变对象和字符串</h4><p>一旦创建，这个对象不能被更改了</p>
+<h4><span id="5-不可变对象和字符串">5、不可变对象和字符串</span></h4><p>一旦创建，这个对象不能被更改了</p>
 <p>其内在的成员变量的值就不能修改了。</p>
 <blockquote>
 <p><strong>如何创建不可变对象（Immutable Object）：</strong><br>        —-所有的属性都是final和private的</p>
@@ -566,15 +566,15 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <p>字符串加法操作：SrinagBuffer，StringBuilder</p>
 </blockquote>
 <hr>
-<h3 id="第七章、package、import、classpath"><a href="#第七章、package、import、classpath" class="headerlink" title="第七章、package、import、classpath"></a>第七章、package、import、classpath</h3><h4 id="1、package和import"><a href="#1、package和import" class="headerlink" title="1、package和import"></a>1、package和import</h4><p>—包名：package name尽量唯一</p>
+<h3><span id="第七章-package-import-classpath">第七章、package、import、classpath</span></h3><h4><span id="1-package和import">1、package和import</span></h4><p>—包名：package name尽量唯一</p>
 <p>—域名是唯一的，因此常用域名作为包名</p>
 <p>—package必须是第一行</p>
 <p>—多个import的顺序无关</p>
 <p>—可以用*来引用一个目录下的所有类</p>
-<h4 id="2、jar文件导出和导入"><a href="#2、jar文件导出和导入" class="headerlink" title="2、jar文件导出和导入"></a>2、jar文件导出和导入</h4><p>.java文件最终会被编译为.class文件（二进制），并发送到机器上使用</p>
+<h4><span id="2-jar文件导出和导入">2、jar文件导出和导入</span></h4><p>.java文件最终会被编译为.class文件（二进制），并发送到机器上使用</p>
 <p>jar文件实际上是一组class文件的压缩包，用于可执行文件的传播。（本质上类似于C++中的DLL文件）</p>
 <p>jar文件只包括class，而不包括java文件，可以有效保护源文件。</p>
-<h3 id="第八章、java常用类"><a href="#第八章、java常用类" class="headerlink" title="第八章、java常用类"></a>第八章、java常用类</h3>
+<h3><span id="第八章-java常用类">第八章、java常用类</span></h3>
                 
             </div>
             <hr/>
@@ -1002,7 +1002,7 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">9.8k</span>&nbsp;字
             
             
             
@@ -1281,6 +1281,12 @@ $(function () {
     
     <script src="/lunan0320.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+    
+    <!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 
 <script src="/lunan0320.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 

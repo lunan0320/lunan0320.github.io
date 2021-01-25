@@ -413,14 +413,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.7k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    13 分
                 </div>
                 
 
@@ -440,8 +440,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HTTPS原理"><a href="#HTTPS原理" class="headerlink" title="HTTPS原理"></a>HTTPS原理</h1><p>[TOC]</p>
-<h3 id="一、HTTPS概述"><a href="#一、HTTPS概述" class="headerlink" title="一、HTTPS概述"></a>一、HTTPS概述</h3><p>​    HTTPS(全称：Hyper Text Transfer Protocol Secure 超文本传输安全协议)，是HTTP下加入SSL层，因此加密的详细内容就需要SSL以及现在最新的TLS。</p>
+                <h1><span id="https原理">HTTPS原理</span></h1><!-- toc -->
+
+<ul>
+<li><a href="#%E4%B8%80-https%E6%A6%82%E8%BF%B0">一、HTTPS概述</a></li>
+<li><a href="#%E4%BA%8C-%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">二、对称加密</a></li>
+<li><a href="#%E4%B8%89-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">三、非对称加密</a></li>
+<li><a href="#%E5%9B%9B-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E6%94%B9%E8%89%AF%E6%96%B9%E6%A1%88">四、非对称加密改良方案</a></li>
+<li><a href="#%E4%BA%94-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><strong>五、非对称加密+对称加密</strong></a></li>
+<li><a href="#%E5%85%AD-%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB">六、中间人攻击</a></li>
+<li><a href="#%E4%B8%83-%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6">七、数字证书</a></li>
+<li><a href="#%E5%85%AB-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D">八、数字签名</a></li>
+<li><a href="#%E4%B9%9D-https%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">九、HTTPS工作原理</a></li>
+<li><a href="#%E5%8D%81-ssl-tls-%E6%8F%A1%E6%89%8B%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B">十、SSL / TLS 握手详细过程</a></li>
+</ul>
+<!-- tocstop -->
+
+<h3><span id="一-https概述">一、HTTPS概述</span></h3><p>​    HTTPS(全称：Hyper Text Transfer Protocol Secure 超文本传输安全协议)，是HTTP下加入SSL层，因此加密的详细内容就需要SSL以及现在最新的TLS。</p>
 <p>HTTP： 直接通过明文在浏览器和服务器之间传递信息。</p>
 <p>HTTPS： 采用 对称加密 和 非对称加密 结合的方式来保护浏览器和服务端之间的通信安全。<br> <strong><em>对称加密算法加密数据+非对称加密算法交换密钥+数字证书验证身份=安全</em></strong></p>
 <blockquote>
@@ -450,15 +465,15 @@
 <p>https默认采用443，对于传输的数据进行加密传输。</p>
 <p>目前主流的网站基本上开始默认采用HTTPS作为通信方式</p>
 </blockquote>
-<h3 id="二、对称加密"><a href="#二、对称加密" class="headerlink" title="二、对称加密"></a>二、对称加密</h3><p>​    对称加密算法的加密和解密都是用<strong>同一个密钥</strong>。</p>
+<h3><span id="二-对称加密">二、对称加密</span></h3><p>​    对称加密算法的加密和解密都是用<strong>同一个密钥</strong>。</p>
 <p>​    如果通信双方都各自持有同一个密钥，且没有别人知道，则两方的通信安全是可以被保证的（除非密钥被破解）。</p>
 <p>​    然而，最大的问题就是这个密钥怎么让传输的双方知晓，同时不被别人知道。如果由服务器生成一个密钥并传输给浏览器，这个传输过程中密钥被别人劫持，之后他就能用密钥解开双方传输的任何内容。</p>
 <p>​    <strong><u>即对称加密最大的问题在于当传输双方的密钥被第三方劫持之后，传输双方的内容就存在泄露的风险。</u></strong></p>
-<h3 id="三、非对称加密"><a href="#三、非对称加密" class="headerlink" title="三、非对称加密"></a>三、非对称加密</h3><p>​    非对称加密是为解决对称加密存在的问题而产生的。</p>
+<h3><span id="三-非对称加密">三、非对称加密</span></h3><p>​    非对称加密是为解决对称加密存在的问题而产生的。</p>
 <p>​    非对称加密算法需要<strong>一组密钥对</strong>，分别是<strong>公钥</strong>和<strong>私钥</strong>，这两个密钥是成对出现的。</p>
 <p>​    <strong>公钥加密的内容需要对应的私钥解密，私钥加密的内容需要对应的公钥解密</strong>。</p>
 <p>​    私钥由服务器自己保存，<strong>公钥发送给客户端</strong>。客户端拿到公钥后可以对请求进行加密后发送给服务端，这时候就算中间被截获，没有私钥也无法解密发送的内容，这样确保了<strong>客户端发送到服务端数据的安全</strong>。</p>
-<h3 id="四、非对称加密改良方案"><a href="#四、非对称加密改良方案" class="headerlink" title="四、非对称加密改良方案"></a>四、非对称加密改良方案</h3><p>​    通过一组公钥私钥，已经可以保证单个方向传输的安全性，那么自然的想到<strong>如果采用两组公钥私钥</strong>，是不是就能保证双向传输都安全了？请看下面的过程：</p>
+<h3><span id="四-非对称加密改良方案">四、非对称加密改良方案</span></h3><p>​    通过一组公钥私钥，已经可以保证单个方向传输的安全性，那么自然的想到<strong>如果采用两组公钥私钥</strong>，是不是就能保证双向传输都安全了？请看下面的过程：</p>
 <ol>
 <li>某网站拥有用于非对称加密的公钥A1、私钥A2；浏览器拥有用于非对称加密的公钥B1、私钥B2。</li>
 <li>浏览器向网站服务器请求，服务器把公钥A1明文传输给浏览器。</li>
@@ -467,7 +482,7 @@
 <li>服务器向浏览器传输的所有东西都用公钥B1加密，浏览器收到后用私钥B2解密。同上也可以保证这条数据的安全。</li>
 </ol>
 <p>​    可见确实可行。抛开这里面仍有的漏洞不谈（下文会讲），HTTPS的加密却没使用这种方案，为什么？最主要的原因是<strong>非对称加密算法非常耗时</strong>，特别是加密解密一些较大数据的时候有些力不从心。而对称加密快很多。那我们*<u><strong>能不能运用非对称加密的特性解决前面提到的对称加密的问题？</strong></u>*</p>
-<h3 id="五、非对称加密-对称加密"><a href="#五、非对称加密-对称加密" class="headerlink" title="五、非对称加密+对称加密"></a><strong>五、非对称加密+对称加密</strong></h3><p>​    充分考虑对称加密和非对称加密各自的优缺点。</p>
+<h3><span id="五-非对称加密对称加密"><strong>五、非对称加密+对称加密</strong></span></h3><p>​    充分考虑对称加密和非对称加密各自的优缺点。</p>
 <p>​    <strong>对称加密：效率高，速度快，但是安全性低。</strong></p>
 <p>​    <strong>非对称加密：安全性高，但是加密算法非常耗时。</strong></p>
 <p>​    因此我们可以尝试采用对称加密和非对称加密相结合的方法，而且要尽量减少非对称加密的次数，我们可以采用下面的方法：</p>
@@ -484,7 +499,7 @@
 <p>HTTPS基本就是采用了这种方案。但还是有漏洞的。</p>
 </li>
 </ol>
-<h3 id="六、中间人攻击"><a href="#六、中间人攻击" class="headerlink" title="六、中间人攻击"></a>六、中间人攻击</h3><p>​    中间人的确无法得到浏览器生成的对称密钥X，这个密钥本身被公钥A1加密，只有服务器才能用私钥A2进行解密。然而中间人却完全不需要拿到私钥A2就能劫持信息，请看：</p>
+<h3><span id="六-中间人攻击">六、中间人攻击</span></h3><p>​    中间人的确无法得到浏览器生成的对称密钥X，这个密钥本身被公钥A1加密，只有服务器才能用私钥A2进行解密。然而中间人却完全不需要拿到私钥A2就能劫持信息，请看：</p>
 <ol>
 <li>某网站拥有用于非对称加密的公钥A1、私钥A2。</li>
 <li>客户端浏览器向网站服务器请求，服务器把公钥A1明文传输给浏览器。</li>
@@ -495,17 +510,17 @@
 </ol>
 <p>​    这样在双方都不会发现异常的情况下，中间人得到了对称密钥X。<strong>根本原因是浏览器无法确认自己收到的公钥是不是网站自己的。</strong></p>
 <p>​    那么下一步就是解决这个问题：**<em><u>如何证明浏览器收到的公钥一定是该网站的公钥？</u>**</em></p>
-<h3 id="七、数字证书"><a href="#七、数字证书" class="headerlink" title="七、数字证书"></a>七、数字证书</h3><p>​    现实生活中，证明一个人最好的方式就是看他的身份证，身份证是由权威的政府机构颁发的，此处的政府机构起到的是一个公信的作用，政府机构本身的权威就是对一个人身份的最后证明。</p>
+<h3><span id="七-数字证书">七、数字证书</span></h3><p>​    现实生活中，证明一个人最好的方式就是看他的身份证，身份证是由权威的政府机构颁发的，此处的政府机构起到的是一个公信的作用，政府机构本身的权威就是对一个人身份的最后证明。</p>
 <p>​    同理，互联网中也有这样的一个公信机构，叫做CA机构。</p>
 <p>​    网站在使用HTTPS前，需要向“<strong>CA机构</strong>”申请颁发一<strong>数字证书</strong>，数字证书里有<strong>证书持有者、证书持有者的公钥等信息</strong>。服务器把证书传输给浏览器，浏览器从证书里取公钥就可以了。然而这里又有一个显而易见的问题：**<u><em>证书本身的传输过程中，如何防止被篡改？即如何证明证书本身的真实性？数字证书怎么防伪呢？</em></u>**</p>
-<h3 id="八、数字签名"><a href="#八、数字签名" class="headerlink" title="八、数字签名"></a>八、数字签名</h3><p>​    此处需要介绍的一种技术是数字签名：为了更好的防伪，我们可以把证书的内容生成一份“签名”，通过比对证书内容和签名是否一直就能察觉到是否被篡改。</p>
-<h4 id="1、数字签名的制作过程："><a href="#1、数字签名的制作过程：" class="headerlink" title="1、数字签名的制作过程："></a><strong>1、数字签名的制作过程：</strong></h4><ol>
+<h3><span id="八-数字签名">八、数字签名</span></h3><p>​    此处需要介绍的一种技术是数字签名：为了更好的防伪，我们可以把证书的内容生成一份“签名”，通过比对证书内容和签名是否一直就能察觉到是否被篡改。</p>
+<h4><span id="1-数字签名的制作过程"><strong>1、数字签名的制作过程：</strong></span></h4><ol>
 <li>CA拥有非对称加密的私钥和公钥。</li>
 <li>CA对证书明文信息进行hash哈希。</li>
 <li>对证书hash哈希后的值<strong>用私钥加密，得到数字签名</strong>。</li>
 </ol>
 <p>​    <strong>明文和数字签名共同组成了数字证书。</strong>这样一份数字证书就可以颁发给网站服务器了。<br>那客户端浏览器拿到服务器传来的数字证书后，**<em><u>如何验证它是不是真的？（有没有被篡改、掉包）</u>**</em></p>
-<h4 id="2、客户端浏览器验证过程："><a href="#2、客户端浏览器验证过程：" class="headerlink" title="2、客户端浏览器验证过程："></a>2、客户端浏览器验证过程：</h4><ol>
+<h4><span id="2-客户端浏览器验证过程">2、客户端浏览器验证过程：</span></h4><ol>
 <li>拿到证书，得到明文T1，数字签名S1。</li>
 <li>用CA机构的公钥对S1解密（由于是客户端浏览器信任的机构，所以浏览器保有它的公钥。详情见下文），得到S2。</li>
 <li>用证书里说明的hash哈希算法对明文T1进行hash得到T2。</li>
@@ -526,7 +541,7 @@
 <blockquote>
 <p>显然每次请求都经历一次密钥传输过程非常耗时，那怎么达到只传输一次呢？用session就可以。<br>服务器会为每个浏览器（或客户端软件）维护一个session ID，在TSL握手阶段传给浏览器，浏览器生成好密钥传给服务器后，服务器会把该密钥存到相应的session ID下，之后浏览器每次请求都会携带session ID，服务器会根据session ID找到相应的密钥并进行解密加密操作，这样就不必要每次重新制作、传输密钥了</p>
 </blockquote>
-<h4 id="3、HASH算法"><a href="#3、HASH算法" class="headerlink" title="3、HASH算法"></a>3、HASH算法</h4><p>​    散列函数单向不可逆，对输入非常敏感，输出长度固定，将任意数据缩小成固定大小的“指纹”，称为digest，即摘要。</p>
+<h4><span id="3-hash算法">3、HASH算法</span></h4><p>​    散列函数单向不可逆，对输入非常敏感，输出长度固定，将任意数据缩小成固定大小的“指纹”，称为digest，即摘要。</p>
 <p>特点：</p>
 <ul>
 <li>任意长度输入，固定长度输出</li>
@@ -539,7 +554,7 @@
 <li>md5: 128bits</li>
 <li>sha1: 160bits、sha224 、sha256、sha384、sha512</li>
 </ul>
-<h3 id="九、HTTPS工作原理"><a href="#九、HTTPS工作原理" class="headerlink" title="九、HTTPS工作原理"></a>九、HTTPS工作原理</h3><p><img src="/lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/1.png"></p>
+<h3><span id="九-https工作原理">九、HTTPS工作原理</span></h3><p><img src="/lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/1.png"></p>
 <ol>
 <li>client向server发送请求<a target="_blank" rel="noopener" href="https://baidu.com,然后连接到server的443端口.(https是443的端口)/">https://baidu.com，然后连接到server的443端口。（https是443的端口）</a></li>
 <li>服务端必须要有一套数字证书，可以自己制作，也可以向CA组织申请。区别就是自己颁发的证书需要客户端验证通过，才可以继续访问，而使用受信任的公司申请的证书则不会弹出提示页面，这套证书其实就是一对公钥和私钥。</li>
@@ -550,12 +565,12 @@
 <li><strong>传输加密后的信息</strong><br>这部分信息是服务端用密钥（随机值）对称加密后的信息，可以在客户端被还原。</li>
 <li><strong>客户端解密信息</strong><br>客户端用之前生成的密钥（随机值）解密服务端传过来的信息，于是获取了解密后的内容。</li>
 </ol>
-<h3 id="十、SSL-TLS-握手详细过程"><a href="#十、SSL-TLS-握手详细过程" class="headerlink" title="十、SSL / TLS 握手详细过程"></a>十、SSL / TLS 握手详细过程</h3><p><img src="/lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/2.png"></p>
-<h4 id="1、第一次握手"><a href="#1、第一次握手" class="headerlink" title="1、第一次握手"></a>1、第一次握手</h4><ol>
+<h3><span id="十-ssl-tls-握手详细过程">十、SSL / TLS 握手详细过程</span></h3><p><img src="/lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/2.png"></p>
+<h4><span id="1-第一次握手">1、第一次握手</span></h4><ol>
 <li><strong>“client hello”消息：</strong>客户端通过发送”client hello”消息向服务器发起握手请求，该消息包含了客户端所支持的 TLS 版本和密码组合以供服务器进行选择，还有一个”client random”随机字符串。</li>
 <li><strong>“server hello”消息：</strong>服务器发送”server hello”消息对客户端进行回应，该消息包含了数字证书，服务器选择的密码组合和”server random”随机字符串。</li>
 </ol>
-<h4 id="2、第二次握手"><a href="#2、第二次握手" class="headerlink" title="2、第二次握手"></a>2、第二次握手</h4><ol>
+<h4><span id="2-第二次握手">2、第二次握手</span></h4><ol>
 <li><strong>验证：</strong>客户端对服务器发来的证书进行验证，确保对方的合法身份，验证过程可以细化为以下几个步骤：<ol>
 <li>检查数字签名</li>
 <li>验证证书链 (这个概念下面会进行说明)</li>
@@ -567,12 +582,12 @@
 <li><strong>使用私钥：</strong>服务器使用私钥解密”premaster secret”。</li>
 <li><strong>生成共享密钥</strong>：客户端和服务器均使用 client random，server random 和 premaster secret，并通过相同的算法生成相同的共享密钥 <strong>KEY</strong>。</li>
 </ol>
-<h4 id="3、第三次握手"><a href="#3、第三次握手" class="headerlink" title="3、第三次握手"></a>3、第三次握手</h4><ol>
+<h4><span id="3-第三次握手">3、第三次握手</span></h4><ol>
 <li><strong>客户端就绪：</strong>客户端发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
 <li><strong>服务器就绪：</strong>服务器发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
 <li><strong>达成安全通信：</strong>握手完成，双方使用对称加密进行安全通信。</li>
 </ol>
-<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="[参考文献]"></a>[参考文献]</h4><p><a target="_blank" rel="noopener" href="https://www.c从nblogs.com/sxiszero/p/11133747.html">HTTPS加密机制</a></p>
+<h4><span id="参考文献">[参考文献]</span></h4><p><a target="_blank" rel="noopener" href="https://www.c从nblogs.com/sxiszero/p/11133747.html">HTTPS加密机制</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chailonggang/p/12918084.html">常用加密算法和HTTPS工作的简化过程</a></p>
 <p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000021559557">HTTPS详解二：SSL / TLS 工作原理和详细握手过程</a></p>
 
@@ -1003,7 +1018,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">9.8k</span>&nbsp;字
             
             
             
@@ -1282,6 +1297,12 @@ $(function () {
     
     <script src="/lunan0320.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+    
+    <!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 
 <script src="/lunan0320.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 

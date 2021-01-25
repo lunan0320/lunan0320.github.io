@@ -6,7 +6,7 @@
   <link href="https://lunan0320.github.io/atom.xml" rel="self"/>
   
   <link href="https://lunan0320.github.io/"/>
-  <updated>2021-01-25T15:22:43.936Z</updated>
+  <updated>2021-01-25T15:42:27.396Z</updated>
   <id>https://lunan0320.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://lunan0320.github.io/2021/01/25/mysql-ji-chu/"/>
     <id>https://lunan0320.github.io/2021/01/25/mysql-ji-chu/</id>
     <published>2021-01-25T14:46:01.000Z</published>
-    <updated>2021-01-25T15:22:43.936Z</updated>
+    <updated>2021-01-25T15:42:27.396Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;MySQL学习笔记&quot;&gt;&lt;a href=&quot;#MySQL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;MySQL学习笔记&quot;&gt;&lt;/a&gt;MySQL学习笔记&lt;/h1&gt;&lt;h2</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;mysql学习笔记&quot;&gt;MySQL学习笔记&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;sql-structure-quevy-language-结构化查询语言&quot;&gt;SQL: Structure Quevy Language   </summary>
         
       
     
@@ -51,8 +51,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Java基本语法&quot;&gt;&lt;a href=&quot;#Java基本语法&quot; class=&quot;headerlink&quot; title=&quot;Java基本语法&quot;&gt;&lt;/a&gt;Java基本语法&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h3 id=&quot;第五章-继承、接口和抽象类&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;java基本语法&quot;&gt;Java基本语法&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h3&gt;&lt;span id=&quot;第五章-继承-接口和抽象类&quot;&gt;第五章 继承、接口和抽象类&lt;/span&gt;&lt;/h3&gt;&lt;h4&gt;&lt;span</summary>
         
       
     
@@ -68,15 +68,18 @@
     <link href="https://lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/"/>
     <id>https://lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/</id>
     <published>2021-01-24T09:16:42.000Z</published>
-    <updated>2021-01-25T15:24:05.948Z</updated>
+    <updated>2021-01-25T15:58:19.344Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;HTTPS原理&quot;&gt;&lt;a href=&quot;#HTTPS原理&quot; class=&quot;headerlink&quot; title=&quot;HTTPS原理&quot;&gt;&lt;/a&gt;HTTPS原理&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h3 id=&quot;一、HTTPS概述&quot;&gt;&lt;a href=&quot;#一、HTTPS概述&quot;</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;https原理&quot;&gt;HTTPS原理&lt;/span&gt;&lt;/h1&gt;&lt;!-- toc --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%E4%B8%80-https%E6%A6%82%E8%BF%B0&quot;&gt;一、HTTPS概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a</summary>
         
       
     
@@ -99,7 +102,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Web4&quot;&gt;&lt;a href=&quot;#Web4&quot; class=&quot;headerlink&quot; title=&quot;Web4&quot;&gt;&lt;/a&gt;Web4&lt;/h1&gt;&lt;h4 id=&quot;题目来源：XCTF-Web-进阶区-supersqli&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web4&quot;&gt;Web4&lt;/span&gt;&lt;/h1&gt;&lt;h4&gt;&lt;span id=&quot;题目来源xctf-web-进阶区-supersqli&quot;&gt;题目来源：XCTF Web 进阶区 supersqli&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;​   </summary>
         
       
     
@@ -122,7 +125,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Web3&quot;&gt;&lt;a href=&quot;#Web3&quot; class=&quot;headerlink&quot; title=&quot;Web3&quot;&gt;&lt;/a&gt;Web3&lt;/h1&gt;&lt;h4 id=&quot;题目来源-XCTF-Web-进阶区-Web-php-include&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web3&quot;&gt;Web3&lt;/span&gt;&lt;/h1&gt;&lt;h4&gt;&lt;span id=&quot;题目来源xctf-web-进阶区-web_php_include&quot;&gt;题目来源:XCTF Web 进阶区 Web_php_include&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;​   </summary>
         
       
     
@@ -145,7 +148,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Web2&quot;&gt;&lt;a href=&quot;#Web2&quot; class=&quot;headerlink&quot; title=&quot;Web2&quot;&gt;&lt;/a&gt;Web2&lt;/h1&gt;&lt;h4 id=&quot;题目来源：XCTF-Web-进阶区-php-rce&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web2&quot;&gt;Web2&lt;/span&gt;&lt;/h1&gt;&lt;h4&gt;&lt;span id=&quot;题目来源xctf-web-进阶区-php_rce&quot;&gt;&lt;strong&gt;题目来源：XCTF Web 进阶区</summary>
         
       
     
@@ -168,7 +171,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Web&quot;&gt;&lt;a href=&quot;#Web&quot; class=&quot;headerlink&quot; title=&quot;Web&quot;&gt;&lt;/a&gt;Web&lt;/h1&gt;&lt;h4 id=&quot;题目来源：XCTF-Web-进阶区-Cat&quot;&gt;&lt;a href=&quot;#题目来源：XCTF-Web-进阶区-Cat&quot;</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web&quot;&gt;Web&lt;/span&gt;&lt;/h1&gt;&lt;h4&gt;&lt;span id=&quot;题目来源xctf-web-进阶区-cat&quot;&gt;&lt;strong&gt;题目来源：XCTF Web 进阶区 Cat&lt;/strong&gt;&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;​   </summary>
         
       
     
@@ -191,7 +194,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Misc1&quot;&gt;&lt;a href=&quot;#Misc1&quot; class=&quot;headerlink&quot; title=&quot;Misc1&quot;&gt;&lt;/a&gt;Misc1&lt;/h1&gt;&lt;p&gt;What-is-this wp🤠&lt;/p&gt;
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;misc1&quot;&gt;Misc1&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;What-is-this wp🤠&lt;/p&gt;
 &lt;p&gt;题目来源：攻防世界—misc -进阶题&lt;/p&gt;
 &lt;p&gt;  </summary>
         
@@ -216,8 +219,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;re5&quot;&gt;&lt;a href=&quot;#re5&quot; class=&quot;headerlink&quot; title=&quot;re5&quot;&gt;&lt;/a&gt;re5&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF Shuffle&lt;/p&gt;
-&lt;p&gt;​   </summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re5&quot;&gt;re5&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF Shuffle&lt;/p&gt;
+&lt;p&gt;​    运行程序发现在IDA中调试时候是一个32位的程序，需要在IDA32中打开&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -240,8 +244,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;re4&quot;&gt;&lt;a href=&quot;#re4&quot; class=&quot;headerlink&quot; title=&quot;re4&quot;&gt;&lt;/a&gt;re4&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF  re4-unvm-me&lt;/p&gt;
-&lt;p&gt;​   </summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re4&quot;&gt;re4&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF  re4-unvm-me&lt;/p&gt;
+&lt;p&gt;​    下载文件后发现这是一个pyc文件，对pyc文件解码后生成的是一个pytc_dis文件&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -264,8 +269,10 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;re3&quot;&gt;&lt;a href=&quot;#re3&quot; class=&quot;headerlink&quot; title=&quot;re3&quot;&gt;&lt;/a&gt;re3&lt;/h1&gt;&lt;p&gt;题目描述：md5😵&lt;/p&gt;
-&lt;p&gt;题目来源：XCTF</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re3&quot;&gt;re3&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;题目描述：md5😵&lt;/p&gt;
+&lt;p&gt;题目来源：XCTF -reverse&lt;/p&gt;
+&lt;p&gt;首先看到题目会想到是md5的加密，打开main函数&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -288,8 +295,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Crypto4&quot;&gt;&lt;a href=&quot;#Crypto4&quot; class=&quot;headerlink&quot; title=&quot;Crypto4&quot;&gt;&lt;/a&gt;Crypto4&lt;/h1&gt;&lt;p&gt;题目来源：XCTF 不仅仅是Morse&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;crypto4&quot;&gt;Crypto4&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;题目来源：XCTF 不仅仅是Morse&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/lunan0320.github.io/2021/01/09/crypto4/1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;​ </summary>
         
       
     
@@ -312,7 +320,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Crypto3&quot;&gt;&lt;a href=&quot;#Crypto3&quot; class=&quot;headerlink&quot; title=&quot;Crypto3&quot;&gt;&lt;/a&gt;Crypto3&lt;/h1&gt;&lt;p&gt;Easychallenge wp😊&lt;/p&gt;
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;crypto3&quot;&gt;Crypto3&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;Easychallenge wp😊&lt;/p&gt;
 &lt;p&gt;题目来源：攻防世界—crypto </summary>
         
       
@@ -336,7 +344,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;re2&quot;&gt;&lt;a href=&quot;#re2&quot; class=&quot;headerlink&quot; title=&quot;re2&quot;&gt;&lt;/a&gt;re2&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/lunan0320.github.io/2020/12/28/re2/1.png&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re2&quot;&gt;re2&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/lunan0320.github.io/2020/12/28/re2/1.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;​   </summary>
         
       
@@ -360,7 +368,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;re1&quot;&gt;&lt;a href=&quot;#re1&quot; class=&quot;headerlink&quot; title=&quot;re1&quot;&gt;&lt;/a&gt;re1&lt;/h1&gt;&lt;p&gt;​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re1&quot;&gt;re1&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;amp;v5, strlen((const char</summary>
         
       
     
@@ -383,8 +391,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Crypto2&quot;&gt;&lt;a href=&quot;#Crypto2&quot; class=&quot;headerlink&quot; title=&quot;Crypto2&quot;&gt;&lt;/a&gt;Crypto2&lt;/h1&gt;&lt;blockquote&gt;
-&lt;pre class=&quot; language-c&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;crypto2&quot;&gt;Crypto2&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
+&lt;pre class=&quot; language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token</summary>
         
       
     
@@ -407,7 +415,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Crypto1&quot;&gt;&lt;a href=&quot;#Crypto1&quot; class=&quot;headerlink&quot; title=&quot;Crypto1&quot;&gt;&lt;/a&gt;Crypto1&lt;/h1&gt;&lt;p&gt;题目来源：XCTF&lt;/p&gt;
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;crypto1&quot;&gt;Crypto1&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;题目来源：XCTF&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       

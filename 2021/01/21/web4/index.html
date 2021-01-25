@@ -440,11 +440,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h1><h4 id="题目来源：XCTF-Web-进阶区-supersqli"><a href="#题目来源：XCTF-Web-进阶区-supersqli" class="headerlink" title="题目来源：XCTF Web 进阶区 supersqli"></a>题目来源：XCTF Web 进阶区 supersqli</h4><p>​    首先打开链接后根据题目提示是漏洞注入。</p>
+                <h1><span id="web4">Web4</span></h1><h4><span id="题目来源xctf-web-进阶区-supersqli">题目来源：XCTF Web 进阶区 supersqli</span></h4><p>​    首先打开链接后根据题目提示是漏洞注入。</p>
 <p>​    尝试一下简单的单个字符的注入，发现是单引号报错字符型注入</p>
 <p><img src="/lunan0320.github.io/2021/01/21/web4/1.png"></p>
 <p>​    </p>
-<h2 id="方法一-handler-…-open："><a href="#方法一-handler-…-open：" class="headerlink" title="方法一 handler … open："></a>方法一 handler … open：</h2><p>那么我们可以直接来看看网页有几个字段或者表，采用的是show tables的方式，容易看到只有两个字段，我们只需要去看看这两个字段中的语句即可</p>
+<h2><span id="方法一-handler-open">方法一 handler … open：</span></h2><p>那么我们可以直接来看看网页有几个字段或者表，采用的是show tables的方式，容易看到只有两个字段，我们只需要去看看这两个字段中的语句即可</p>
 <p><img src="/lunan0320.github.io/2021/01/21/web4/2.png"></p>
 <p>​    <strong><em>此处学会使用的是show tables直接查表</em></strong></p>
 <pre class=" language-php"><code class="language-php"><span class="token number">1</span>'<span class="token punctuation">;</span>show databases<span class="token punctuation">;</span><span class="token shell-comment comment">#</span>
@@ -459,7 +459,7 @@
 <pre class=" language-php"><code class="language-php"><span class="token operator">-</span><span class="token number">1</span>'<span class="token punctuation">;</span>handler `<span class="token number">1919810931114514</span>` open<span class="token punctuation">;</span>handler `<span class="token number">1919810931114514</span>` read first<span class="token punctuation">;</span><span class="token shell-comment comment">#</span></code></pre>
 <p>​    因此容易得到flag{c168d583ed0d4d7196967b28cbd0b5e9}</p>
 <hr>
-<h2 id="方法二-堆叠注入："><a href="#方法二-堆叠注入：" class="headerlink" title="方法二 堆叠注入："></a>方法二 堆叠注入：</h2><p>​    继之前，我们发现是两个表之后采用联合查询union select，但是发现关键字已经被select正则过滤</p>
+<h2><span id="方法二-堆叠注入">方法二 堆叠注入：</span></h2><p>​    继之前，我们发现是两个表之后采用联合查询union select，但是发现关键字已经被select正则过滤</p>
 <p><img src="/lunan0320.github.io/2021/01/21/web4/4.png"></p>
 <p>​     </p>
 <p>​    因此我们可以尝试一下堆叠注入，通过-1;show tables – +;来查看表，与之前的大同小异。</p>
@@ -908,7 +908,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">9.8k</span>&nbsp;字
             
             
             
@@ -1187,6 +1187,12 @@ $(function () {
     
     <script src="/lunan0320.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+    
+    <!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 
 <script src="/lunan0320.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 

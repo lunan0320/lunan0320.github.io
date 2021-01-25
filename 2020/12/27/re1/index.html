@@ -440,7 +440,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p>
+                <h1><span id="re1">re1</span></h1><p>​    先拖到die中发现是32位文件，然后同ida32位打开，找到main函数，直接f5反编译，发现了几个函数， 点进这个 sub_4015B0(&amp;v5, strlen((const char *)&amp;v5), &amp;v6, &amp;v4)函数发现是对输入的值进行处理，然后判断v6的值与5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld是否相同，由此可知我们只需将5GRB5XNU6jlT3TlT3WpB8W0WtldF+msR42ZH5yld变换回去就可以的到flag。</p>
 <p><img src="/lunan0320.github.io/2020/12/27/re1/1.png"></p>
 <p>​    点进这个sub_401500(aAbcdefghijklmn)函数我们发现是对aAbcdefghijklmn的一些操作，然后看他的汇编代码我们会发现有一个表，猜测是用base64进行处理的，而且对表进行操作过，就可以知道进行了就可以直到进行了换表操作。</p>
 <p><img src="/lunan0320.github.io/2020/12/27/re1/2.png"></p>
@@ -874,7 +874,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">9.8k</span>&nbsp;字
             
             
             
@@ -1153,6 +1153,12 @@ $(function () {
     
     <script src="/lunan0320.github.io/libs/instantpage/instantpage.js" type="module"></script>
     
+    
+    <!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 
 <script src="/lunan0320.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
