@@ -29,10 +29,10 @@
 
     <script src="/lunan0320.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
-<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
+<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 <script type="text/javascript">
     var OriginTitile=document.title,st;
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">Web基础</span>
                             </a>
                         
                     </div>
@@ -406,21 +406,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-25
+                    2021-01-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    9 分
                 </div>
                 
 
@@ -440,7 +440,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="java基本语法">Java基本语法</span></h1><p>[TOC]</p>
+                <h1><span id="java语法">Java语法</span></h1><p>[TOC]</p>
 <h3><span id="第五章-继承-接口和抽象类">第五章 继承、接口和抽象类</span></h3><h4><span id="1-继承">1、继承</span></h4><blockquote>
 <p>将共同点提取出来，即形成了父类/基类/超类。</p>
 <p>其他类自动成为子类/派生类</p>
@@ -574,7 +574,74 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
 <h4><span id="2-jar文件导出和导入">2、jar文件导出和导入</span></h4><p>.java文件最终会被编译为.class文件（二进制），并发送到机器上使用</p>
 <p>jar文件实际上是一组class文件的压缩包，用于可执行文件的传播。（本质上类似于C++中的DLL文件）</p>
 <p>jar文件只包括class，而不包括java文件，可以有效保护源文件。</p>
-<h3><span id="第八章-java常用类">第八章、java常用类</span></h3>
+<h3><span id="第八章-java常用类">第八章、java常用类</span></h3><h4><span id="1-java的string类">1、java的String类</span></h4><p>a.charAt(0)//返回第0个元素。</p>
+<p>a.indexOf(“;”)//返回第一个；的位置。</p>
+<p>a.concat(“;000”)  //连接一个新字符串并返回。而本身值不变。</p>
+<p>a.contains(“000”) //判断a是否包含000</p>
+<p>a.endsWith(“000”)  //判断a是否以000结尾</p>
+<p>a.equals(“000”)  //判断a是否等于000</p>
+<p>a.equalsIngoreCase(“000”)  //在忽略大小写的情况下比较是否相同</p>
+<p>a.length()  //返回a的长度</p>
+<p>a.trim()  //返回a去除前后空格的字符串，a不变</p>
+<p>String[] b=a.split(“;”)  //将a字符串按照；分割成数组</p>
+<p>a.substring(2,5)  //截取第二个到第五个的字符，a本身不变</p>
+<p>a.replace(“1”.”a”)  //把所有的1都变成a</p>
+<p>2、StringBuffer和StringBuilder</p>
+<p>两个类都是可变对象，变量是原地就修改了</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StringBUfferReferenceTest</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        StringBuffer sb1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        StringBuffer sb2<span class="token operator">=</span>sb1<span class="token punctuation">;</span>
+
+        sb1<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"1234567890"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sb2<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//sb1和sb2指向的内存是一样的，因此改变sb1的值，sb2的值也相应发生变换</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4><span id="2-时间类">2、时间类</span></h4><p>–getTime()，返回来自1970.1.1以来的毫秒数</p>
+<p>java.sql.Date(和数据库对应的时间类)</p>
+<p>Calendar是目前最常用的，但是是抽象类(不可以new出这个对象)</p>
+<p>一般采用    Calendar gc=Calendar.getInstance();—实质上是简单工厂模式    ，获取到Calendar的一个对象</p>
+<p>与Calendar gc=new GregorianCalendar();是等价的</p>
+<p><strong>Calendarl类中主要的函数</strong>：</p>
+<p>​    <strong>getField()函数，可以用来获取时间中每一个属性的值。注意：月份是0-11</strong></p>
+<p>eg:    calendar.get(Calendar.YEAR)</p>
+<p>​            calendar.get(Calendar.MONTH)+1</p>
+<p>​            calendar.get(Calendar.DAY_OF_MONTH);</p>
+<p>​            calendar.get(Calendar.HOUR)</p>
+<p>​            calendar.get(Calendar.HOUR_OF_DAY)；//24小时表示</p>
+<p>​    <strong>getTime()，是返回相应的date对象</strong></p>
+<p>​    <strong>getTimeInMills()，返回自1970.1.1以来的毫秒数</strong></p>
+<p>​    setField()，设置时间的字段</p>
+<p>eg:</p>
+<p>​        calendar.set(2018,7,8)</p>
+<p>​    add(field,amount)根据指定字段增加减少时间</p>
+<p>eg:</p>
+<p>​        calendar.add(Calendar.YEAR,1);  //年份加1年</p>
+<p>java.time包</p>
+<h4><span id="第九章-异常处理">第九章、异常处理</span></h4><h4><span id="1-try-catch-finally">1、try-catch-finally</span></h4><p>一种保护代码正常运行的机制</p>
+<blockquote>
+<p><strong>异常结构：</strong></p>
+<p>-try…catch(catch可以有多个)</p>
+<p>-try…catch…finally</p>
+<p>-try…finally</p>
+<p>try必须有，catch和finally必须有一个</p>
+</blockquote>
+<p>**catch:**当try发生异常，将执行catch代码。若无异常，则绕过。（自上向下排列）</p>
+<p><strong>finally</strong>：当try，catch执行结束后，必须要执行finally</p>
+<p>catch块可以有多个，每个有不同的入口形参，当已发生的异常和某个catch块中的形参类型一致，那么将执行该catch块中的代码。如果没有一个匹配，那么catch块也不会被触发。最后都进入finally块。</p>
+<p>进入一个catch块就不会进入第二个catch块。</p>
+<p>因此，小异常写在前面。</p>
+<p><strong>throw</strong>：方法存在异常的语句，但是不处理，那么可以使用throws来声明。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">divide</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token keyword">throws</span> ArithmeticException<span class="token punctuation">{</span>
+        <span class="token keyword">int</span> result<span class="token operator">=</span>x<span class="token operator">/</span>y<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//因为我不去处理，因此这个地方可会有异常，那就直接向外抛出异常</span>
+        <span class="token keyword">return</span> x<span class="token operator">/</span>y<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> </code></pre>
+<h4><span id="2-自定义异常">2、自定义异常</span></h4><p>需要继承Exception类或者其子类</p>
+<p>—继承自Exception，就变成了Checked Exception</p>
+
                 
             </div>
             <hr/>
@@ -638,8 +705,8 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">Web基础</span>
                                 </a>
                             
                         </div>
@@ -717,8 +784,8 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Web基础</span>
                     </a>
                     
                 </div>
@@ -762,8 +829,8 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/HTTPS/">
-                        <span class="chip bg-color">HTTPS</span>
+                    <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Web基础</span>
                     </a>
                     
                 </div>
@@ -1002,7 +1069,7 @@ Man obj2 <span class="token operator">=</span> <span class="token keyword">new</
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.8k</span>&nbsp;字
+                class="white-color">14.1k</span>&nbsp;字
             
             
             

