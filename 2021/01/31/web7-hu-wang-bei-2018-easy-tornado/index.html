@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="木马getshell, lunan">
+    <meta name="keywords" content="Web7-[护网杯 2018]easy_tornado, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>木马getshell | lunan</title>
+    <title>Web7-[护网杯 2018]easy_tornado | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">木马getshell</h1>
+                    <h1 class="description center-align post-title">Web7-[护网杯 2018]easy_tornado</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">Web安全</span>
+                            <a href="/lunan0320.github.io/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -399,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-27
+                    2021-01-31
                 </div>
                 
 
@@ -413,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    960
                 </div>
                 
 
@@ -440,52 +440,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3><span id="getshell3步控制目标服务器"><strong>getshell：3步控制目标服务器</strong></span></h3><h4><span id="1-什么是web-shell">1、什么是Web-shell?</span></h4><p>web   的含义显然是需要服务器开放web服务</p>
-<p><strong>shell  是一个人机交互页面</strong></p>
-<p>拿 shell”的含义是<strong>取得对服务器/电脑某种程度上的操作权限。</strong></p>
-<p>webshell拿到网站服务器的权限（shell）。</p>
-<p>webshell就是以asp、php、jsp或者cgi等网页文件形式存在的命令执行环境，也可以将其称作为一种网页后门。</p>
-<h4><span id="2-木马">2、木马</span></h4><p><strong>什么是木马：</strong>木马是指未经用户同意进行非授权操作的一种恶意程序。它们可能删除硬盘上的数 据，使系统瘫痪，盗取用户资料等。木马程序不能独立侵入计算机，而是要依靠黑客 来进行传播，它们常常被伪装成“正常”软件进行散播。</p>
-<p><strong>木马</strong>可以帮助我们拿到shell，以达到控制网站服务器的目的，也有人称之为<strong>网站的后门工具。</strong></p>
-<h4><span id="3-什么是后门">3、<strong>什么是后门？</strong></span></h4><p>后门是指一种绕过安全性控制而取对程序或系统访问权的方法。在软件的开发阶段，程序员常会在软件内创建后门便于可以修改程序中的缺陷。如果这些后门被其他人知道或者发布软件之前没有删除后门程序那么他就存在安全隐患容易被黑客当成漏洞进行攻击！<br>这里指的是后门是给不法分子留下访问路径,达到偷窥的目的</p>
-<p>普通的ASP一句话木马（一句话木马：通常是一句话那么长的 eval后门。）</p>
-<pre class=" language-asp"><code class="language-asp"><% eval request ("abcdefg") %></%></code></pre>
+                <h1><span id="web7-护网杯-2018easy_tornado">Web7-[护网杯 2018]easy_tornado</span></h1><p>打开题目后，首先发现3个超链接</p>
+<p><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/1.png"></p>
+<p>依次点开三个链接</p>
+<p><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/2.png"><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/3.png"><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/4.png"></p>
+<p>网址里有参数<code>filename</code>和<code>filehash</code>推测这里flag应该是</p>
+<p><code>filename=/fllllllllllllag&amp;filehash=md5(cookie_secret+md5(filename))</code>里面，filehash里hash就是提示为md5的hash加密。</p>
+<p>变量 filename 的值总是为要访问的文件，再根据提示三和 filehash 三个不同的值猜测 filehash 的值为MD5加密后的字符串。</p>
+<p> filename知道了，<code>cookie_secret</code>在哪呢？hints提示<code>render</code></p>
+<p>又根据题目<code>easy_tornado</code>可推测是<strong>服务器模板注入。</strong></p>
 <blockquote>
-<p>eval    执行<br>request    从用户那里取得的信息<br>木马：执行从用户那里取得的信息</p>
+<h4><span id="扩展ssti注入"><strong>扩展：SSTI注入</strong></span></h4><p>SSTI就是<strong>服务器端模板注入</strong>(Server-Side Template Injection)，也给出了一个注入的概念。</p>
+<p><strong>服务端模板</strong>：相当于很多公式，根据变量输出结果。这里的模板就是模板引擎根据数据自动生成前端页面。</p>
+<p>常见的注入有：SQL 注入，XSS 注入，XPATH 注入，XML 注入，代码注入，命令注入等等。sql注入已经出世很多年了，对于sql注入的概念和原理很多人应该是相当清楚了，SSTI也是注入类的漏洞，其成因其实是可以类比于sql注入的。</p>
+<p>sql注入是从<strong>用户获得一个输入，然后又后端脚本语言进行数据库查询，所以可以利用输入来拼接我们想要的sql语句</strong>，当然现在的sql注入防范做得已经很好了，然而随之而来的是更多的漏洞。</p>
+<p>SSTI也是<strong>获取了一个输入，然后在后端的渲染处理上进行了语句的拼接，然后执行</strong>。错误的执行了用户输入。类比于 sql 注入。当然还是和sql注入有所不同的，SSTI利用的是现在的网站模板引擎(下面会提到)，主要针对python、php、java的一些网站处理框架，比如Python的jinja2 mako tornado django，php的smarty twig，java的jade  velocity。当这些框架对运用渲染函数生成html的时候会出现SSTI的问题。</p>
 </blockquote>
-<p><strong>什么是一句话木马？</strong></p>
-<p>什么是一句话木马？</p>
-<p>一句话木马就是一句简单的脚本语言，常见脚本语言的一句话木马如下：</p>
+<p>因为<strong>render（）</strong>是tornado里的函数，可以<strong>生成html模板</strong>。是一个<strong>渲染函数</strong> ，就是一个公式，能输出前端页面的公式。</p>
+<p><strong>tornado是用Python编写的Web服务器兼Web应用框架</strong>，简单来说就是用来生成模板的东西。和Python相关，和模板相关，就可以推测这可能是个ssti注入题了。</p>
+<p>那我们开始初步尝试：</p>
+<pre class=" language-php"><code class="language-php"><span class="token operator">/</span>file<span class="token operator">?</span>filename<span class="token operator">=</span><span class="token operator">/</span>fllllllllllllag<span class="token operator">&amp;</span>filehash<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
+<p><strong>为什么使用双花括号?</strong></p>
+<pre class=" language-c++"><code class="language-c++">/*Tornado templates support control statements and expressions. Control  statements are surrounded by {%  %}, e.g. {% if len(items) > 2 %}. Expressions are surrounded by {{ }}, e.g. {{ items[0] }}.*/
+
+</code></pre>
+<p>得到关键报错信息：</p>
+<p><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/5.png"></p>
+<p><strong>模板注入必须通过传输型如的执行命令</strong>。探测方式很简单，给一个参数赋值<code>{{22*22}}</code>返回484则必然存在模板注入。</p>
+<p>但是当我们输入<code>error?msg={{1}}</code>就可以得到回显，说明此处是存在SSTI注入漏洞的。</p>
+<p>当我构造的payload为：error?msg=4的时候，回显的结果是orz。因此我们可以猜测出，此处是出现了过滤。</p>
+<p>此时我们需要找的是<code>cookie_secret</code>,</p>
+<p>搜素百度得Tornado框架的附属文件handler.settings中存在cookie_secret</p>
+<p><strong>Handler这个对象，Handler指向的处理当前这个页面的RequestHandler对象</strong></p>
 <blockquote>
-<p>php：<!--?php @eval($_post['pass']);?--></p>
-<p>asp：&lt;%eval request (“pass”)%&gt;</p>
-<p>aspx：&lt;%@ Page Language=”Jscript”%&gt; &lt;%eval(Request.Item[“pass”],”unsafe”);%&gt;</p>
+<p>RequestHandler中并没有settings这个属性，与RequestHandler关联的Application对象（Requestion.application）才有setting这个属性</p>
+<p>handler 指向RequestHandler</p>
+<p>而RequestHandler.settings又指向self.application.settings</p>
+<p>所有handler.settings就指向RequestHandler.application.settings了！</p>
 </blockquote>
-<p><strong>一句话木马的使用</strong></p>
-<p>以php一句话为例，我们可以直接将这些语句插入到网站的某个php文件上，或者直接创建一个新的文件，在文件里写入一句话木马，然后把文件上传到网站上即可。</p>
-<p>Shell文件可从服务端接收数据并执行、返回结果</p>
-<p>小马：通常是一个体积小的变形后门，主要用途是上传大马（一般只有上传功能）。</p>
-<p>大马：自带多功能的后门，通常为了方便使用，体积大不容易过WAF</p>
-<p>小马是用来上传大马的</p>
-<p>流程：</p>
-<blockquote>
-<p>1、进入网站后台，找到上传点。  eg：利用xss—拿到cookie</p>
-<p>2、上传木马</p>
-<p>3、连菜刀，拿到shell</p>
-</blockquote>
-<p><strong>如何寻找上传点？</strong>需要找到能上传文件的地方，比如图片，附件等，<strong>其次需要我们上传的文件被执行</strong></p>
-<p><strong>一句话是不是上传之后就能用？</strong>不是，需要知道他的路径，且能被执行</p>
-<h4><span id="4-文件解析漏洞"><strong>4、文件解析漏洞</strong></span></h4><p>是指中间件（Apache、nginx、iis等）在解析文件时出现了漏洞，从而，黑客可以利用该漏洞实现非法文件的解析。</p>
-<p>eg:     iis6.0默认把asa，cdx，cer文件 当作asp文件来执行。</p>
-<h4><span id="5-制作图片马"><strong>5、制作图片马</strong></span></h4><pre class=" language-php"><code class="language-php">copy <span class="token number">1</span><span class="token punctuation">.</span>png<span class="token operator">/</span>b<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">.</span>asp b<span class="token punctuation">.</span>png</code></pre>
-<p>copy 图片名字/b + 文件名字  图片马名字</p>
-<p><strong>为什么要制作图片马？</strong></p>
-<p>因为网站监测了我们的上传内容，我们需要将文件头内容修改成合适的内容，而图片马是一种方式</p>
-<p><strong>菜刀连接的原理是什么？</strong></p>
-<p>菜刀通过访问刚刚的asp一句话，向里面的参数传递不同的指令，一句话执行相应的 指令，然后将结果返回给我们</p>
-<p><strong>shell 管理工具</strong></p>
-<p>中国菜刀<br>中国蚁剑<br>冰蝎</p>
-<p><strong>用什么语言写木马</strong><br>1、目标是什么语言写的<br>2、看目标能解析的后缀<br>3、看目标能解析的文件 asmx</p>
+<p>此时构造payload:</p>
+<pre class=" language-http"><code class="language-http"><span class="token header-name keyword">http:</span>//e8d1f189-e498-4c03-9b0f-4eef7c6c671c.node3.buuoj.cn/error?msg={{handler.settings}}</code></pre>
+<p>得到提示信息，得到cookie_secret:       7837cb65-a58d-4897-9e1e-efdebe9b75b5</p>
+<p><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/6.png"></p>
+<p>此时的payload应该就是如下通过md5的结果：</p>
+<pre class=" language-http"><code class="language-http">file?filename=/fllllllllllllag&amp;filehash=md5(cookie_secret+md5(/fllllllllllllag))</code></pre>
+<p><strong>/fllllllllllllag</strong>通过md5加密后：3bf9f6cf685a6dd8defadabfb41a03a1</p>
+<p>**md5(cookie_secret+md5(/fllllllllllllag))**通过md5加密后的结果:77a1d0572298d9f79da44fd36511802c</p>
+<p>此时构造payload:</p>
+<pre class=" language-http"><code class="language-http">/file?filename=/fllllllllllllag&amp;filehash=77a1d0572298d9f79da44fd36511802c</code></pre>
+<p>回显得到最终的flag{a97dd1f2-6848-4eb9-86b1-c4f2306216c4}</p>
+<p><img src="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/7.png"></p>
 
                 
             </div>
@@ -512,7 +516,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/27/mu-ma-getshell/">https://lunan0320.github.io/lunan0320.github.io/2021/01/27/mu-ma-getshell/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/">https://lunan0320.github.io/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +554,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">Web安全</span>
+                                <a href="/lunan0320.github.io/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -595,17 +599,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/28/web5-hctf-2018-warmup/">
+                <a href="/lunan0320.github.io/2021/01/31/web7-hu-wang-bei-2018-easy-tornado/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="Web5 HCTF 2018：WarmUp">
+                        <img src="/lunan0320.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="Web7-[护网杯 2018]easy_tornado">
                         
-                        <span class="card-title">Web5 HCTF 2018：WarmUp</span>
+                        <span class="card-title">Web7-[护网杯 2018]easy_tornado</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -615,9 +620,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -626,6 +631,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -644,13 +650,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/26/xss-lou-dong/">
+                <a href="/lunan0320.github.io/2021/01/29/fu-wu-qi-ti-quan/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="XSS漏洞">
+                        <img src="/lunan0320.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="服务器提权">
                         
-                        <span class="card-title">XSS漏洞</span>
+                        <span class="card-title">服务器提权</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -661,7 +667,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
                             </span>
                         <span class="publish-author">
                             
