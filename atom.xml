@@ -6,7 +6,7 @@
   <link href="https://lunan0320.github.io/atom.xml" rel="self"/>
   
   <link href="https://lunan0320.github.io/"/>
-  <updated>2021-02-08T06:30:49.502Z</updated>
+  <updated>2021-02-14T15:17:40.608Z</updated>
   <id>https://lunan0320.github.io/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web13-PHP序列化与反序列化</title>
+    <link href="https://lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/"/>
+    <id>https://lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/</id>
+    <published>2021-02-12T14:05:00.000Z</published>
+    <updated>2021-02-14T15:17:40.608Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web13-php序列化与反序列化&quot;&gt;Web13-PHP序列化与反序列化&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;参考文献：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web12-HTTP</title>
+    <link href="https://lunan0320.github.io/2021/02/11/web12-http/"/>
+    <id>https://lunan0320.github.io/2021/02/11/web12-http/</id>
+    <published>2021-02-11T12:15:28.000Z</published>
+    <updated>2021-02-14T15:21:12.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web12-http&quot;&gt;Web12-HTTP&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;1、直接查看网页源码，发现&lt;strong&gt;Secret.php&lt;/strong&gt;的文件，尝试访问&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web11-RoarCTF2019 Calc</title>
+    <link href="https://lunan0320.github.io/2021/02/10/web11-roarctf2019-calc/"/>
+    <id>https://lunan0320.github.io/2021/02/10/web11-roarctf2019-calc/</id>
+    <published>2021-02-10T06:52:19.000Z</published>
+    <updated>2021-02-14T15:19:42.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web11-roarctf2019-calc&quot;&gt;Web11-RoarCTF2019 Calc&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;一-知识点&quot;&gt;一、知识点&lt;/span&gt;&lt;/h2&gt;&lt;h3&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>Web10-Secret File</title>
@@ -413,81 +483,6 @@
     
     
     <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Misc1</title>
-    <link href="https://lunan0320.github.io/2021/01/17/misc1/"/>
-    <id>https://lunan0320.github.io/2021/01/17/misc1/</id>
-    <published>2021-01-17T13:43:32.000Z</published>
-    <updated>2021-01-17T14:00:36.159Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;misc1&quot;&gt;Misc1&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;What-is-this wp🤠&lt;/p&gt;
-&lt;p&gt;题目来源：攻防世界—misc -进阶题&lt;/p&gt;
-&lt;p&gt;  </summary>
-        
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://lunan0320.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>re5</title>
-    <link href="https://lunan0320.github.io/2021/01/11/re5/"/>
-    <id>https://lunan0320.github.io/2021/01/11/re5/</id>
-    <published>2021-01-11T13:55:36.000Z</published>
-    <updated>2021-01-17T15:35:19.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re5&quot;&gt;re5&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF Shuffle&lt;/p&gt;
-&lt;p&gt;​    运行程序发现在IDA中调试时候是一个32位的程序，需要在IDA32中打开&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Reverse" scheme="https://lunan0320.github.io/tags/Reverse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>re4</title>
-    <link href="https://lunan0320.github.io/2021/01/11/re4/"/>
-    <id>https://lunan0320.github.io/2021/01/11/re4/</id>
-    <published>2021-01-11T13:51:45.000Z</published>
-    <updated>2021-01-17T15:35:34.878Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;re4&quot;&gt;re4&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;​    题目来源：XCTF  re4-unvm-me&lt;/p&gt;
-&lt;p&gt;​    下载文件后发现这是一个pyc文件，对pyc文件解码后生成的是一个pytc_dis文件&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Reverse" scheme="https://lunan0320.github.io/tags/Reverse/"/>
     
   </entry>
   
