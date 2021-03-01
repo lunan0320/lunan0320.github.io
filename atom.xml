@@ -6,7 +6,7 @@
   <link href="https://lunan0320.github.io/atom.xml" rel="self"/>
   
   <link href="https://lunan0320.github.io/"/>
-  <updated>2021-02-28T08:51:37.615Z</updated>
+  <updated>2021-03-01T08:53:21.679Z</updated>
   <id>https://lunan0320.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Web16-BuyFlag抓包绕过</title>
+    <link href="https://lunan0320.github.io/2021/03/01/web16-buyflag-zhua-bao-rao-guo/"/>
+    <id>https://lunan0320.github.io/2021/03/01/web16-buyflag-zhua-bao-rao-guo/</id>
+    <published>2021-03-01T08:41:50.000Z</published>
+    <updated>2021-03-01T08:53:21.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web16-buyflag抓包绕过&quot;&gt;Web16-BuyFlag抓包绕过&lt;/span&gt;&lt;/h1&gt;&lt;h3&gt;&lt;span id=&quot;一-知识点&quot;&gt;一、知识点&lt;/span&gt;&lt;/h3&gt;&lt;h4&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title>DOS命令详解</title>
     <link href="https://lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/"/>
     <id>https://lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/</id>
     <published>2021-02-28T08:34:53.000Z</published>
-    <updated>2021-02-28T08:51:37.615Z</updated>
+    <updated>2021-02-28T08:53:29.382Z</updated>
     
     
       
@@ -460,29 +483,6 @@
     
     
     <category term="Web安全" scheme="https://lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web4</title>
-    <link href="https://lunan0320.github.io/2021/01/21/web4/"/>
-    <id>https://lunan0320.github.io/2021/01/21/web4/</id>
-    <published>2021-01-21T14:36:54.000Z</published>
-    <updated>2021-01-18T15:16:20.773Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web4&quot;&gt;Web4&lt;/span&gt;&lt;/h1&gt;&lt;h4&gt;&lt;span id=&quot;题目来源xctf-web-进阶区-supersqli&quot;&gt;题目来源：XCTF Web 进阶区 supersqli&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;​   </summary>
-        
-      
-    
-    
-    
-    
-    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
     
   </entry>
   
