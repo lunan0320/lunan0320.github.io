@@ -6,7 +6,7 @@
   <link href="https://lunan0320.github.io/atom.xml" rel="self"/>
   
   <link href="https://lunan0320.github.io/"/>
-  <updated>2021-03-01T08:53:21.679Z</updated>
+  <updated>2021-03-06T15:29:00.673Z</updated>
   <id>https://lunan0320.github.io/</id>
   
   <author>
@@ -17,11 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Web18-异或注入-[CISCN2019 华北赛区 Day2 Web1]Hack World</title>
+    <link href="https://lunan0320.github.io/2021/03/06/web18-yi-huo-zhu-ru-ciscn2019-hua-bei-sai-qu-day2-web1-hack-world/"/>
+    <id>https://lunan0320.github.io/2021/03/06/web18-yi-huo-zhu-ru-ciscn2019-hua-bei-sai-qu-day2-web1-hack-world/</id>
+    <published>2021-03-06T14:28:28.000Z</published>
+    <updated>2021-03-06T15:29:00.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web18-异或注入-ciscn2019-华北赛区-day2-web1hack-world&quot;&gt;Web18-异或注入-[CISCN2019 华北赛区 Day2 Web1]Hack World&lt;/span&gt;&lt;/h1&gt;&lt;h3&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web17-[ZJCTF 2019]NiZhuanSiWei</title>
+    <link href="https://lunan0320.github.io/2021/03/04/web17-zjctf-2019-nizhuansiwei/"/>
+    <id>https://lunan0320.github.io/2021/03/04/web17-zjctf-2019-nizhuansiwei/</id>
+    <published>2021-03-04T04:59:03.000Z</published>
+    <updated>2021-03-06T15:33:57.683Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;web17-zjctf-2019nizhuansiwei&quot;&gt;Web17-[ZJCTF 2019]NiZhuanSiWei&lt;/span&gt;&lt;/h1&gt;&lt;h3&gt;&lt;span id=&quot;一-知识点&quot;&gt;一、知识点&lt;/span&gt;&lt;/h3&gt;&lt;h4&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web" scheme="https://lunan0320.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Web16-BuyFlag抓包绕过</title>
-    <link href="https://lunan0320.github.io/2021/03/01/web16-buyflag-zhua-bao-rao-guo/"/>
-    <id>https://lunan0320.github.io/2021/03/01/web16-buyflag-zhua-bao-rao-guo/</id>
-    <published>2021-03-01T08:41:50.000Z</published>
-    <updated>2021-03-01T08:53:21.679Z</updated>
+    <link href="https://lunan0320.github.io/2021/03/02/web16-buyflag-zhua-bao-rao-guo/"/>
+    <id>https://lunan0320.github.io/2021/03/02/web16-buyflag-zhua-bao-rao-guo/</id>
+    <published>2021-03-02T08:41:50.000Z</published>
+    <updated>2021-03-06T15:34:23.268Z</updated>
     
     
       
@@ -41,10 +87,10 @@
   
   <entry>
     <title>DOS命令详解</title>
-    <link href="https://lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/"/>
-    <id>https://lunan0320.github.io/2021/02/28/dos-ming-ling-xiang-jie/</id>
-    <published>2021-02-28T08:34:53.000Z</published>
-    <updated>2021-02-28T08:53:29.382Z</updated>
+    <link href="https://lunan0320.github.io/2021/03/01/dos-ming-ling-xiang-jie/"/>
+    <id>https://lunan0320.github.io/2021/03/01/dos-ming-ling-xiang-jie/</id>
+    <published>2021-03-01T08:34:53.000Z</published>
+    <updated>2021-03-06T15:35:01.116Z</updated>
     
     
       
@@ -425,57 +471,6 @@
         
         
     <summary type="html">&lt;h1&gt;&lt;span id=&quot;mysql学习笔记&quot;&gt;MySQL学习笔记&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;sql-structure-quevy-language-结构化查询语言&quot;&gt;SQL: Structure Quevy Language   </summary>
-        
-      
-    
-    
-    
-    
-    <category term="Web安全" scheme="https://lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java基础语法</title>
-    <link href="https://lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/"/>
-    <id>https://lunan0320.github.io/2021/01/25/java-ji-chu-yu-fa/</id>
-    <published>2021-01-25T10:13:51.000Z</published>
-    <updated>2021-01-29T14:56:28.490Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;java语法&quot;&gt;Java语法&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h3&gt;&lt;span id=&quot;第五章-继承-接口和抽象类&quot;&gt;第五章 继承、接口和抽象类&lt;/span&gt;&lt;/h3&gt;&lt;h4&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Web安全" scheme="https://lunan0320.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTPS工作原理</title>
-    <link href="https://lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/"/>
-    <id>https://lunan0320.github.io/2021/01/24/https-gong-zuo-yuan-li/</id>
-    <published>2021-01-24T09:16:42.000Z</published>
-    <updated>2021-01-29T14:56:17.944Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;https原理&quot;&gt;HTTPS原理&lt;/span&gt;&lt;/h1&gt;&lt;!-- toc --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#%E4%B8%80-https%E6%A6%82%E8%BF%B0&quot;&gt;一、HTTPS概述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
         
       
     
