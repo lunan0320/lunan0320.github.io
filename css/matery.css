@@ -34,10 +34,11 @@
 }
 
 body {
-    cursor:url(/cursor.svg),auto;
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) );
+    background-color: #eaeaea;
     margin: 0;
     color: #34495e;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 h1 {
@@ -240,9 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #8cbfb8 0%, #128c6f 100%);
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
-
 
 .text-color {
     color: #0f9d58 !important;
@@ -550,10 +550,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-/* .bg-cover:after {
+.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-} */
+}
 
 .bg-cover:before,
 .bg-cover:after {
