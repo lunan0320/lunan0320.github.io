@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Fed-Hyper-Knowledge-Distillation, null">
-    <meta name="description" content="Metadata
-
-Tags: #Personalizaion #Knowledge-Distillation
-
-Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
+    <meta name="keywords" content="FetchSGD-Sketching, null">
+    <meta name="description" content="FetchSGD Communication-Efficient Federated Learning with Sketching原文来源：[PMLR2020] FetchSGD Communication-Efficient Feder">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Fed-Hyper-Knowledge-Distillation | null</title>
+    <title>FetchSGD-Sketching | null</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -292,12 +288,12 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Fed-Hyper-Knowledge-Distillation</h1>
+                    <h1 class="description center-align post-title">FetchSGD-Sketching</h1>
                 </div>
             </div>
         </div>
@@ -321,12 +317,8 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Personalization/">
-                                <span class="chip bg-color">Personalization</span>
-                            </a>
-                        
-                            <a href="/tags/Knowledge-Distillation/">
-                                <span class="chip bg-color">Knowledge Distillation</span>
+                            <a href="/tags/Federated-learning/">
+                                <span class="chip bg-color">Federated learning</span>
                             </a>
                         
                     </div>
@@ -350,7 +342,7 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-31
+                    2022-11-16
                 </div>
                 
 
@@ -359,7 +351,7 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    826
+                    3.1k
                 </div>
                 
 
@@ -376,100 +368,249 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Metadata</p>
-<ul>
-<li><p>Tags: #Personalizaion #Knowledge-Distillation</p>
-</li>
-<li><p>Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]]</p>
-</li>
-</ul>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Heterogeneity of data distributed across clients limits the performance of global models trained through federated learning, especially in the settings with highly imbalanced class distributions of local datasets. In recent years, personalized federated learning (pFL) has emerged as a potential solution to the challenges presented by heterogeneous data. However, existing pFL methods typically enhance performance of local models at the expense of the global model’s accuracy. We propose FedHKD (Federated Hyper-Knowledge Distillation), a novel FL algorithm in which clients rely on knowledge distillation (KD) to train local models. In particular, each client extracts and sends to the server the means of local data representations and the corresponding soft predictions – information that we refer to as “hyper-knowledge”. The server aggregates this information and broadcasts it to the clients in support of local training. Notably, unlike other KD-based pFL methods, FedHKD does not rely on a public dataset nor it deploys a generative model at the server. We analyze convergence of FedHKD and conduct extensive experiments on visual datasets in a variety of scenarios, demonstrating that FedHKD provides signiﬁcant improvement in both personalized as well as global model performance compared to state-of-the-art FL methods designed for heterogeneous data settings.</p>
-<ul>
-<li>笔记</li>
-<li>Zotero links<ul>
-<li><ul>
-<li><a href="zotero://select/items/1_V85GVI27">Local library</a></li>
-</ul>
-</li>
-<li><ul>
-<li>PDF Attachments</li>
-</ul>
-</li>
-<li><p><a href="zotero://open-pdf/library/items/4R4JQMWF">Chen 等 - 2023 - THE BEST OF BOTH WORLDS ACCURATE GLOBAL AND PERSO.pdf</a></p>
-</li>
-<li><ul>
-<li>Cite key: chenBESTBOTHWORLDS2023a</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>  personalized federated learning (pFL) 用于解决数据异构带来的问题。<br>但现有的 pFL方法以牺牲 global model 准确率的前提下，增强 local models 的性能</p>
-<p><strong>FedHKD (Federated Hyper-Knowledge Distillation)</strong></p>
-<p>Client：</p>
-<ul>
-<li>Extract the means of <em>local data representations</em></li>
-<li>Send the corresponding <em>soft predictions</em></li>
-</ul>
-<p>Server：<br>    - Aggregation<br>    - Broadcast.</p>
-<p>Difference：<br>大多数基于KD的方案都依赖于一个公共数据集，限制了在实际中的使用。</p>
-<p>imporvement：FedHKD does not rely on a public dataset</p>
-<p>hyper-knowledge：</p>
-<ul>
-<li>mean representations </li>
-<li>the corresponding mean soft predictions</li>
-</ul>
-<p>privacy： <em>differential privacy</em> via the Gaussian mechanism</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031165210.png"></p>
-<p>Knowledge distillation (KD) with a public dataset:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031155327.png"></p>
+                <h2 id="FetchSGD-Communication-Efficient-Federated-Learning-with-Sketching"><a href="#FetchSGD-Communication-Efficient-Federated-Learning-with-Sketching" class="headerlink" title="FetchSGD Communication-Efficient Federated Learning with Sketching"></a>FetchSGD Communication-Efficient Federated Learning with Sketching</h2><p><em><strong>原文来源：[PMLR2020] FetchSGD Communication-Efficient Federated Learning with Sketching</strong></em></p>
 <blockquote>
-<p>$z_i$ is the $i^{th}$ output of a data sample.<br>$q_i$ is the $i^{th}$ soft prediction.<br>$T$ is the temperature parameter.</p>
-<p><strong>public datasets consumes communication and memory resources.</strong></p>
+<p>欢迎大家访问我的<a target="_blank" rel="noopener" href="https://lunan0320.github.io/">GitHub博客</a></p>
 </blockquote>
-<h3 id="Feature-Extractor-and-Classifier"><a href="#Feature-Extractor-and-Classifier" class="headerlink" title="Feature Extractor and Classifier"></a>Feature Extractor and Classifier</h3><p>models:</p>
+<h5 align='center'> https://lunan0320.cn</h5>	
+
+<h2 id="0-Abstract"><a href="#0-Abstract" class="headerlink" title="0. Abstract"></a>0. Abstract</h2><p>Federated Learning 由于 sparse client participation存在的两个问题：</p>
+<ul>
+<li>communication bottleneck</li>
+<li>convergence issues</li>
+</ul>
+<p>FetchSGD 使用 linear Count Sketch （计数草图） 压缩 model updates.</p>
+<p>将 momentum and error accumulation 从 clients 移到 central aggregator.</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>训练 high-quality models 的问题：</p>
+<p>1、<strong>communication-efficiency</strong></p>
+<p>​	clients 与 aggregator 是一种 low connections.</p>
+<p>2、<strong>client must be stateless</strong></p>
+<p>​	no client participates more than once during training.</p>
+<p>3、<strong>not independent and identically distributed</strong></p>
+<p><strong>FetchSGD:</strong> compress the gradient using a data structure called a Count Sketch.</p>
+<p><strong>aggregator</strong>:  maintains momentum and error accumulation Count Sketches.</p>
+<p><img src="http://img-blog.csdnimg.cn/img_convert/67230dfa96f55049e1a235d8209fa09d.png"></p>
+<p><strong>experiments</strong>:</p>
+<ul>
+<li>image recognition</li>
+<li>language modeling</li>
+</ul>
+<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2. Related Work"></a>2. Related Work</h2><h3 id="2-1-FedAvg"><a href="#2-1-FedAvg" class="headerlink" title="2.1 FedAvg"></a>2.1 FedAvg</h3><p>FedAvg 通过在向 aggregator 发送 update 前，先在本地执行多次 SGD 减少了在训练过程中 transfer 的 bytes</p>
+<p>FedAvg 是在 federated setting 中最常使用的优化算法</p>
+<p><strong>advantage</strong>: </p>
+<p>（1）no local state，对于 clients 在训练过程中只参与一次是必须的</p>
+<p>（2）communication-efficient， reduce the total number of bytes transferred.</p>
+<p><strong>disadvantage</strong>:</p>
+<p>（1）network connections may be too slow or unreliable.</p>
+<p>（2）many local steps lead to degraded convergence on non-iid. data. (local over-fitting)</p>
+<p>local steps越多，non-iid. 的 convergence 会 变慢</p>
+<p>improve performance on <strong>non-iid. data:</strong></p>
+<p>penalizing the L2 distance between local models and the current global model.</p>
+<h3 id="2-2-Gradient-Compression"><a href="#2-2-Gradient-Compression" class="headerlink" title="2.2 Gradient Compression"></a>2.2 Gradient Compression</h3><p><strong>FedAvg limitation</strong>:</p>
+<p>each round, clients download an entire model （广播）and upload an entire model update. (training large models with FedAvg difficult)</p>
+<p>Uploading model updates is challenging. (connections tend to be asymmetric)</p>
+<p><strong>Alternative to FedAvg</strong>:</p>
+<p>gradient compression.</p>
+<p>compress stochastic gradients –&gt; the result is still an unbiased estimate of the true gradient.</p>
+<p>eg. stochastic quantization, stochastic sparsification.</p>
+<p><strong>tradeoff</strong>:</p>
+<p>compression and the variance of the stochastic gradient.</p>
+<p><strong>Biased gradient compression methods</strong>:</p>
+<p><em><strong>减少传输的数据量</strong></em></p>
+<blockquote>
+<p>稀疏化方法通过只上传部分重要的梯度来进行全局模型的更新</p>
+<ul>
+<li><p>梯度的大小来衡量其重要性, 通过预先设立阈值, 当梯度大于该阈值时对其进行上传</p>
+</li>
+<li><p>固定稀疏率, 每次传递一定比例的最大梯度或每次传递前<em>k</em>个最大梯度的Top-k方法</p>
+</li>
+</ul>
+</blockquote>
+<p>（1）top-k sparsification (每次传递前<em>k</em>个最大梯度的Topk方法)</p>
+<p>（2）signSGD (保留梯度的符号来更新模型, 将负梯度量化为–1, 其余量化为1, 实现了32倍的压缩)</p>
+<h3 id="2-3-Optimization-with-Sketching"><a href="#2-3-Optimization-with-Sketching" class="headerlink" title="2.3 Optimization with Sketching"></a>2.3 Optimization with Sketching</h3><ol>
+<li>之前提出的 sketching techniques to optimization，没有收敛性保证，并且 compression little.</li>
+</ol>
+<p>​	而且没有利用 error accumulation, 这对于 biased gradient compression schemes 是 必须的</p>
+<ol start="2">
+<li>sketches for gradient compression in data center training.</li>
+</ol>
+<p>​	在发送完 compressed gradients.  requires a second round of communication between the clients and the parameter server.</p>
+<ol start="3">
+<li><p>有的方法需要 local client state for both momentum and error accumulation.</p>
+</li>
+<li><p>sketches for distributed optimization.</p>
+<p>压缩的是 auxiliary variables, eg. momentum, and per-parameter learning rates. 而不是 gradients themselves.</p>
+</li>
+<li><p>有的方法是 using sketched updates 来实现高效通信， the family of sketches updates, the combination of subsampling, quantization, and random rotations.</p>
+</li>
+<li><p>本文的方法：compress the gradients and do not require any additional communication at all to carry out momentum.</p>
+</li>
+</ol>
+<h2 id="3-FetchSGD"><a href="#3-FetchSGD" class="headerlink" title="3. FetchSGD"></a>3. FetchSGD</h2><h3 id="3-1-Federated-Learning-Setup"><a href="#3-1-Federated-Learning-Setup" class="headerlink" title="3.1 Federated Learning Setup"></a>3.1 Federated Learning Setup</h3><p>C clients, Z 是 data domain</p>
+<p><strong>supervised learning</strong>:</p>
+<p>$ Z &#x3D; X \times Y$, X 是 feature space, Y 是 label space.</p>
+<p><strong>unsupervised learning:</strong><br>$Z &#x3D; X$, X 是 feature space.</p>
+<p>第 i 个 client 有 $D_i$ samples, 从 $P_i$ 中提取出的 i.i.d.</p>
+<p>设 W 是由 d dimensional vectors 参数化的假设类</p>
+<p>目标：<strong>minimize</strong> the weighted average (加权)</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d1b249ffb0822602c1da86a5c784f6ac.png"></p>
+<p>the <strong>average</strong> of client risks:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/55cee0b7793dc65d3e2204f1f8383361.png"></p>
+<h3 id="3-2-Algorithm"><a href="#3-2-Algorithm" class="headerlink" title="3.2 Algorithm"></a>3.2 Algorithm</h3><ul>
+<li><p>FedSGD的每次迭代，第 i 个 participating client 计算 a stochastic gradient $g_i^t$ 使用 local data 的一个batch.</p>
+</li>
+<li><p>使用 Count Sketch data structure compress $g_i^t$</p>
+</li>
+<li><p>每个 client 发送 $S(g_t^t)$ 给 aggregator 作为 model update.</p>
+</li>
+</ul>
+<p><strong>Count Sketch</strong>:</p>
+<p>​	一种随机的数据结构，将一个 vector 投影几次，到一个较低维度的空间来压缩它，之后就可以大致恢复 high-magnitude elements(高量级元素)</p>
+<p>Count Sketch 满足如下的 linear property:<br>$$<br>S(g_1+g_2) &#x3D; S(g_1) + S(g_2)<br>$$<br>这样的线性关系使得 server 可以准确计算<br>$$<br>\sum_i S(g_i^t) &#x3D; S(\sum_ig_i^t) &#x3D; S(g^t)<br>$$<br>对于一个 sketching operator $S(·)$，都有与之对应的 decompression operator $U(·)$，返回的是 original vector 的unbiased estimate</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c77316ae76842cba89e1fe8d52f3874b.png"></p>
+<p>$U(·)$其实是对 $S(·)$ “undoes” the projections.</p>
+<p>持有 $S(g_i^t)$时，central aggregator 可以 update the global model:<br>$$<br>Top-k(U(\sum_iS(g_i^t))) \approx Top-k(g^t)<br>$$<br><strong>biased</strong> gradient compression methods can <strong>converge</strong>:</p>
+<blockquote>
+<p>​	biased gradient compression operator 累积了 error</p>
+<p>并在 optimization 过程中重新引入了 error.</p>
+</blockquote>
+<p>在 FetchSGD，bias 是由 Top-k 引入的而非 $S(·)$</p>
+<p>因此，aggregator 可以 accumulates the error.</p>
+<p>zero-initialized sketch $S_e$</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/89c8ad25bf94ce85bb246f69e36322c9.png"></p>
+<p>$\eta$ 是 learning rate，$\triangle^t\in R^d$  是 $k-sparse$</p>
+<p><strong>对比</strong>：</p>
+<p>其他的 biased gradient compression methods 在 compress the gradients 时候在clients 引入了 bias, 因此需要在 clients 保持独立的 error accumulation vectors. (在 clients 端，计算压缩误差存储在本地，在下一轮被选中训练时，进行梯度修正)</p>
+<p>但这对于 Federated learning 是比较难的，因为 clients 可能只参与一次，使得 error 无法在之后的 round 中被引入。</p>
+<p><strong>Another View</strong>：<br>$S(·)$ 是linear, error accumulation 只是由 linear operations 组成，使用$S_e$在 server 执行 error accumulation 与在 client执行 error accumulation 是等价的</p>
+<p>而且 momentum 也是由 linear operations 组成，因此 momentum 也可在 clients 或者在 server执行。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/71d3b20f1cb4f59bd52ad4a861e8c65f.png"></p>
+<p><strong>FetchSGD</strong> is presented in full in <strong>Algorithm 1.</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3ef39c013b89f6276b10efcde9b5a01d.png"></p>
+<h2 id="4-Theory"><a href="#4-Theory" class="headerlink" title="4. Theory"></a>4. Theory</h2><p>FetchSGD convergence guarantees</p>
+<h3 id="4-1-Scenario-1-Contraction-Holds"><a href="#4-1-Scenario-1-Contraction-Holds" class="headerlink" title="4.1 Scenario 1: Contraction Holds"></a>4.1 Scenario 1: Contraction Holds</h3><p>biased gradient compression operator 可以使得 compressed SGD converge</p>
+<p>已经存在的方法证明了 compressed SGD converges， 当 $C$ 满足 $\tau-contraction$</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3d073cf8fc9398c41480e9a4b4cfea7d.png" alt="image-20221123161653123"></p>
+<p>已有的证明证实：使用 Count Sketches 去压缩梯度可以满足上述特征</p>
+<p>但是这个压缩方法包括</p>
+<p>1、一个 second round of communication.</p>
+<p>​	如果由$S(e^t)$计算的$e^t$中没有high-magnitude 高量级 elements，server可以随机查询$e^t$</p>
+<p>2、FetchSGD 不计算$e_i^t$ 或者 $e^t$, 因此 第二轮的通信是不可能的，现有的方法是行不通的。</p>
+<h4 id="Assumption-1-Scenario-1"><a href="#Assumption-1-Scenario-1" class="headerlink" title="Assumption 1 (Scenario 1)"></a>Assumption 1 (Scenario 1)</h4><p>${w_t}_{t&#x3D;1}^T$ 是 FetchSGD 生成的 models 的 sequence</p>
+<p>${u^t}<em>{t&#x3D;1}^T$ 和 ${e^t}</em>{t&#x3D;1}^T$ 是 momentum 和 error accumulation vectors.</p>
+<p>存在常数 $0 &lt; \tau &lt; 1$， 对于任意的$t\in[T]$, $q^t :&#x3D; \eta (\rho u^{t-1}+g^{t-1})+e^{t-1}$, 在满足 $\tau||q_i^t||^2\leq(q_i^t)^2$的情况下，至少有一个 coordinate.</p>
+<h4 id="Theorem-1-Scenario-1"><a href="#Theorem-1-Scenario-1" class="headerlink" title="Theorem 1(Scenario 1)"></a>Theorem 1(Scenario 1)</h4><p>$f$ 是一个 $L-smooth\quad non-convex\quad function$  , 并且有上界 G</p>
+<blockquote>
+<p>L-smooth 的定义：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/20386bd2945776f7dbfafb109b7f3fa4.png"></p>
+</blockquote>
+<p>在 Assumption 1的情况下， FetchSGD 在步长 $\eta &#x3D; \frac{1-\rho}{2L\sqrt{T}}$ 执行T 轮，返回 ${w^t}_{t&#x3D;1}^T$，在概率至少 $1-\delta$  sketching randomness:<br><img src="https://img-blog.csdnimg.cn/img_convert/1f3b6d032f929585704c8ee268cc1373.png"></p>
+<p>第一部分的期望，是在 mini batches sampling 的随机性</p>
+<p>对于更大的 T ，第一项占主导地位， Theorem 1 中的收敛率与在 uncompressed SGD 情况下的匹配。</p>
+<p>Assumption 1 缩放了 negative gradient，以及 momentum、error accumulation vector必须指向完全相同的方向</p>
+<p>下一小节分析在只包括 gradients 下的假设下的 FetchSGD</p>
+<h3 id="4-2-Scenario-2-SlidingWindow-Heavy-Hitters"><a href="#4-2-Scenario-2-SlidingWindow-Heavy-Hitters" class="headerlink" title="4.2 Scenario 2: SlidingWindow Heavy Hitters"></a>4.2 Scenario 2: SlidingWindow Heavy Hitters</h3><p>沿着 optimization path 的 gradients 已经被观察到包括heavy coordinates.</p>
+<p>但是假设 all gradients 包括 heavy coordinates 是有些过度optimistic, 因为在一些平坦的参数空间可能不是这样</p>
+<p>更加缓和的 assumption: 在 gradient vectors 的 sliding sum中存在 heavy coordinates.</p>
+<h4 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition 1"></a>Definition 1</h4><p> [$(I,\tau)-sliding\quad heavy$]</p>
+<p>stochastic process ${g^t}_{t\in N}$ 是 $(I,\tau)-sliding\quad heavy$, 如果在每次迭代 t  中，有至少 $1-\delta$ 的概率，gradient vector $g^t$可以分解为  $g^t &#x3D; g_N^t+g_S^t$，其中 $g_S^t$ 是 “signal” ，$g_N^t$ 是 “noise”：</p>
 <ol>
-<li>a feature extractor<br>translating the input raw data (i.e., an image) into latent space representation</li>
-<li>a classifier<br> mapping representations into categorical vectors</li>
+<li>signal</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031155927.png"></p>
+<p>对于vector $g_S^t$，每个 non-zero coordinate j，满足如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/94d9b4f366657868d5f79d6077bdf0bb.png"></p>
+<ol start="2">
+<li>noise</li>
+</ol>
+<p>$g_N^t$ 是均值为0，对称，且使用范数规范化， second moment bounded as:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e45de89fa08db0351dd1d66a56ff40ea.png"></p>
+<p>如果将连续的 $I$ 个 gradients sum up，结果中的每个坐标要么是 $\tau-heavy\quad hitter$，要么是从一些 mean-zero symmetric noise 提取出的</p>
+<p>Count Sketches 可以捕获 signal，因为 Count Sketch 可以近似于 heavy hitters.</p>
+<p>signal 分布在大小为 $I$ 的 sliding windows, 需要一个 sliding window error accumulation scheme, 来确保可以捕获到任何时刻的 signal.</p>
+<p>Vanilla error  accumulation 不足以显示 convergence</p>
+<p>vanilla error accumulation 是 all prior gradients的累积，仅有在 $I$ consecutive gradients 的 sum up中的signal 不会被 vanilla error accumulation 捕获</p>
+<p>因此考虑使用 sliding window error accumulation scheme，可以捕获任何在 $I$ 个sequence 的 gradients</p>
+<p><strong>simple way</strong>:</p>
+<p>保持 $ I $ error accumulation Count Sketches,如下图所示，是 $ I  &#x3D;4$ 的情况，每次迭代时，每个 sketch accumulates新的 gradients，在继续积累梯度前，每 $I$ 次迭代时，sketch就会被归零</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ed9a30d710b058a3fffe31b6eaecc1ab.png"></p>
+<p>每次迭代时，都有一个 sketch available,包括了 prior $I’$ gradients, $I’\leq I$ </p>
+<p>实际中，保持 I error accumulation sketches 是 too expensive</p>
+<p>但是，“sliding window” 被广泛研究，通过 $log(I)$ error accumulation sketches 就可以识别 heavy hitters.</p>
+<h4 id="Assumption-2-Scenario-2"><a href="#Assumption-2-Scenario-2" class="headerlink" title="Assumption 2 (Scenario 2)"></a>Assumption 2 (Scenario 2)</h4><p>优化过程中的遇到的梯度序列，是一个 $(I,\tau)-sliding\quad heavy$ stochastic process.</p>
+<h4 id="Theorem-2-Scenario-2"><a href="#Theorem-2-Scenario-2" class="headerlink" title="Theorem 2(Scenario 2)"></a>Theorem 2(Scenario 2)</h4><p>f 是一个 L-smooth non-convex function</p>
+<p>$g_i$ 代表了 $f_i$ 的 stochastic gradients，使得 $||g_i||^2 \leq G^2$</p>
+<p>在 Assumption 2下，FetchSGD 使用 a sketch size $O(\frac{log(dT&#x2F;\delta)}{\tau^2})$，步长是 $\eta &#x3D; \frac{1}{G\sqrt{L}T^{2&#x2F;3}}$， $\rho &#x3D; 0$ 代表 no momentum，满足概率至少 $1-2\delta$，返回 ${w^t}_{t&#x3D;1}^T$,使得：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/222001988333aac5ca09066ec3f8544f.png" alt="image-20221123204322429"></p>
+<p>定理第一部分的期望是关于小批次抽样的随机性</p>
+<h4 id="Remarks"><a href="#Remarks" class="headerlink" title="Remarks"></a>Remarks</h4><ol>
+<li>这些是在 non-i.i.d.设置下的guarantees, f 是 对于可能不相关的分布的 average risk.</li>
+<li>收敛速度限制了目标梯度范数，而不是目标本身</li>
+<li>定理1 中的收敛速度与 uncompressed SGD 收敛速度相匹配，而在Theorem 2中情况更差</li>
+<li>proof 使用了 virtual sequence idea，可以被泛化到其他类的函数：smooth、(strongly) convex etc.</li>
+</ol>
+<h2 id="5-Evalauation"><a href="#5-Evalauation" class="headerlink" title="5. Evalauation"></a>5. Evalauation</h2><p>实现并比较 FetchSGD、gradient sparsification (local top-k)、FedAvg。</p>
 <blockquote>
-<p>$x_i$ is the raw data of client i<br>$R_{\phi_i}$ is the embedding functions of feature extractor<br>$G_{w_i}$ is the classifier<br>$h_i$ is the representation vector<br>$z_i$ is the categorical vector</p>
+<p>使用 neural networks with ReLU activations, loss surfaces are not L-smooth.</p>
+<p>使用 a vanilla Count Sketch, 而不是 a sliding window Count Sketch</p>
+<p>使用 non-zero momentum，这是 Theorem 1 allows，但是Theorem 2 不允许的</p>
+<p>使用 momentum factor masking</p>
+<p>对于在 $S_e^t$中的 $S(\triangle^t)$的 nonzero coordinates zero out, 而不是减去 $S(\triangle^t)$</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d35f2da747639c62337ad3c3688383d0.png" alt="image-20221124102945020"></p>
 </blockquote>
-<h3 id="Evaluating-and-Using-Hyper-Knowledge"><a href="#Evaluating-and-Using-Hyper-Knowledge" class="headerlink" title="Evaluating and Using Hyper-Knowledge."></a>Evaluating and Using Hyper-Knowledge.</h3><p>client i: mean latent representation of class j </p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031161955.png"></p>
-<blockquote>
-<p>$Q(*,T)$ is the soft target function<br>$h_i^{j,k}$ : data representation of the $i^{th}$ client’s $k^{th}$ sample with <em>label $j$</em><br> $z_i^{j,k}$ : prediction of the $i^{th}$ client’s $k^{th}$ sample with *label $j$</p>
-</blockquote>
-<p>client $i$ hyper-knowledge of class $j$:   $\mathcal{K}_i^j &#x3D; (\overline h_i^j,\overline q_i^j)$.</p>
-<p>suppose there are n classes:<br>client i full hyper-knowledge: $\mathcal{K}_i &#x3D; {\mathcal{K}_i^1,…\mathcal{K}_i^n}$</p>
-<p><strong>comparison</strong>:</p>
+<p>实验针对于 small local datasets and non-i.i.d. data</p>
 <ul>
-<li>FedProto only utilizes means of data representations and makes no use of soft predictions. (只利用了表征的均值，没有使用 soft predictions)</li>
+<li><p><input disabled="" type="checkbox"> 
+Gradient sparsification 方法，是对每个 worker 的 local top-k elements求和，当local datasets变得更小，而且彼此间差异越大时，在逼近global gradient的真实 top-k 上的效果更差</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+在每个 client 的 local data 上执行多步骤，效果也并不好，因为这会直接导致 local overfitting.</p>
+</li>
 </ul>
-<h3 id="Differential-Privacy-Mechanism"><a href="#Differential-Privacy-Mechanism" class="headerlink" title="Differential Privacy Mechanism"></a>Differential Privacy Mechanism</h3><p>client i transmits noisy version of its hyper-knowledge to the server：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031163231.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031163252.png"></p>
-<p><strong>Global Hyper-knowledge aggregation</strong></p>
-<p>给 local representation 加了 noise，对于 soft prediction 没有加噪声</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031163507.png"></p>
-<p><strong>Local training objective</strong></p>
-<p>data samples: $(x,y)\in \mathcal{D}_i$</p>
-<p>Loss function of client $i$:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031163815.png"></p>
+<p>​	而且真实情况下，most users 是相对小的数据集，真实的data在 FL中也是 non-i.i.d.</p>
+<p><strong>FetchSGD advantage</strong></p>
+<ul>
+<li><p>compression operator is linear. 小的数据集也不会造成困难，使用 N个数据点的单个client 执行一个步骤，等同于使用 N 个clients 在单个数据点上执行一个步骤。</p>
+</li>
+<li><p>non-i.i.d. 的问题可以通过随机选择 clients 来缓解 （FedAvg 加权）</p>
+</li>
+<li><p>在FedAvg中，clients 在参与之前必须下载整个 model，因为模型的每个 weight 都会在这一轮更新</p>
+</li>
+</ul>
+<p>​		local top-k and FetchSGD 每轮只更新一定数量的参数，而不参与的 clients 就可以保持当前的 model，这就减少了参与前下载的参数的数量</p>
+<p>​		因此，对于local top-k and FetchSGD，upload compression 比 download compression 更重要。</p>
+<ul>
+<li>FedAvg 是通过减少迭代的次数来实现 compression 的，因此只要放缩 learning rate，来匹配 FedAvg执行的迭代总数</li>
+</ul>
+<hr>
 <blockquote>
-<p> $B_i$ the number of samples<br> n is the number of classes<br> $| |_2$ denotes Euclidean norm<br> $Q(,T)$ soft target function with temperature T </p>
+<p>在non-federated setting 中，momentum 是很重要的，可以实现更好的性能</p>
+<p>在federated learning，momentum 是 clients 在local gradients上执行，这对于 clients 只参与一次或几次是没影响的。 </p>
+<p>而 central aggregator 可以执行 momentum 在聚合模型更新时，但是对于FedAvg 和 local top-k ，momentum 没有更好的效果，而 FetchSGD由于 compression operator linearity能够无缝衔接 momentum</p>
 </blockquote>
-<p>第一项是经验风险， predictions 和 ground-truth labels<br>后面两项是利用 hyper knowledge 的正则项 （邻近&#x2F;距离函数）</p>
-<p>第二项 force the local classifier to output similar soft predictions when given global data representations</p>
-<p>第三项 force the features extractor to output similar data representations when given local data samples</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031165103.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231031165243.png"></p>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><ol>
-<li>实现了无 public dataset  的知识蒸馏，原因是 server 在起初没有 model，直接聚合client knowledge，然后</li>
-<li>其实这里并没有global model，global model 是直接从 clients 做的权重的模型参数聚合（相当于直接把clients 的模型参数发送给了server）</li>
-<li>此类情况的 global model 是否应该存在，因为 server 只是做了知识的聚合，真正的更新发生在 clients</li>
-</ol>
+<h3 id="5-1-CIFAR-ResNet9"><a href="#5-1-CIFAR-ResNet9" class="headerlink" title="5.1 CIFAR(ResNet9)"></a>5.1 CIFAR(ResNet9)</h3><p>CIFAR10 和 CIFAR100 是 <strong>image classificaion datasets</strong></p>
+<p>如图所示是在 CIFAR10 和 CIFAR100 上的 test accuracy vs. compression</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5cf34113539da56a3b0313614610ebb3.png"></p>
+<h3 id="5-2-FEMNIST-ResNet101"><a href="#5-2-FEMNIST-ResNet101" class="headerlink" title="5.2 FEMNIST (ResNet101)"></a>5.2 FEMNIST (ResNet101)</h3><p>Federated EMNIST 是 an <strong>image classification datase</strong>t, 62个类别 （大小写字母加数字）</p>
+<p>在 low compression, FetchSGD outperforms the uncompressed baseline.</p>
+<p><strong>observation</strong>: local top-k 使用 global momentum 显著地 outperforms other methods on this task.</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a17aa75bd8212648a043189b362f9b38.png"></p>
+<h3 id="5-3-PersonaChat-GPT2"><a href="#5-3-PersonaChat-GPT2" class="headerlink" title="5.3 PersonaChat(GPT2)"></a>5.3 PersonaChat(GPT2)</h3><p>GPT2-small model, a transformer model, 用于 <strong>language modeling.</strong></p>
+<p>在 PersonaChat dataset(a chit-chat dataset)上预先训练 GPT2</p>
+<p>在 validation dataset 上测试了 perplexity (语言模型的标准度量，越低越好)</p>
+<p>右侧是 loss curves(negative log likelihood), 所有的 compression techniques 在早期都优于 uncompressed baseline，但是大多数都过早饱和，这时压缩引入的错误开始阻碍训练。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/4e5eb35debd8d27f8048ff53036d97d2.png"></p>
+<h2 id="6-Discussion"><a href="#6-Discussion" class="headerlink" title="6. Discussion"></a>6. Discussion</h2><p>FL 在 communication efficiency 方面引起了极大的关注</p>
+<ul>
+<li><p>之前的工作是为了减少 在达到收敛前所需的 total number of communication rounds，没有减少每一轮中所需要的通信量</p>
+</li>
+<li><p>本文引入 FetchSGD算法，在符合 FL 其他约束条件的情况下，减少了每轮的通信量</p>
+</li>
+<li><p>FetchSGD 很容易解决 non-i.i.d. data的问题，这对于其他的方法可能是很复杂的</p>
+</li>
+<li><p>FL 未来研究也是针对结合轮数的效率和每轮的效率进行优化。</p>
+</li>
+</ul>
 
                 
             </div>
@@ -496,7 +637,7 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/">http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/</a>
+                    <a href="http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/">http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,12 +675,8 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Personalization/">
-                                    <span class="chip bg-color">Personalization</span>
-                                </a>
-                            
-                                <a href="/tags/Knowledge-Distillation/">
-                                    <span class="chip bg-color">Knowledge Distillation</span>
+                                <a href="/tags/Federated-learning/">
+                                    <span class="chip bg-color">Federated learning</span>
                                 </a>
                             
                         </div>
@@ -582,64 +719,9 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2023/10/31/Fed-Hyper-Knowledge-Distillation/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Fed-Hyper-Knowledge-Distillation">
-                        
-                        <span class="card-title">Fed-Hyper-Knowledge-Distillation</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Paper-Reading/" class="post-category">
-                                    Paper Reading
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Personalization/">
-                        <span class="chip bg-color">Personalization</span>
-                    </a>
-                    
-                    <a href="/tags/Knowledge-Distillation/">
-                        <span class="chip bg-color">Knowledge Distillation</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2023/10/20/PFA-Personalization/">
                     <div class="card-image">
@@ -657,9 +739,9 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -681,6 +763,56 @@ Authors: [[Huancheng Chen]], [[Chianing Wang]], [[Haris Vikalo]">
                     
                     <a href="/tags/Privacy-Preserving/">
                         <span class="chip bg-color">Privacy Preserving</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/16/FetchSGD-Sketching/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="FetchSGD-Sketching">
+                        
+                        <span class="card-title">FetchSGD-Sketching</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper-Reading/" class="post-category">
+                                    Paper Reading
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Federated-learning/">
+                        <span class="chip bg-color">Federated learning</span>
                     </a>
                     
                 </div>
