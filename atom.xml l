@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  <subtitle>Welcome to lunanのblog</subtitle>
+  <link href="http://lunan0320.cn/atom.xml%20l" rel="self"/>
+  
+  <link href="http://lunan0320.cn/"/>
+  <updated>2023-10-31T13:04:50.682Z</updated>
+  <id>http://lunan0320.cn/</id>
+  
+  <author>
+    <name>lunan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fed-Hyper-Knowledge-Distillation</title>
+    <link href="http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/"/>
+    <id>http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/</id>
+    <published>2023-10-31T12:50:35.000Z</published>
+    <updated>2023-10-31T13:04:50.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Metadata&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tags: #Personalizaion #Knowledge-Distillation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Authors: [[Huancheng Chen]], [[Chianing Wang]],</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PFA-Personalization</title>
+    <link href="http://lunan0320.cn/2023/10/20/PFA-Personalization/"/>
+    <id>http://lunan0320.cn/2023/10/20/PFA-Personalization/</id>
+    <published>2023-10-20T13:21:40.000Z</published>
+    <updated>2023-10-31T13:23:59.053Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;PFA-Privacy-preserving-Federated-Adaptation-for-Effective-Model-Personalization&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
+    
+    <category term="Privacy Preserving" scheme="http://lunan0320.cn/tags/Privacy-Preserving/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FetchSGD-Sketching</title>
+    <link href="http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/"/>
+    <id>http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/</id>
+    <published>2022-11-16T03:34:40.000Z</published>
+    <updated>2023-10-31T13:17:58.419Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;FetchSGD-Communication-Efficient-Federated-Learning-with-Sketching&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Federated learning" scheme="http://lunan0320.cn/tags/Federated-learning/"/>
+    
+  </entry>
+  
+</feed>
