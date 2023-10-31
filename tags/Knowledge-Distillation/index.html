@@ -50,7 +50,7 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml%20l" title="null" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
 </head>
 
 
@@ -331,9 +331,12 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+        $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+
+
+    //   var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
+    // 
+    // $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
 </script>
 
@@ -354,10 +357,19 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/Federated-learning/" title="Federated learning: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Federated learning" style="background-color: #F9EBEA;">Federated learning
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Personalization/" title="Personalization: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Personalization" style="background-color: #F9EBEA;">Personalization
+                            data-tagname="Personalization" style="background-color: #F5EEF8;">Personalization
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -366,16 +378,7 @@
                 <a href="/tags/Knowledge-Distillation/" title="Knowledge Distillation: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="Knowledge Distillation" style="background-color: #F5EEF8;">Knowledge Distillation
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Federated-learning/" title="Federated learning: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Federated learning" style="background-color: #D5F5E3;">Federated learning
+                            data-tagname="Knowledge Distillation" style="background-color: #D5F5E3;">Knowledge Distillation
                         <span class="tag-length">1</span>
                     </span>
                 </a>
