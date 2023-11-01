@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-10-31T13:04:50.682Z</updated>
+  <updated>2023-11-01T15:47:53.465Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ensembled CTR Prediction via Knowledge Distillation</title>
+    <link href="http://lunan0320.cn/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/"/>
+    <id>http://lunan0320.cn/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/</id>
+    <published>2023-11-01T15:46:52.000Z</published>
+    <updated>2023-11-01T15:47:53.465Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;Ensembled-CTR-Prediction-via-Knowledge-Distillation&quot;&gt;&lt;a href=&quot;#Ensembled-CTR-Prediction-via-Knowledge-Distillation&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Distilling the Knowledge in a Neural Network</title>
+    <link href="http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/"/>
+    <id>http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/</id>
+    <published>2023-11-01T15:23:38.000Z</published>
+    <updated>2023-11-01T15:52:36.475Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Distilling-the-Knowledge-in-a-Neural-Network&quot;&gt;&lt;a href=&quot;#Distilling-the-Knowledge-in-a-Neural-Network&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+  </entry>
   
   <entry>
     <title>Fed-Hyper-Knowledge-Distillation</title>
@@ -48,6 +103,33 @@
   </entry>
   
   <entry>
+    <title>Hierachical Knowledge Transfer Federated Learning</title>
+    <link href="http://lunan0320.cn/2023/10/22/Hierachical-Knowledge-Transfer-Federated-Learning/"/>
+    <id>http://lunan0320.cn/2023/10/22/Hierachical-Knowledge-Transfer-Federated-Learning/</id>
+    <published>2023-10-22T15:43:58.000Z</published>
+    <updated>2023-11-01T15:52:52.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-Hierarchical-Knowledge-Transfer-Framework-for-Heterogeneous-Federated-Learning&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Transfer Learning" scheme="http://lunan0320.cn/tags/Transfer-Learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PFA-Personalization</title>
     <link href="http://lunan0320.cn/2023/10/20/PFA-Personalization/"/>
     <id>http://lunan0320.cn/2023/10/20/PFA-Personalization/</id>
@@ -71,6 +153,177 @@
     <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
     
     <category term="Privacy Preserving" scheme="http://lunan0320.cn/tags/Privacy-Preserving/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Parameter-Efficient Transfer Learning</title>
+    <link href="http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/"/>
+    <id>http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/</id>
+    <published>2023-10-17T15:41:31.000Z</published>
+    <updated>2023-11-01T15:43:10.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;Parameter-Efficient-Transfer-Learning-for-NLP&quot;&gt;&lt;a href=&quot;#Parameter-Efficient-Transfer-Learning-for-NLP&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
+    
+    <category term="Transfer Learning" scheme="http://lunan0320.cn/tags/Transfer-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SplitFed</title>
+    <link href="http://lunan0320.cn/2023/10/15/SplitFed/"/>
+    <id>http://lunan0320.cn/2023/10/15/SplitFed/</id>
+    <published>2023-10-15T15:30:38.000Z</published>
+    <updated>2023-11-01T15:33:17.069Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;SplitFed-When-Federated-Learning-Meets-Split-Learning&quot;&gt;&lt;a href=&quot;#SplitFed-When-Federated-Learning-Meets-Split-Learning&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Just Fine-tune twice</title>
+    <link href="http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/"/>
+    <id>http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/</id>
+    <published>2023-10-10T15:38:23.000Z</published>
+    <updated>2023-11-01T15:39:33.288Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;Just-Fine-tune-Twice-Selective-Differential-Privacy-for-Large-Language-Models&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+    <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
+    
+    <category term="Differential Privacy" scheme="http://lunan0320.cn/tags/Differential-Privacy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bert of Theseus</title>
+    <link href="http://lunan0320.cn/2023/10/05/Bert-of-Theseus/"/>
+    <id>http://lunan0320.cn/2023/10/05/Bert-of-Theseus/</id>
+    <published>2023-10-05T15:35:05.000Z</published>
+    <updated>2023-11-01T16:00:54.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;BERT-of-Theseus-Compressing-BERT-by-Progressive-Module-Replacing&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+    <category term="Bert" scheme="http://lunan0320.cn/tags/Bert/"/>
+    
+    <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SplitNN</title>
+    <link href="http://lunan0320.cn/2023/10/01/SplitNN/"/>
+    <id>http://lunan0320.cn/2023/10/01/SplitNN/</id>
+    <published>2023-10-01T15:33:38.000Z</published>
+    <updated>2023-11-01T15:34:38.522Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;SplitNN-driven-Vertical-Partitioning&quot;&gt;&lt;a href=&quot;#SplitNN-driven-Vertical-Partitioning&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
+    
+    <category term="Partition" scheme="http://lunan0320.cn/tags/Partition/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FedGEMS</title>
+    <link href="http://lunan0320.cn/2023/09/21/FedGEMS/"/>
+    <id>http://lunan0320.cn/2023/09/21/FedGEMS/</id>
+    <published>2023-09-21T15:48:06.000Z</published>
+    <updated>2023-11-01T15:54:18.517Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;FedGEMS-Federated-Learning-of-Larger-Server-Models-via-Selective-Knowledge-Fusion&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Knowledge Fusion" scheme="http://lunan0320.cn/tags/Knowledge-Fusion/"/>
     
   </entry>
   
