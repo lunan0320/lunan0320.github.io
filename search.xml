@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>DaFKD Domain-Aware Federated Knowledge Distillation</title>
+      <link href="/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/"/>
+      <url>/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/</url>
+      
+        <content type="html"><![CDATA[<h1 id="DaFKD-Domain-Aware-Federated-Knowledge-Distillation"><a href="#DaFKD-Domain-Aware-Federated-Knowledge-Distillation" class="headerlink" title="DaFKD: Domain-Aware Federated Knowledge Distillation"></a>DaFKD: Domain-Aware Federated Knowledge Distillation</h1><p>#Federated-Learning #GAN #Knowledge-Distillation #CVPR</p><h2 id="Metadata"><a href="#Metadata" class="headerlink" title="Metadata"></a>Metadata</h2><ul><li>Item Type: [[Article]]</li><li>Authors: [[Haozhao Wang]], [[Yichen Li]], [[Wenchao Xu]], [[Ruixuan Li]], [[Yufeng Zhan]], [[Zhigang Zeng]]</li><li>Date Added: [[2023-11-03]]</li><li>Topics: [[LLM+KD]]</li><li>PDF Attachments<ul><li><a href="zotero://open-pdf/library/items/RP3LYE35">Wang 等 - DaFKD Domain-Aware Federated Knowledge Distillati.pdf</a></li></ul></li></ul><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Federated Distillation (FD) has recently attracted increasing attention for its efficiency in aggregating multiple diverse local models trained from statistically heterogeneous data of distributed clients. Existing FD methods generally treat these models equally by merely computing the average of their output soft predictions for some given input distillation sample, which does not take the diversity across all local models into account, thus leading to degraded performance of the aggregated model, especially when some local models learn little knowledge about the sample. In this paper, we propose a new perspective that treats the local data in each client as a specific domain and design a novel domain knowledge aware federated distillation method, dubbed DaFKD, that can discern the importance of each model to the distillation sample, and thus is able to optimize the ensemble of soft predictions from diverse models. Specifically, we employ a domain discriminator for each client, which is trained to identify the correlation factor between the sample and the corresponding domain. Then, to facilitate the training of the domain discriminator while saving communication costs, we propose sharing its partial parameters with the classification model. Extensive experiments on various datasets and settings show that the proposed method can improve the model accuracy by up to 6.02% compared to state-of-the-art baselines.</p><h2 id="Zotero-links"><a href="#Zotero-links" class="headerlink" title="Zotero links"></a>Zotero links</h2><ul><li><a href="zotero://select/items/1_WIDGF6RP">Local library</a></li><li><a href="http://zotero.org/users/11178219/items/WIDGF6RP">Cloud library</a></li></ul><h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Federated Distillation (FD): aggregating multiple diverse data<br>Existing FD: treat these models <strong>equally</strong>, merely computing the <strong>average</strong> soft predictions.</p><p><em>fault</em>: does not take the <strong>diversity</strong> across all local models into account. (对 knowledge  的 average aggregation，没有考虑本地模型的多样性). —&gt; leading to the degrade performance of the aggregated model</p><p>Non-iid: –&gt; model parameters on different clients are optimized <strong>towards diverse directions</strong></p><p>FD(Federated Distillation) is proposed to tackle the non-iid problem, <strong>aggregating only the output soft predictions</strong>.</p><ul><li>model diversity </li><li>bring errors when some clients give wrong predictions</li></ul><p>Contributions:</p><ul><li>Domain knowledge aware federated distillation method (DaFKD)，根据 distillation sample and the training domain 的相关性来确定模型的重要性</li><li>Treats the local data in each client as a specific domain，识别每个模型对于蒸馏样本的重要性，优化来自不同模型的 ensemble of the  soft predictions，减小 wrong soft predictions 的影响</li><li><strong>Domain discriminator</strong> for each client, identify the <strong>correlation factor</strong> between the sample and the corresponding domain. （high importance &lt;– correlation factor is significant）<br>样本在被包含在 domain 中时，模型会做出更正确的选择</li></ul><h3 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h3><p>huge diverse of the parameters of local models across clients（不同客户的本地模型参数存在巨大差异），local models are optimized to different directions.</p><p><strong>Prior works：</strong></p><ul><li>Adding a regularization item in the local objective function such that the divergence of the local model is constrained by the global model. （局部目标函数添加正则化项，使得局部受到全局的约束）</li><li>reducing the variance of local gradient to align the diverse local update.（减少局部梯度的方差以对齐不同的局部更新）</li></ul><p><strong>Federated Distillation</strong></p><ul><li>Transfer the knowledge from multiple local models to the global model (将知识从多个局部模型转移到全局模型)</li><li>Aggregating multiple local models to combined models, and then distilling the combined models into one global model (先将clients的模型权重聚合为多个联合模型，然后对联合模型蒸馏，得到全局模型)<br>但是，上述方法都需要 public dataset</li><li>Data generated by the generative models （data-free way）<br>但是，上述方法直接 average soft predictions，没有考虑模型的多样性 model diversity，可能限制模型的性能。</li><li>本文考虑 domain knowledge，在 ensemble soft predictions 的时候考虑不同模型的重要性</li></ul><h3 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h3><p>利用 domain discriminator 识别每个 local model 的 importance</p><p>local training:</p><ol><li>private dataset</li><li>以对抗的方式生成 global data。</li></ol><p>共享 discriminator 的部分参数给 target classification model。</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104201434.png"></p><p><strong>Objective function:</strong></p><p>$L_k(w)$ is local loss of the $k-th$ client<br>$L_{CE}$ is the cross-entropy loss between the prediction and the ground truth labels.</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104201658.png"></p><p>当 sample 在 domain 内部的时候，能够有较高的概率做出正确的 prediction<br>量化 domain 和给定 sample 之间的相关性 correlation</p><p>对抗生成网络：</p><p>Discriminator 用来区分生成的数据是否是从目标数据集的分布中采样的</p><p>本文训练的 discriminator 用来计算局部数据集与蒸馏样本的相关性</p><p>为每个客户端 k 设定 personalized discriminator $\theta_k^d$<br>为每个 client 使用全局共享的 generator $\theta^g$</p><ol><li>客户端 k pulls the generator $\theta^g$ ，从分布 $p_z$ 中 sample noise，生成伪数据集 $\hat D_k$ </li><li>客户端 k 给 private dataset $D_k$ 标签 positive，给 pseudo dataset $\hat D_k$ 标签 negative</li><li>客户端 k 训练自己的 domain discriminator $\theta_k^d$ （判别器）</li></ol><p>训练 discriminator 的损失函数如下：</p><p>$f(\theta_k^d;x_i)$ 代表 $x_i$ 是真实数据的概率</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104203915.png"></p><p>在训练完 discriminator 之后， client 训练 generator $\theta_k^g$ ,最大化 loss function 如下：</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104204511.png"></p><p>在训练完 local generator $\theta_k^g$ 之后，server 收到参与方 clients 的 generator 来聚合得到一个新的 global generator $\theta^g$ </p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104204749.png"></p><p>Global perspective, adversarial loss function:</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104204957.png"></p><p>local generator 上传到 server 的时候可能会泄漏信息，</p><p>prior works</p><ul><li>generating feature maps instead of the original data</li><li>differential privacy</li></ul><p>This paper</p><ul><li>allowing the generator to output intermediate features</li></ul><h3 id="Domain-aware-Federated-Distillation"><a href="#Domain-aware-Federated-Distillation" class="headerlink" title="Domain-aware Federated Distillation"></a>Domain-aware Federated Distillation</h3><ol><li><p>Round t， client k 在本地训练 $w_t^k$ ，将 local model $w_t^k$  以及 domain discriminator $\theta_k^d$ 发送给 server</p></li><li><p>server 对 local models 平均聚合<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104205858.png"></p></li><li><p>server 使用 global generator $\theta^g$ 生成 pseudo dataset $\hat D^g$ 作为 distillation data</p></li><li><p>对于每个 distillation sample $x_i\in \hat D^g$ ，server 根据 domain discriminator $\theta_k^g$  计算每个 local model $w_t^k$ 的重要性 $\alpha_{k,i} &#x3D; f(\theta_k^{\theta};x_i)$ ,并 normalize probability</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104210355.png"></p><ol start="5"><li>server 讲 pseudo sample $x_i$ 输入给每个 local model $w_t^k$  和 average model $\hat w_{t+1}$ </li><li>server 使用 importance $\hat \alpha_{k,i}$  应用 ensemble knowledge distillation 来获取 global model $w_{t+1}$</li></ol><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104210746.png"></p><p>KL(·) is to compute the Kullback-Leibler divergence (KL-divergence)</p><p><strong>Discussion</strong></p><p>每个 client 都可以获取 global generator，当 noise seed 一致时候，可以在每个 client 生成共享的蒸馏数据集<br>为了保护隐私，每个client 可以直接上传 soft predictions weighted by importance to the server</p><h3 id="Partial-Parameters-Sharing"><a href="#Partial-Parameters-Sharing" class="headerlink" title="Partial Parameters Sharing"></a>Partial Parameters Sharing</h3><p>domain discriminator 是由 local dataset 训练得到，性能可能由于 local dataset 的size 过小而恶化</p><p>multi-task learning ，在不同任务之间共享 encoder 可以相互促进，因此共享 discriminator $\theta_k^d$  的部分参数给 classification model $w^k$ </p><p>共享层的好处是，discriminator 也上传到服务器的时候，可以降低通信成本</p><p>This paper 在两个模型中，共享 the front model layers （前面的层都是用来提取特征 extract features）</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104212025.png"></p><p>discriminator and classification model 以一种联合的方式训练：</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104212258.png"></p><p><strong>Algorithm</strong>：</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231104212732.png"></p><ul><li>每一轮都要训练生成器、判别器，并要同 local model 一起发送给 server ，一方面会导致每轮的通信量比较大，另一方面会导致隐私问题（没有对 local model 做保护）</li><li>给每个 client 的 local model 一个 importance，从判别器对 pseudo sample $x_i$ 的判定结果，是否类似某个 local domain 来赋值</li><li>server 本是没有模型的，是对所有的 local model parameters 聚合后的模型，作为 global model 来蒸馏</li><li>重要性可以由 server 计算（需要上传 discriminator），也可以由 client 计算（不需要上传 discriminator）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> CVPR </category>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Federated Learning </tag>
+            
+            <tag> Knowledge Distillation </tag>
+            
+            <tag> GAN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ensembled CTR Prediction via Knowledge Distillation</title>
       <link href="/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/"/>
       <url>/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/</url>
@@ -13,16 +44,18 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> ACM International Conference on Information </category>
+          
+          <category> 2020 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Knowledge Distillation </tag>
-            
             <tag> Federated Learning </tag>
+            
+            <tag> Knowledge Distillation </tag>
             
         </tags>
       
@@ -40,16 +73,18 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> NIPS </category>
+          
+          <category> 2014 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Knowledge Distillation </tag>
-            
             <tag> LLM </tag>
+            
+            <tag> Knowledge Distillation </tag>
             
         </tags>
       
@@ -67,16 +102,18 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> ICLR </category>
+          
+          <category> 2023 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Personalization </tag>
-            
             <tag> Knowledge Distillation </tag>
+            
+            <tag> Personalization </tag>
             
         </tags>
       
@@ -94,7 +131,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> INFOCOM </category>
+          
+          <category> 2023 </category>
           
       </categories>
       
@@ -121,7 +160,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> Proceedings of the Web Conference </category>
+          
+          <category> 2021 </category>
           
       </categories>
       
@@ -148,7 +189,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> PMLR </category>
+          
+          <category> 2019 </category>
           
       </categories>
       
@@ -175,16 +218,18 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> AAAI </category>
+          
+          <category> 2023 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Split Learning </tag>
-            
             <tag> Federated Learning </tag>
+            
+            <tag> Split Learning </tag>
             
         </tags>
       
@@ -202,7 +247,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> arXiv </category>
+          
+          <category> 2022 </category>
           
       </categories>
       
@@ -231,7 +278,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> arXiv </category>
+          
+          <category> 2020 </category>
           
       </categories>
       
@@ -260,7 +309,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> arXiv </category>
+          
+          <category> 2020 </category>
           
       </categories>
       
@@ -287,7 +338,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> ICLR </category>
+          
+          <category> 2022 </category>
           
       </categories>
       
@@ -314,7 +367,9 @@
       
       <categories>
           
-          <category> Paper Reading </category>
+          <category> PMLR </category>
+          
+          <category> 2020 </category>
           
       </categories>
       

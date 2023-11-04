@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-01T15:47:53.465Z</updated>
+  <updated>2023-11-04T13:56:39.860Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DaFKD Domain-Aware Federated Knowledge Distillation</title>
+    <link href="http://lunan0320.cn/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/"/>
+    <id>http://lunan0320.cn/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/</id>
+    <published>2023-11-04T13:48:28.000Z</published>
+    <updated>2023-11-04T13:56:39.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;DaFKD-Domain-Aware-Federated-Knowledge-Distillation&quot;&gt;&lt;a href=&quot;#DaFKD-Domain-Aware-Federated-Knowledge-Distillation&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CVPR" scheme="http://lunan0320.cn/categories/CVPR/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/CVPR/2023/"/>
+    
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="GAN" scheme="http://lunan0320.cn/tags/GAN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ensembled CTR Prediction via Knowledge Distillation</title>
     <link href="http://lunan0320.cn/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/"/>
     <id>http://lunan0320.cn/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/</id>
     <published>2023-11-01T15:46:52.000Z</published>
-    <updated>2023-11-01T15:47:53.465Z</updated>
+    <updated>2023-11-04T14:07:34.421Z</updated>
     
     
       
@@ -35,12 +66,14 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="ACM International Conference on Information" scheme="http://lunan0320.cn/categories/ACM-International-Conference-on-Information/"/>
     
+    <category term="2020" scheme="http://lunan0320.cn/categories/ACM-International-Conference-on-Information/2020/"/>
     
-    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
     
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
     
   </entry>
   
@@ -49,7 +82,7 @@
     <link href="http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/"/>
     <id>http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/</id>
     <published>2023-11-01T15:23:38.000Z</published>
-    <updated>2023-11-01T15:52:36.475Z</updated>
+    <updated>2023-11-04T13:56:31.665Z</updated>
     
     
       
@@ -62,12 +95,14 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="NIPS" scheme="http://lunan0320.cn/categories/NIPS/"/>
     
+    <category term="2014" scheme="http://lunan0320.cn/categories/NIPS/2014/"/>
     
-    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
     
     <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
     
   </entry>
   
@@ -76,7 +111,7 @@
     <link href="http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/"/>
     <id>http://lunan0320.cn/2023/10/31/Fed-Hyper-Knowledge-Distillation/</id>
     <published>2023-10-31T12:50:35.000Z</published>
-    <updated>2023-10-31T13:04:50.682Z</updated>
+    <updated>2023-11-04T13:59:26.152Z</updated>
     
     
       
@@ -93,12 +128,14 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="ICLR" scheme="http://lunan0320.cn/categories/ICLR/"/>
     
+    <category term="2023" scheme="http://lunan0320.cn/categories/ICLR/2023/"/>
     
-    <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
     
     <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
     
   </entry>
   
@@ -107,7 +144,7 @@
     <link href="http://lunan0320.cn/2023/10/22/Hierachical-Knowledge-Transfer-Federated-Learning/"/>
     <id>http://lunan0320.cn/2023/10/22/Hierachical-Knowledge-Transfer-Federated-Learning/</id>
     <published>2023-10-22T15:43:58.000Z</published>
-    <updated>2023-11-01T15:52:52.892Z</updated>
+    <updated>2023-11-04T14:01:31.218Z</updated>
     
     
       
@@ -120,7 +157,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="INFOCOM" scheme="http://lunan0320.cn/categories/INFOCOM/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/INFOCOM/2023/"/>
     
     
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
@@ -134,7 +173,7 @@
     <link href="http://lunan0320.cn/2023/10/20/PFA-Personalization/"/>
     <id>http://lunan0320.cn/2023/10/20/PFA-Personalization/</id>
     <published>2023-10-20T13:21:40.000Z</published>
-    <updated>2023-10-31T13:23:59.053Z</updated>
+    <updated>2023-11-04T14:03:39.065Z</updated>
     
     
       
@@ -147,7 +186,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="Proceedings of the Web Conference" scheme="http://lunan0320.cn/categories/Proceedings-of-the-Web-Conference/"/>
+    
+    <category term="2021" scheme="http://lunan0320.cn/categories/Proceedings-of-the-Web-Conference/2021/"/>
     
     
     <category term="Personalization" scheme="http://lunan0320.cn/tags/Personalization/"/>
@@ -161,7 +202,7 @@
     <link href="http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/"/>
     <id>http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/</id>
     <published>2023-10-17T15:41:31.000Z</published>
-    <updated>2023-11-01T15:43:10.451Z</updated>
+    <updated>2023-11-04T14:02:47.575Z</updated>
     
     
       
@@ -175,7 +216,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="PMLR" scheme="http://lunan0320.cn/categories/PMLR/"/>
+    
+    <category term="2019" scheme="http://lunan0320.cn/categories/PMLR/2019/"/>
     
     
     <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
@@ -189,7 +232,7 @@
     <link href="http://lunan0320.cn/2023/10/15/SplitFed/"/>
     <id>http://lunan0320.cn/2023/10/15/SplitFed/</id>
     <published>2023-10-15T15:30:38.000Z</published>
-    <updated>2023-11-01T15:33:17.069Z</updated>
+    <updated>2023-11-04T14:04:06.493Z</updated>
     
     
       
@@ -203,12 +246,14 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="AAAI" scheme="http://lunan0320.cn/categories/AAAI/"/>
     
+    <category term="2023" scheme="http://lunan0320.cn/categories/AAAI/2023/"/>
     
-    <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
     
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
     
   </entry>
   
@@ -217,7 +262,7 @@
     <link href="http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/"/>
     <id>http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/</id>
     <published>2023-10-10T15:38:23.000Z</published>
-    <updated>2023-11-01T15:39:33.288Z</updated>
+    <updated>2023-11-04T14:05:59.518Z</updated>
     
     
       
@@ -231,7 +276,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2022" scheme="http://lunan0320.cn/categories/arXiv/2022/"/>
     
     
     <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
@@ -247,7 +294,7 @@
     <link href="http://lunan0320.cn/2023/10/05/Bert-of-Theseus/"/>
     <id>http://lunan0320.cn/2023/10/05/Bert-of-Theseus/</id>
     <published>2023-10-05T15:35:05.000Z</published>
-    <updated>2023-11-01T16:00:54.666Z</updated>
+    <updated>2023-11-04T14:07:45.761Z</updated>
     
     
       
@@ -261,7 +308,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2020" scheme="http://lunan0320.cn/categories/arXiv/2020/"/>
     
     
     <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
@@ -277,7 +326,7 @@
     <link href="http://lunan0320.cn/2023/10/01/SplitNN/"/>
     <id>http://lunan0320.cn/2023/10/01/SplitNN/</id>
     <published>2023-10-01T15:33:38.000Z</published>
-    <updated>2023-11-01T15:34:38.522Z</updated>
+    <updated>2023-11-04T14:05:43.657Z</updated>
     
     
       
@@ -291,7 +340,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2020" scheme="http://lunan0320.cn/categories/arXiv/2020/"/>
     
     
     <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
@@ -305,7 +356,7 @@
     <link href="http://lunan0320.cn/2023/09/21/FedGEMS/"/>
     <id>http://lunan0320.cn/2023/09/21/FedGEMS/</id>
     <published>2023-09-21T15:48:06.000Z</published>
-    <updated>2023-11-01T15:54:18.517Z</updated>
+    <updated>2023-11-04T13:59:07.061Z</updated>
     
     
       
@@ -318,7 +369,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="ICLR" scheme="http://lunan0320.cn/categories/ICLR/"/>
+    
+    <category term="2022" scheme="http://lunan0320.cn/categories/ICLR/2022/"/>
     
     
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
@@ -332,7 +385,7 @@
     <link href="http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/"/>
     <id>http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/</id>
     <published>2022-11-16T03:34:40.000Z</published>
-    <updated>2023-10-31T13:17:58.419Z</updated>
+    <updated>2023-11-04T14:01:57.039Z</updated>
     
     
       
@@ -345,7 +398,9 @@
     
     
     
-    <category term="Paper Reading" scheme="http://lunan0320.cn/categories/Paper-Reading/"/>
+    <category term="PMLR" scheme="http://lunan0320.cn/categories/PMLR/"/>
+    
+    <category term="2020" scheme="http://lunan0320.cn/categories/PMLR/2020/"/>
     
     
     <category term="Federated learning" scheme="http://lunan0320.cn/tags/Federated-learning/"/>

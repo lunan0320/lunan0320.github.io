@@ -360,21 +360,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">12</a></span>
+    <span class="count"><a href="/">13</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">21</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">13</a></span>
+    <span class="count"><a href="/tags">14</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -390,21 +390,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">12</a></span>
+    <span class="count"><a href="/">13</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">21</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">13</a></span>
+    <span class="count"><a href="/tags">14</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -540,7 +540,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [1,0,0,0,0,0,0,0,0,0,1,8,2],
+                data: [1,0,0,0,0,0,0,0,0,0,1,8,3],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -582,7 +582,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Paper Reading","value":12}],
+                data: [{"name":"arXiv","value":3},{"name":"CVPR","value":1},{"name":"ACM International Conference on Information","value":1},{"name":"NIPS","value":1},{"name":"2020","value":2},{"name":"ICLR","value":2},{"name":"2023","value":1},{"name":"PMLR","value":2},{"name":"INFOCOM","value":1},{"name":"2020","value":1},{"name":"2022","value":1},{"name":"Proceedings of the Web Conference","value":1},{"name":"AAAI","value":1},{"name":"2014","value":1},{"name":"2023","value":1},{"name":"2022","value":1},{"name":"2020","value":1},{"name":"2023","value":1},{"name":"2021","value":1},{"name":"2023","value":1},{"name":"2019","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -606,7 +606,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Federated Learning","Knowledge Distillation","LLM","Fine Tune","Personalization","Split Learning","Transfer Learning","Federated learning","Privacy Preserving","Partition"]
+                data: ["Federated Learning","Knowledge Distillation","LLM","Fine Tune","Personalization","Transfer Learning","Split Learning","Bert","GAN","Knowledge Fusion"]
             }
         ],
         yAxis: [
@@ -619,7 +619,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [4,3,3,3,2,2,2,1,1,1],
+                data: [5,4,3,3,2,2,2,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -789,44 +789,8 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/Personalization/">
-                <span class="chip center-align waves-effect waves-light chip-default">Personalization</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Knowledge-Distillation/">
-                <span class="chip center-align waves-effect waves-light chip-default">Knowledge Distillation</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Federated-learning/">
-                <span class="chip center-align waves-effect waves-light chip-default">Federated learning</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Privacy-Preserving/">
-                <span class="chip center-align waves-effect waves-light chip-default">Privacy Preserving</span>
-            </a>
-            
-            
-            
             <a href="/tags/LLM/">
                 <span class="chip center-align waves-effect waves-light chip-default">LLM</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Split-Learning/">
-                <span class="chip center-align waves-effect waves-light chip-default">Split Learning</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Partition/">
-                <span class="chip center-align waves-effect waves-light chip-default">Partition</span>
             </a>
             
             
@@ -849,8 +813,38 @@
             
             
             
+            <a href="/tags/Knowledge-Distillation/">
+                <span class="chip center-align waves-effect waves-light chip-default">Knowledge Distillation</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GAN/">
+                <span class="chip center-align waves-effect waves-light chip-default">GAN</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Personalization/">
+                <span class="chip center-align waves-effect waves-light chip-default">Personalization</span>
+            </a>
+            
+            
+            
             <a href="/tags/Knowledge-Fusion/">
                 <span class="chip center-align waves-effect waves-light chip-default">Knowledge Fusion</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Federated-learning/">
+                <span class="chip center-align waves-effect waves-light chip-default">Federated learning</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Transfer-Learning/">
+                <span class="chip center-align waves-effect waves-light chip-default">Transfer Learning</span>
             </a>
             
             
@@ -861,8 +855,20 @@
             
             
             
-            <a href="/tags/Transfer-Learning/">
-                <span class="chip center-align waves-effect waves-light chip-default">Transfer Learning</span>
+            <a href="/tags/Privacy-Preserving/">
+                <span class="chip center-align waves-effect waves-light chip-default">Privacy Preserving</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Split-Learning/">
+                <span class="chip center-align waves-effect waves-light chip-default">Split Learning</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Partition/">
+                <span class="chip center-align waves-effect waves-light chip-default">Partition</span>
             </a>
             
             
@@ -899,7 +905,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.1k</span>
+                        class="white-color">12.7k</span>
             
             
             
