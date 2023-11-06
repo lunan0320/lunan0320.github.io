@@ -4,17 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Parameter-Efficient Transfer Learning, null">
-    <meta name="description" content="
-Parameter-Efficient Transfer Learning for NLP
+    <meta name="keywords" content="Offsite-Tuning Transfer Learning without Full Model, null">
+    <meta name="description" content="Offsite-Tuning: Transfer Learning without Full Model#LLM #Fine-tune 
 Metadata
-
-
-Tags: #TransferLearning #Adapter
-
-
-
-Authors: [[Neil Houlsby]],">
+Authors: [[Guangxuan Xiao]], [[Ji Lin]], [">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +19,7 @@ Authors: [[Neil Houlsby]],">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Parameter-Efficient Transfer Learning | null</title>
+    <title>Offsite-Tuning Transfer Learning without Full Model | null</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -298,12 +291,12 @@ Authors: [[Neil Houlsby]],">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/39.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Parameter-Efficient Transfer Learning</h1>
+                    <h1 class="description center-align post-title">Offsite-Tuning Transfer Learning without Full Model</h1>
                 </div>
             </div>
         </div>
@@ -327,12 +320,16 @@ Authors: [[Neil Houlsby]],">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Fine-Tune/">
-                                <span class="chip bg-color">Fine Tune</span>
+                            <a href="/tags/LLM/">
+                                <span class="chip bg-color">LLM</span>
                             </a>
                         
                             <a href="/tags/Transfer-Learning/">
                                 <span class="chip bg-color">Transfer Learning</span>
+                            </a>
+                        
+                            <a href="/tags/Fine-tuning/">
+                                <span class="chip bg-color">Fine-tuning</span>
                             </a>
                         
                     </div>
@@ -343,12 +340,12 @@ Authors: [[Neil Houlsby]],">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/PMLR/" class="post-category">
-                                PMLR
+                            <a href="/categories/arXiv/" class="post-category">
+                                arXiv
                             </a>
                         
-                            <a href="/categories/PMLR/2019/" class="post-category">
-                                2019
+                            <a href="/categories/arXiv/2023/" class="post-category">
+                                2023
                             </a>
                         
                     </div>
@@ -360,7 +357,7 @@ Authors: [[Neil Houlsby]],">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-17
+                    2023-11-06
                 </div>
                 
 
@@ -369,7 +366,7 @@ Authors: [[Neil Houlsby]],">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    186
+                    1.2k
                 </div>
                 
 
@@ -386,61 +383,90 @@ Authors: [[Neil Houlsby]],">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li><h1 id="Parameter-Efficient-Transfer-Learning-for-NLP"><a href="#Parameter-Efficient-Transfer-Learning-for-NLP" class="headerlink" title="Parameter-Efficient Transfer Learning for NLP"></a>Parameter-Efficient Transfer Learning for NLP</h1></li>
-<li><p>Metadata</p>
-<ul>
-<li><ul>
-<li>Tags: #TransferLearning #Adapter</li>
-</ul>
-</li>
-<li><ul>
-<li>Authors: [[Neil Houlsby]], [[Andrei Giurgiu]], [[Stanisław Jastrzebski]], [[Bruna Morrone]]</li>
-</ul>
-</li>
-</ul>
-</li>
-<li></li>
-<li><p>笔记</p>
-</li>
-<li><p>Zotero links</p>
-<ul>
-<li><ul>
-<li><a href="zotero://select/items/1_93SEZHDX">Local library</a></li>
-</ul>
-</li>
-<li><ul>
-<li>PDF Attachments</li>
-</ul>
-</li>
-<li><p><a href="zotero://open-pdf/library/items/ILC8G4JS">Houlsby 等 - Parameter-Efficient Transfer Learning for NLP.pdf</a></p>
-</li>
-<li></li>
-<li><ul>
-<li>Cite key: houlsbyParameterEfficientTransferLearning</li>
+                <h1 id="Offsite-Tuning-Transfer-Learning-without-Full-Model"><a href="#Offsite-Tuning-Transfer-Learning-without-Full-Model" class="headerlink" title="Offsite-Tuning: Transfer Learning without Full Model"></a>Offsite-Tuning: Transfer Learning without Full Model</h1><p>#LLM #Fine-tune </p>
+<h2 id="Metadata"><a href="#Metadata" class="headerlink" title="Metadata"></a>Metadata</h2><ul>
+<li>Authors: [[Guangxuan Xiao]], [[Ji Lin]], [[Song Han]]</li>
+<li>Date: [[2023-02-09]]</li>
+<li>Date Added: [[2023-11-05]]</li>
+<li>URL: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/2302.04870">http://arxiv.org/abs/2302.04870</a></li>
+<li>Topics: [[FL+LLM]]</li>
+<li>Tags: #Computer-Science—Computation-and-Language, #Computer-Science—Computer-Vision-and-Pattern-Recognition, #Computer-Science—Machine-Learning, #zotero, #literature-notes, #reference</li>
+<li>PDF Attachments<ul>
+<li><a href="zotero://open-pdf/library/items/78VPET5E">Xiao et al_2023_Offsite-Tuning.pdf</a></li>
 </ul>
 </li>
 </ul>
-</li>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Transfer learning is important for foundation models to adapt to downstream tasks. However, many foundation models are proprietary, so users must share their data with model owners to fine-tune the models, which is costly and raise privacy concerns. Moreover, fine-tuning large foundation models is computation-intensive and impractical for most downstream users. In this paper, we propose Offsite-Tuning, a privacy-preserving and efficient transfer learning framework that can adapt billion-parameter foundation models to downstream data without access to the full model. In offsite-tuning, the model owner sends a light-weight adapter and a lossy compressed emulator to the data owner, who then fine-tunes the adapter on the downstream data with the emulator’s assistance. The fine-tuned adapter is then returned to the model owner, who plugs it into the full model to create an adapted foundation model. Offsite-tuning preserves both parties’ privacy and is computationally more efficient than the existing fine-tuning methods that require access to the full model weights. We demonstrate the effectiveness of offsite-tuning on various large language and vision foundation models. Offsite-tuning can achieve comparable accuracy as full model fine-tuning while being privacy-preserving and efficient, achieving 6.5x speedup and 5.6x memory reduction. Code is available at <a target="_blank" rel="noopener" href="https://github.com/mit-han-lab/offsite-tuning">https://github.com/mit-han-lab/offsite-tuning</a>.</p>
+<h2 id="Zotero-links"><a href="#Zotero-links" class="headerlink" title="Zotero links"></a>Zotero links</h2><ul>
+<li><a href="zotero://select/items/1_BMJ6IKVG">Local library</a></li>
+<li><a target="_blank" rel="noopener" href="http://zotero.org/users/11178219/items/BMJ6IKVG">Cloud library</a></li>
 </ul>
-<h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><p>fine-tuning is parameter inefficient</p>
-<p>Propose：transfer with adapter modules，a compact and extensible model;<br>    only a few trainable parameters per task</p>
-<p>Transfer learning in NLP:</p>
-<ul>
-<li>feature-based transfer<br>-pre-training real-valued embeddings vectors. The embeddings are then fed to custom downstream models</li>
-<li>fine-tuning (better performance)<br>-copying the weights from a pre-trained network and tuning them on the downstream task.</li>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>Transfer learning for downstream tasks.</p>
+<h3 id="Fine-tuning-drawbacks"><a href="#Fine-tuning-drawbacks" class="headerlink" title="Fine-tuning drawbacks:"></a>Fine-tuning drawbacks:</h3><ol>
+<li>models are <strong>proprietary</strong> （所有权）users must share their data with model owners to fine-tune the models (costly and raise privacy concerns), trained weights are usually proprietary and not made public</li>
+<li>fine-tuning large foundation models is <strong>computation-intensive</strong> and <strong>impractical</strong> for downstream user. The demanding hardware requirement has made it impossible for most end users to perform transfer learning.</li>
+</ol>
+<h3 id="Offsite-Tuning"><a href="#Offsite-Tuning" class="headerlink" title="Offsite-Tuning"></a>Offsite-Tuning</h3><ul>
+<li>privacy-preserving</li>
+<li>efficient transfer learning</li>
+<li>without access to the full model weights</li>
 </ul>
-<p>Adapters:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106153433.png"></p>
+<p><em>model owner:</em></p>
+<ol>
+<li>send a lightweight <strong>adapter</strong> </li>
+<li>send a lossy compressed <strong>emulator</strong></li>
+</ol>
+<p><em>data owner:</em></p>
+<ol>
+<li><strong>fine-tunes</strong> the adapter on the downstream data with the emulator’s assistance.</li>
+<li>return the fine-tuned adapter to the model owner</li>
+</ol>
+<p><em>model owner:</em><br>plugs it into the full model —&gt; an adapted foundation model</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106153757.png"></p>
 <blockquote>
-<p>added between layers<br>   injecting new layers into the original network. The weights of the original network are untouched,</p>
+<p><strong>Adapte</strong>r: encoding task-specific knowledge<br><strong>Emulator</strong>: mimics the behavior of the rest of the full model and provides approximate gradients for fine-tuning the adapters</p>
 </blockquote>
-<p>Comparasion:</p>
-<ul>
-<li>Fine-tuning, the new top-layer and the original weights are co-trained</li>
-<li>Adapter-tuning, the parameters of the original network are frozen and therefore may be shared by many tasks.</li>
+<h3 id="Parameter-Efficient-Fine-tuning"><a href="#Parameter-Efficient-Fine-tuning" class="headerlink" title="Parameter-Efficient Fine-tuning"></a>Parameter-Efficient Fine-tuning</h3><p>updating or adding only a small number of parameters</p>
+<p><strong>Adapter-tuning</strong><br>inserts small task-specific neural networks into transformer layers</p>
+<p><strong>Prefix-tuning</strong><br>为输入序列预置特定任务的可调前缀向量</p>
+<p><strong>LoRA</strong><br>将特定任务的权重更新分解为可训练的低秩向量</p>
+<p><strong>BitFit</strong><br>更新模型的偏置向量是非常有用的，因为它们只需要为每个下游任务存储和加载少量参数，而基础模型的大部分参数可以共享。</p>
+<p>drawbacks of PEFT: </p>
+<blockquote>
+<p>requires the knowledge of the entire model weights, compromise either data or model owners’ privacy<br>resource-intensive</p>
+</blockquote>
+<p><strong>Federated Learning with LLM</strong></p>
+<ol>
+<li>does not preserve the model privacy</li>
+<li>users can perform training on the whole model weights, which is hardly feasible for large foundation models. 用户可以对整个模型的权重进行训练，但这对大型基础模型来说几乎不可行。</li>
+</ol>
+<h3 id="Problem-Definition"><a href="#Problem-Definition" class="headerlink" title="Problem Definition"></a>Problem Definition</h3><p>Foundation model: $M_{\Theta}$<br>Downstream datasets fine-tuning:  $\Delta &#x3D; argmin L(\Theta + \delta, D)$<br>—&gt; $M_{\Theta} -&gt; M_{\Theta+\Delta}$<br>Emulator $M^{<em>}$ is (significantly) smaller and weaker than $M_{\Theta}$<br>Data owners optimize the emulator on the dataset, yielding $M^{</em>}<em>{\Theta*+\Delta*}$<br>Model owner plugs the trained weights $\Delta *$ to get $M</em>{\Theta+\Delta*}$</p>
+<h3 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h3><ul>
+<li>Zero-shot performance<br>-&gt; directly evaluated on downstream tasks without fine-tuning (i.e., the performance of $M_{\Theta}$).</li>
+<li>Emulator performance<br>-&gt;performance of the small substitute model when fine-tuned on the downstream datasets (i.e., the performance of $M^{<em>}_{\Theta</em> + \Delta *}$ )</li>
+<li>Plug-in performance<br>-&gt;performance of the pre-trained foundation model with plugged-in trained weights from the substitute model (i.e.,$M_{\Theta + \Delta *}$ ).</li>
+<li>Full fine-tuning performance<br>-&gt;directly fine-tune the foundation model on downstream datasets (i.e., $M_{\Theta + \Delta }$) without considering privacy.</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231013104511.png"></p>
-<p>Left: We add the adapter module twice to each Transformer layer<br>Right: The adapter consists of a bottleneck which contains few parameters relative to the attention and feedforward layers in the original model.</p>
+<h3 id="Offsite-Tuning-1"><a href="#Offsite-Tuning-1" class="headerlink" title="Offsite-Tuning"></a>Offsite-Tuning</h3><p>将 foundation model $M$ 划分为拼接的两部分 $M&#x3D;[\mathcal{A},\epsilon]$</p>
+<blockquote>
+<ol>
+<li>a small, trainable adapter $\mathcal{A}$ for downstream adaptation</li>
+<li>remaining portion $\epsilon$  , is to be kept frozen</li>
+</ol>
+</blockquote>
+<p>对 the frozen component 压缩，得到 emulator $\epsilon *$<br>提供给 downstream users the adapter and emulator $[\mathcal{A},\epsilon *]$<br>通过更新 $\mathcal{A}$ 来进行 fine-tune，得到 $\mathcal{A}’$ ，返回给 model owner<br>插入到原始的模型中，$M’ &#x3D; [\mathcal{A}’,\epsilon]$<br>data owner 的 $[\mathcal{A},\epsilon *]$ 是有损压缩，性能较低，不会破坏 model owner 的模型完整性。</p>
+<h3 id="Adapter-Selection"><a href="#Adapter-Selection" class="headerlink" title="Adapter Selection"></a>Adapter Selection</h3><p>select a small subset of the foundation model as the adapter, which can be trained on various downstream datasets.<br>只有一个模型的子集被更新，适配器必须能通用于不同的下游任务。<br>include both shallow and deep layers in the adapter<br>$M &#x3D; \mathcal{A_1}\cdot \epsilon \cdot \mathcal{A_2}$<br>比直接在最后几层作为 adapter 效果要好，$M &#x3D; \epsilon \cdot \mathcal{A}$</p>
+<h3 id="Emulator-Compression"><a href="#Emulator-Compression" class="headerlink" title="Emulator Compression"></a>Emulator Compression</h3><p>Emulator:  provide the rough gradient directions to update the adapters while remaining similar to the original frozen component,提供粗略的梯度方向，以更新适配器，同时保持与原始冻结组件的相似性<br>精度不能太高，可能会泄漏原始模型的信息</p>
+<p><strong>layer drop-based</strong> compression method<br>we uniformly drop a subset of layers from the frozen component, E, and use the remaining layers as the emulator, $\epsilon *$ 从冻结组件 $\epsilon$ 中均匀地移除一个子集层，并将剩余的层作为 emulator (取emulator 的最前面和最后面的部分效果好)</p>
+<p>进一步 apply <strong>knowledge distillation</strong> to the layer-dropped emulator，distillation process is performed using mean squared error (MSE)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106170346.png"></p>
+<p>$x_i$ 是第 i 个输入样本经过前面的层 $\mathcal{A_1}$ 得到的 hidden representation</p>
+<h4 id="Limitation"><a href="#Limitation" class="headerlink" title="Limitation"></a>Limitation</h4><ul>
+<li>emulator remains huge for large models</li>
+<li>compute-intensive distillation techniques may be cost-prohibitive</li>
+<li>yet demonstrate that our method does not inadvertently result in model and data information leakage.</li>
+</ul>
 
                 
             </div>
@@ -467,7 +493,7 @@ Authors: [[Neil Houlsby]],">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/">http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/</a>
+                    <a href="http://lunan0320.cn/2023/11/06/Offsite-Tuning-Transfer-Learning-without-Full-Model/">http://lunan0320.cn/2023/11/06/Offsite-Tuning-Transfer-Learning-without-Full-Model/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -505,12 +531,16 @@ Authors: [[Neil Houlsby]],">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Fine-Tune/">
-                                    <span class="chip bg-color">Fine Tune</span>
+                                <a href="/tags/LLM/">
+                                    <span class="chip bg-color">LLM</span>
                                 </a>
                             
                                 <a href="/tags/Transfer-Learning/">
                                     <span class="chip bg-color">Transfer Learning</span>
+                                </a>
+                            
+                                <a href="/tags/Fine-tuning/">
+                                    <span class="chip bg-color">Fine-tuning</span>
                                 </a>
                             
                         </div>
@@ -553,17 +583,17 @@ Authors: [[Neil Houlsby]],">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/20/PFA-Personalization/">
+                <a href="/2023/11/06/Offsite-Tuning-Transfer-Learning-without-Full-Model/">
                     <div class="card-image">
                         
+                        <img src="/medias/featureimages/39.jpg" class="responsive-img" alt="Offsite-Tuning Transfer Learning without Full Model">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="PFA-Personalization">
-                        
-                        <span class="card-title">PFA-Personalization</span>
+                        <span class="card-title">Offsite-Tuning Transfer Learning without Full Model</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -573,34 +603,39 @@ Authors: [[Neil Houlsby]],">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Proceedings-of-the-Web-Conference/" class="post-category">
-                                    Proceedings of the Web Conference
+                            <a href="/categories/arXiv/" class="post-category">
+                                    arXiv
                                 </a>
                             
-                            <a href="/categories/Proceedings-of-the-Web-Conference/2021/" class="post-category">
-                                    2021
+                            <a href="/categories/arXiv/2023/" class="post-category">
+                                    2023
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Personalization/">
-                        <span class="chip bg-color">Personalization</span>
+                    <a href="/tags/LLM/">
+                        <span class="chip bg-color">LLM</span>
                     </a>
                     
-                    <a href="/tags/Privacy-Preserving/">
-                        <span class="chip bg-color">Privacy Preserving</span>
+                    <a href="/tags/Transfer-Learning/">
+                        <span class="chip bg-color">Transfer Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Fine-tuning/">
+                        <span class="chip bg-color">Fine-tuning</span>
                     </a>
                     
                 </div>
@@ -614,13 +649,13 @@ Authors: [[Neil Houlsby]],">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/15/SplitFed/">
+                <a href="/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SplitFed">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="DaFKD Domain-Aware Federated Knowledge Distillation">
                         
-                        <span class="card-title">SplitFed</span>
+                        <span class="card-title">DaFKD Domain-Aware Federated Knowledge Distillation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -631,17 +666,17 @@ Authors: [[Neil Houlsby]],">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/AAAI/" class="post-category">
-                                    AAAI
+                            <a href="/categories/CVPR/" class="post-category">
+                                    CVPR
                                 </a>
                             
-                            <a href="/categories/AAAI/2023/" class="post-category">
+                            <a href="/categories/CVPR/2023/" class="post-category">
                                     2023
                                 </a>
                             
@@ -656,8 +691,12 @@ Authors: [[Neil Houlsby]],">
                         <span class="chip bg-color">Federated Learning</span>
                     </a>
                     
-                    <a href="/tags/Split-Learning/">
-                        <span class="chip bg-color">Split Learning</span>
+                    <a href="/tags/Knowledge-Distillation/">
+                        <span class="chip bg-color">Knowledge Distillation</span>
+                    </a>
+                    
+                    <a href="/tags/GAN/">
+                        <span class="chip bg-color">GAN</span>
                     </a>
                     
                 </div>

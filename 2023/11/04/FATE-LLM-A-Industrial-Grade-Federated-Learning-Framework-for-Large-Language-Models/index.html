@@ -4,17 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Parameter-Efficient Transfer Learning, null">
+    <meta name="keywords" content="FATE-LLM A Industrial Grade Federated Learning Framework for Large Language Models, null">
     <meta name="description" content="
-Parameter-Efficient Transfer Learning for NLP
+FATE-LLM: A Industrial Grade Federated Learning Framework for Large Language Models
+
+#LLM #Survey 
+
 Metadata
 
 
-Tags: #TransferLearning #Adapter
-
-
-
-Authors: [[Neil Houlsby]],">
+Authors:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +25,7 @@ Authors: [[Neil Houlsby]],">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Parameter-Efficient Transfer Learning | null</title>
+    <title>FATE-LLM A Industrial Grade Federated Learning Framework for Large Language Models | null</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -298,12 +297,12 @@ Authors: [[Neil Houlsby]],">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Parameter-Efficient Transfer Learning</h1>
+                    <h1 class="description center-align post-title">FATE-LLM A Industrial Grade Federated Learning Framework for Large Language Models</h1>
                 </div>
             </div>
         </div>
@@ -327,12 +326,16 @@ Authors: [[Neil Houlsby]],">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Fine-Tune/">
-                                <span class="chip bg-color">Fine Tune</span>
+                            <a href="/tags/LLM/">
+                                <span class="chip bg-color">LLM</span>
                             </a>
                         
-                            <a href="/tags/Transfer-Learning/">
-                                <span class="chip bg-color">Transfer Learning</span>
+                            <a href="/tags/Federated-Learning/">
+                                <span class="chip bg-color">Federated Learning</span>
+                            </a>
+                        
+                            <a href="/tags/FATE/">
+                                <span class="chip bg-color">FATE</span>
                             </a>
                         
                     </div>
@@ -343,12 +346,12 @@ Authors: [[Neil Houlsby]],">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/PMLR/" class="post-category">
-                                PMLR
+                            <a href="/categories/arXiv/" class="post-category">
+                                arXiv
                             </a>
                         
-                            <a href="/categories/PMLR/2019/" class="post-category">
-                                2019
+                            <a href="/categories/arXiv/2023/" class="post-category">
+                                2023
                             </a>
                         
                     </div>
@@ -360,7 +363,7 @@ Authors: [[Neil Houlsby]],">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-17
+                    2023-11-04
                 </div>
                 
 
@@ -369,7 +372,7 @@ Authors: [[Neil Houlsby]],">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    186
+                    555
                 </div>
                 
 
@@ -387,60 +390,98 @@ Authors: [[Neil Houlsby]],">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li><h1 id="Parameter-Efficient-Transfer-Learning-for-NLP"><a href="#Parameter-Efficient-Transfer-Learning-for-NLP" class="headerlink" title="Parameter-Efficient Transfer Learning for NLP"></a>Parameter-Efficient Transfer Learning for NLP</h1></li>
+<li><h1 id="FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models"><a href="#FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models" class="headerlink" title="FATE-LLM: A Industrial Grade Federated Learning Framework for Large Language Models"></a>FATE-LLM: A Industrial Grade Federated Learning Framework for Large Language Models</h1></li>
+</ul>
+<p>#LLM #Survey </p>
+<ul>
 <li><p>Metadata</p>
 <ul>
 <li><ul>
-<li>Tags: #TransferLearning #Adapter</li>
-</ul>
-</li>
-<li><ul>
-<li>Authors: [[Neil Houlsby]], [[Andrei Giurgiu]], [[Stanisław Jastrzebski]], [[Bruna Morrone]]</li>
+<li>Authors: [[Tao Fan]], [[Yan Kang]], [[Guoqiang Ma]], [[Weijing Chen]], [[Wenbin Wei]], [[Lixin Fan]], [[Qiang Yang]]</li>
 </ul>
 </li>
 </ul>
 </li>
-<li></li>
-<li><p>笔记</p>
-</li>
-<li><p>Zotero links</p>
+<li><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2></li>
+</ul>
+<p>Large Language Models (LLMs), such as ChatGPT, LLaMA, GLM, and PaLM, have exhibited remarkable performances across various tasks in recent years. However, LLMs face two main challenges in real-world applications. One challenge is that training LLMs consumes vast computing resources, preventing LLMs from being adopted by small and medium-sized enterprises with limited computing resources. Another is that training LLM requires a large amount of high-quality data, which are often scattered among enterprises. To address these challenges, we propose FATE-LLM, an industrial-grade federated learning framework for large language models. FATE-LLM (1) facilitates federated learning for large language models (coined FedLLM); (2) promotes efficient training of FedLLM using parameter-efficient fine-tuning methods; (3) protects the intellectual property of LLMs; (4) preserves data privacy during training and inference through privacy-preserving mechanisms. We release the code of FATE-LLM at <a target="_blank" rel="noopener" href="https://github.com/FederatedAI/FATE-LLM">https://github.com/FederatedAI/FATE-LLM</a> to facilitate the research of FedLLM and enable a broad range of industrial applications.</p>
 <ul>
+<li>笔记</li>
+<li>Zotero links<ul>
 <li><ul>
-<li><a href="zotero://select/items/1_93SEZHDX">Local library</a></li>
+<li><a href="zotero://select/items/1_VDFBY8QG">Local library</a></li>
 </ul>
 </li>
 <li><ul>
 <li>PDF Attachments</li>
 </ul>
 </li>
-<li><p><a href="zotero://open-pdf/library/items/ILC8G4JS">Houlsby 等 - Parameter-Efficient Transfer Learning for NLP.pdf</a></p>
-</li>
-<li></li>
-<li><ul>
-<li>Cite key: houlsbyParameterEfficientTransferLearning</li>
-</ul>
+<li><p><a href="zotero://open-pdf/library/items/VVPFU353">2023_FATE-LLMFan_.pdf</a></p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><p>fine-tuning is parameter inefficient</p>
-<p>Propose：transfer with adapter modules，a compact and extensible model;<br>    only a few trainable parameters per task</p>
-<p>Transfer learning in NLP:</p>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p><strong>Challenges</strong></p>
 <ul>
-<li>feature-based transfer<br>-pre-training real-valued embeddings vectors. The embeddings are then fed to custom downstream models</li>
-<li>fine-tuning (better performance)<br>-copying the weights from a pre-trained network and tuning them on the downstream task.</li>
+<li>training LLMs consumes vast computing resources</li>
+<li>requires a large amount of high-quality data</li>
 </ul>
-<p>Adapters:</p>
+<p>Large Language Models</p>
+<p>ChatGPT is fine-tuned from the generative pretrained trasformer GPT-3.5, applies reinforcement learning from human feedback(RLHF)</p>
+<p><strong>LLMs:</strong> </p>
+<ul>
+<li><p>encoder-decoder or encoder-only large language models</p>
 <blockquote>
-<p>added between layers<br>   injecting new layers into the original network. The weights of the original network are untouched,</p>
+<p>Bert is the representative of encoder-only large language models.</p>
 </blockquote>
-<p>Comparasion:</p>
-<ul>
-<li>Fine-tuning, the new top-layer and the original weights are co-trained</li>
-<li>Adapter-tuning, the parameters of the original network are frozen and therefore may be shared by many tasks.</li>
+</li>
+<li><p>decoder-only large language models</p>
+<blockquote>
+<p>GPTs is the representative of decoder-only large language models.<br>LLaMA<br>OPT<br>PaLM<br>BLOOM</p>
+</blockquote>
+</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231013104511.png"></p>
-<p>Left: We add the adapter module twice to each Transformer layer<br>Right: The adapter consists of a bottleneck which contains few parameters relative to the attention and feedforward layers in the original model.</p>
+<h2 id="FATE-LLM-System-Design"><a href="#FATE-LLM-System-Design" class="headerlink" title="FATE-LLM System Design"></a>FATE-LLM System Design</h2><p>parameter-efficiency fine-tuning (<strong>PEFT</strong>)</p>
+<ul>
+<li>Adapter Tuning</li>
+<li>Prompt Tuning</li>
+<li>Knowledge Distillation(KD)</li>
+<li>Quantization</li>
+</ul>
+<h3 id="FedHomoLLM"><a href="#FedHomoLLM" class="headerlink" title="FedHomoLLM"></a>FedHomoLLM</h3><p>PEFT techniques to train clients’ LLMs with the same architecture and size</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106112607.png"></p>
+<h3 id="FedHeteroLLM"><a href="#FedHeteroLLM" class="headerlink" title="FedHeteroLLM"></a>FedHeteroLLM</h3><p>knowledge distillation (KD) and PEFT techniques to deal with the FL scenario where FL clients own LLMs of different sizes</p>
+<ol>
+<li><p>each client in FedHeteroLLM leverages KD to learn a mentee model from its local pre-trained LLM.</p>
+</li>
+<li><p>all clients send adaptor or prompt parameters to the server for secure aggregation</p>
+</li>
+<li><p>the server dispatches the aggregated model to all clients for the next round of training</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106112629.png"></p>
+<h3 id="FedCoLLM-Federated-Co-tuning-LLM"><a href="#FedCoLLM-Federated-Co-tuning-LLM" class="headerlink" title="FedCoLLM(Federated Co-tuning LLM)"></a>FedCoLLM(Federated Co-tuning LLM)</h3><p>使用从 server 中蒸馏得到的模型来初始化 clients 的 local models，比随机初始化客户端模型能够获得更好的 global model.</p>
+<p>客户端的 local LLMs 提供的 domain knowledge 使得 server 能够在更大的 LLMs 继续训练</p>
+<p>共同发展 co-evolve the LLMs of the server and clients.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106112504.png"></p>
+<h3 id="FedOST-Federated-OffSite-Tuning"><a href="#FedOST-Federated-OffSite-Tuning" class="headerlink" title="FedOST (Federated OffSite-Tuning)"></a>FedOST (Federated OffSite-Tuning)</h3><p><strong>Offsite-Tuning</strong><br>a privacypreserving and efficient transfer learning framework<br>adapt an LLM to downstream tasks without access to the LLM’s full weights</p>
+<ol>
+<li><p>server sends two adaptors and an emulator of its LLM to a client,</p>
+</li>
+<li><p>client: <em>frozen</em> emulator and using client’s <em>domain-specific</em> data <em>fine-tune</em> adaptors</p>
+</li>
+<li><p>client sends adaptors back to the server</p>
+</li>
+<li><p>server plugs adaptors into LLM to form an adapted LLM for the client.</p>
+</li>
+</ol>
+<blockquote>
+<p>potential to protect the client’s <strong>data privacy</strong> and the server’s <strong>model property.</strong></p>
+</blockquote>
+<p><strong>FedOST</strong></p>
+<p>multiple clients collaboratively train two global adaptors</p>
+<p>FedOST enhances data privacy by adopting secure aggregation</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231106113319.png"></p>
 
                 
             </div>
@@ -467,7 +508,7 @@ Authors: [[Neil Houlsby]],">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/">http://lunan0320.cn/2023/10/17/Parameter-Efficient-Transfer-Learning/</a>
+                    <a href="http://lunan0320.cn/2023/11/04/FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models/">http://lunan0320.cn/2023/11/04/FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -505,12 +546,16 @@ Authors: [[Neil Houlsby]],">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Fine-Tune/">
-                                    <span class="chip bg-color">Fine Tune</span>
+                                <a href="/tags/LLM/">
+                                    <span class="chip bg-color">LLM</span>
                                 </a>
                             
-                                <a href="/tags/Transfer-Learning/">
-                                    <span class="chip bg-color">Transfer Learning</span>
+                                <a href="/tags/Federated-Learning/">
+                                    <span class="chip bg-color">Federated Learning</span>
+                                </a>
+                            
+                                <a href="/tags/FATE/">
+                                    <span class="chip bg-color">FATE</span>
                                 </a>
                             
                         </div>
@@ -557,13 +602,13 @@ Authors: [[Neil Houlsby]],">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/10/20/PFA-Personalization/">
+                <a href="/2023/11/04/DaFKD-Domain-Aware-Federated-Knowledge-Distillation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="PFA-Personalization">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="DaFKD Domain-Aware Federated Knowledge Distillation">
                         
-                        <span class="card-title">PFA-Personalization</span>
+                        <span class="card-title">DaFKD Domain-Aware Federated Knowledge Distillation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -574,74 +619,17 @@ Authors: [[Neil Houlsby]],">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Proceedings-of-the-Web-Conference/" class="post-category">
-                                    Proceedings of the Web Conference
+                            <a href="/categories/CVPR/" class="post-category">
+                                    CVPR
                                 </a>
                             
-                            <a href="/categories/Proceedings-of-the-Web-Conference/2021/" class="post-category">
-                                    2021
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Personalization/">
-                        <span class="chip bg-color">Personalization</span>
-                    </a>
-                    
-                    <a href="/tags/Privacy-Preserving/">
-                        <span class="chip bg-color">Privacy Preserving</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/10/15/SplitFed/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SplitFed">
-                        
-                        <span class="card-title">SplitFed</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/AAAI/" class="post-category">
-                                    AAAI
-                                </a>
-                            
-                            <a href="/categories/AAAI/2023/" class="post-category">
+                            <a href="/categories/CVPR/2023/" class="post-category">
                                     2023
                                 </a>
                             
@@ -656,8 +644,69 @@ Authors: [[Neil Houlsby]],">
                         <span class="chip bg-color">Federated Learning</span>
                     </a>
                     
-                    <a href="/tags/Split-Learning/">
-                        <span class="chip bg-color">Split Learning</span>
+                    <a href="/tags/Knowledge-Distillation/">
+                        <span class="chip bg-color">Knowledge Distillation</span>
+                    </a>
+                    
+                    <a href="/tags/GAN/">
+                        <span class="chip bg-color">GAN</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/11/01/Ensembled-CTR-Prediction-via-Knowledge-Distillation/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Ensembled CTR Prediction via Knowledge Distillation">
+                        
+                        <span class="card-title">Ensembled CTR Prediction via Knowledge Distillation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ACM-International-Conference-on-Information/" class="post-category">
+                                    ACM International Conference on Information
+                                </a>
+                            
+                            <a href="/categories/ACM-International-Conference-on-Information/2020/" class="post-category">
+                                    2020
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Federated-Learning/">
+                        <span class="chip bg-color">Federated Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Knowledge-Distillation/">
+                        <span class="chip bg-color">Knowledge Distillation</span>
                     </a>
                     
                 </div>

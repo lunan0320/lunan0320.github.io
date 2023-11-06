@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-04T13:56:39.860Z</updated>
+  <updated>2023-11-06T09:41:12.917Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Offsite-Tuning Transfer Learning without Full Model</title>
+    <link href="http://lunan0320.cn/2023/11/06/Offsite-Tuning-Transfer-Learning-without-Full-Model/"/>
+    <id>http://lunan0320.cn/2023/11/06/Offsite-Tuning-Transfer-Learning-without-Full-Model/</id>
+    <published>2023-11-06T09:34:53.000Z</published>
+    <updated>2023-11-06T09:41:12.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Offsite-Tuning-Transfer-Learning-without-Full-Model&quot;&gt;&lt;a href=&quot;#Offsite-Tuning-Transfer-Learning-without-Full-Model&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/arXiv/2023/"/>
+    
+    
+    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+    <category term="Transfer Learning" scheme="http://lunan0320.cn/tags/Transfer-Learning/"/>
+    
+    <category term="Fine-tuning" scheme="http://lunan0320.cn/tags/Fine-tuning/"/>
+    
+  </entry>
   
   <entry>
     <title>DaFKD Domain-Aware Federated Knowledge Distillation</title>
@@ -44,6 +75,38 @@
     <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
     
     <category term="GAN" scheme="http://lunan0320.cn/tags/GAN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FATE-LLM A Industrial Grade Federated Learning Framework for Large Language Models</title>
+    <link href="http://lunan0320.cn/2023/11/04/FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models/"/>
+    <id>http://lunan0320.cn/2023/11/04/FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models/</id>
+    <published>2023-11-04T09:35:08.000Z</published>
+    <updated>2023-11-06T09:42:42.478Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;FATE-LLM-A-Industrial-Grade-Federated-Learning-Framework-for-Large-Language-Models&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/arXiv/2023/"/>
+    
+    
+    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="FATE" scheme="http://lunan0320.cn/tags/FATE/"/>
     
   </entry>
   
