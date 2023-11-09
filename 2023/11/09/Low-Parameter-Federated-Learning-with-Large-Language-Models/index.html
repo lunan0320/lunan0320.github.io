@@ -4,17 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SplitFed, null">
+    <meta name="keywords" content="Low-Parameter Federated Learning with Large Language Models, null">
     <meta name="description" content="
-SplitFed: When Federated Learning Meets Split Learning
+Low-Parameter Federated Learning with Large Language Models
 Metadata
 
 
-Tags: #&amp;#x2F;unread
+Tags: #LLM #Federated-Learning
 
 
 
-Authors: [[Chandra Thapa]], [[">
+Authors: [[Jin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +26,7 @@ Authors: [[Chandra Thapa]], [[">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SplitFed | null</title>
+    <title>Low-Parameter Federated Learning with Large Language Models | null</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -298,12 +298,12 @@ Authors: [[Chandra Thapa]], [[">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SplitFed</h1>
+                    <h1 class="description center-align post-title">Low-Parameter Federated Learning with Large Language Models</h1>
                 </div>
             </div>
         </div>
@@ -327,12 +327,12 @@ Authors: [[Chandra Thapa]], [[">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Federated-Learning/">
-                                <span class="chip bg-color">Federated Learning</span>
+                            <a href="/tags/LoRA/">
+                                <span class="chip bg-color">LoRA</span>
                             </a>
                         
-                            <a href="/tags/Split-Learning/">
-                                <span class="chip bg-color">Split Learning</span>
+                            <a href="/tags/PEFT/">
+                                <span class="chip bg-color">PEFT</span>
                             </a>
                         
                     </div>
@@ -343,11 +343,11 @@ Authors: [[Chandra Thapa]], [[">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/AAAI/" class="post-category">
-                                AAAI
+                            <a href="/categories/arXiv/" class="post-category">
+                                arXiv
                             </a>
                         
-                            <a href="/categories/AAAI/2023/" class="post-category">
+                            <a href="/categories/arXiv/2023/" class="post-category">
                                 2023
                             </a>
                         
@@ -360,7 +360,7 @@ Authors: [[Chandra Thapa]], [[">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-15
+                    2023-11-09
                 </div>
                 
 
@@ -369,7 +369,7 @@ Authors: [[Chandra Thapa]], [[">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    532
+                    638
                 </div>
                 
 
@@ -387,97 +387,71 @@ Authors: [[Chandra Thapa]], [[">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li><h1 id="SplitFed-When-Federated-Learning-Meets-Split-Learning"><a href="#SplitFed-When-Federated-Learning-Meets-Split-Learning" class="headerlink" title="SplitFed: When Federated Learning Meets Split Learning"></a>SplitFed: When Federated Learning Meets Split Learning</h1></li>
+<li><h1 id="Low-Parameter-Federated-Learning-with-Large-Language-Models"><a href="#Low-Parameter-Federated-Learning-with-Large-Language-Models" class="headerlink" title="Low-Parameter Federated Learning with Large Language Models"></a>Low-Parameter Federated Learning with Large Language Models</h1></li>
 <li><p>Metadata</p>
 <ul>
 <li><ul>
-<li>Tags: #&#x2F;unread</li>
+<li>Tags: #LLM #Federated-Learning</li>
 </ul>
 </li>
 <li><ul>
-<li>Authors: [[Chandra Thapa]], [[Pathum Chamikara Mahawaga Arachchige]], [[Seyit Camtepe]], [[Lichao Sun]]</li>
+<li>Authors: [[Jingang Jiang]], [[Xiangyang Liu]], [[Chenyou Fan]]</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2></li>
 </ul>
-<p>Federated learning (FL) and split learning (SL) are two popular distributed machine learning approaches. Both follow a model-to-data scenario; clients train and test machine learning models without sharing raw data. SL provides better model privacy than FL due to the machine learning model architecture split between clients and the server. Moreover, the split model makes SL a better option for resource-constrained environments. However, SL performs slower than FL due to the relay-based training across multiple clients. In this regard, this paper presents a novel approach, named splitfed learning (SFL), that amalgamates the two approaches eliminating their inherent drawbacks, along with a refined architectural configuration incorporating differential privacy and PixelDP to enhance data privacy and model robustness. Our analysis and empirical results demonstrate that (pure) SFL provides similar test accuracy and communication efficiency as SL while significantly decreasing its computation time per global epoch than in SL for multiple clients. Furthermore, as in SL, its communication efficiency over FL improves with the number of clients. Besides, the performance of SFL with privacy and robustness measures is further evaluated under extended experimental settings.</p>
+<p>We study few-shot Natural Language Understanding (NLU) tasks with Large Language Models (LLMs) in federated learning (FL) scenarios. It is a challenging task due to limited labeled data and communication capacities in FL, especially with mobile devices. Recent studies show LLMs can be prompted to perform few-shot NLU tasks like sentiment analysis and arithmetic reasoning. However, the huge sizes of LLMs result in high computation and communication costs, making classical FL schemes impractical. To address these challenges, we propose Low-Parameter Federated Learning (LP-FL). LP-FL combines few-shot prompt learning from LLMs with efficient communication and federating techniques. Our approach enables federated clients to assign soft labels to unlabeled data using gradually learned knowledge from the global model. Through iterative soft-label assigning, we continually expand the labeled set during the FL process. Additionally, to reduce computation and communication costs, LP-FL utilizes the Low-Rank Adaptation (LoRA) technique for compact learnable parameter construction, efficient local model fine-tuning, and affordable global model federation. LP-FL consistently outperforms Full-Parameter Federated Learning (FP-FL) in sentiment analysis tasks across various FL settings. Its resistance to overfitting allows LP-FL to equal or surpass centralized training in few-shot scenarios.</p>
 <ul>
 <li>笔记</li>
 <li>Zotero links<ul>
 <li><ul>
-<li><a href="zotero://select/items/1_RKWXILFM">Local library</a></li>
+<li><a href="zotero://select/items/1_32PQFISQ">Local library</a></li>
 </ul>
 </li>
 <li><ul>
 <li>PDF Attachments</li>
 </ul>
 </li>
-<li><p><a href="zotero://open-pdf/library/items/87PQREWQ">Thapa 等 - 2022 - SplitFed When Federated Learning Meets Split Lear.pdf</a></p>
-</li>
-<li><ul>
-<li>DOI: <a target="_blank" rel="noopener" href="https://doi.org/10.1609/aaai.v36i8.20825">10.1609&#x2F;aaai.v36i8.20825</a></li>
-</ul>
-</li>
-<li><ul>
-<li>Cite key: thapaSplitFedWhenFederated2022</li>
-</ul>
+<li><p><a href="zotero://open-pdf/library/items/27V2MPCM">Jiang 等 - 2023 - Low-Parameter Federated Learning with Large Langua.pdf</a></p>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><h3 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h3><p>Split learning<br>Prons:</p>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p><strong>Challenges</strong> of LLM in FL:</p>
 <ul>
-<li>Model architecture split between clients and the server.</li>
-<li>Split learning 更适用于 resource-constrained.<br>Cons:</li>
-<li>Slower, relay-based training across multiple cllients, 接力训练</li>
+<li>limited labeled data </li>
+<li>communication capacities</li>
 </ul>
-<h3 id="Proposed-Framework"><a href="#Proposed-Framework" class="headerlink" title="Proposed Framework"></a>Proposed Framework</h3><blockquote>
-<p>Main server,high-performance computing resources.<br>Fed server, conducts FedAvg on the clientside local updates</p>
-</blockquote>
-<p><strong>Workflow</strong></p>
-<h2 id="Clients-side-Forward-propagation-parallel-Pass-smashed-data-to-the-main-server"><a href="#Clients-side-Forward-propagation-parallel-Pass-smashed-data-to-the-main-server" class="headerlink" title="Clients side- Forward propagation, parallel- Pass smashed data to the main server"></a>Clients side<br>- Forward propagation, parallel<br>- Pass smashed data to the main server</h2><p>Main server</p>
-<ul>
-<li>Forward propagation and back-propagation</li>
-<li>Sends gradients of the smashed data to the respective clients</li>
-<li>Updata its main server model</li>
-</ul>
-<p>Clients side</p>
-<ul>
-<li>Receive gradients,  back-propagation, computes gradients</li>
-<li>DP + gradients , send to the fed server</li>
-</ul>
-<p>Fed server</p>
-<ul>
-<li>Conducts the FedAvg of their local updates</li>
-<li>Sends aggregation to all participants</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009143849.png" alt=" "></p>
-<p>Variants of SFL<br>Based on Server-side Aggregation<br>variants of SFL: removing the model aggregation part in the server-side computation module</p>
+<p>Low-Parameter Federated Learning (LP-FL):</p>
 <blockquote>
-<p>The forward-backward propagations of the server-side model sequentially with respect to the client’s smashed data</p>
+<p>combines few-shot prompt learning from LLMs with efficient communication and federating techniques</p>
 </blockquote>
-<p>Based on data label sharing</p>
+<ul>
+<li>clients 从 global model 的 knowledge 将 soft labels 应用到 unlabeled data，以此来扩展 labeled set</li>
+<li>Low-Rank Adaptation (LoRA) technique, efficient local model fine-tuning<br>追求一种有效的微调方法，以最小的参数微调达到理想的结果</li>
+</ul>
+<p>Use cases: data is often unlabeled, distributed learning with <strong>few-shot labeled</strong> data, achieve effective fine-tuning of a global model.</p>
+<p>Contributions:</p>
 <ol>
-<li>Share data labels to the server</li>
-<li>Without sharing any data labels to the server<br> Clients will process 2 client-side model portions, one with the first few layers, another with the laset few layers. Middle layers will be computed at the server-side.</li>
+<li>consider an under-studied task of fine-tuning LLMs with distributed devices with limited communications and local computational powers.</li>
+<li>fine-tune the LLMs by adding task descriptions to the input examples for text sentiment classification. semi-supervised method to augment the dataset.</li>
+<li>fine-tuning a small subset of the local model parameters then federate averaging over all clients.</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009145506.png" alt=" "></p>
-<p><em>Privacy Protection at the Client-side</em></p>
-<ol>
-<li>Differential privacy to the client-side model training</li>
-<li>PixelDP noise layer in the client-side model.</li>
+<h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h2><ol>
+<li>使用 small labeled data fine-tuning the global model. (Train LoRA in clients side)</li>
+<li>server performs FedAvg on the LoRA parameters and retransmits the updated LoRA to clients.</li>
+<li>client updates their local model using the received LoRA, and select a portion of the unlabeled data for annotation （逐渐使用 unlabeled data 扩展 labeled set）<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107092244-20231109221636349.png" alt="image.png"></li>
 </ol>
-<p><em>Privacy Protection at the Fed Server</em><br>Clipped  the gradients</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009194607.png" alt=" "></p>
-<p>Add noise</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009194631.png" alt=" "></p>
-<p>client 对加噪后的梯度进行 update</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009194537.png" alt=" "></p>
-<p><em>Privacy Protection on Main Server.</em><br>Smashed data to the main server 可能泄露信息<br>Integrate a <em>noise layer</em> in the client-side model based on the concepts of PixelDP</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202310/20231009200146.png" alt=" "></p>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Faster than SL by parallel processing across clients.<br>SFL has similar performance compared to SL<br>Hybrid approach that supports machine learning with resource-constrained devices.</p>
+<p>M 是 LLM<br>V 是词汇量的规模<br>$T_k$ is the labeled set, $U_k$ is the unlabeled set<br>sequence $x&#x3D;(s_1,\cdots,s_n)$ ,$s_j\in V$<br>使用 P (x) 将带有mask token 的任务描述短语添加到 input sequence x<br>利用 LLM $M$ 预测 P(x) 中 mask token 位置的每个 $v\in V$ 的概率<br>给定序列 x，计算带有 label $l\in L$ 的score</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095731-20231109221636426.png" alt="image.png"></p>
+<p>通过 softmax 函数获取标签上的概率分布,比较真实单词的预测概率，并使用标准交叉熵损失来衡量预测</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095910.png" alt="image.png"></p>
+<p>To address the communication burden arising from the substantial parameter size of the LLM, we utilize the Parameter-Efficient Fine-Tuning technique known as Low-Rank Adaptation (LoRA)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107100050-20231109221636595.png" alt="image.png"></p>
+<p>对 clients 训练得到的 LoRA，执行 FedAvg 更新<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107092717-20231109221636695.png" alt="image.png"></p>
+<h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095109-20231109221636819.png" alt="image.png"></p>
 
                 
             </div>
@@ -504,7 +478,7 @@ Authors: [[Chandra Thapa]], [[">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lunan0320.cn/2023/10/15/SplitFed/">http://lunan0320.cn/2023/10/15/SplitFed/</a>
+                    <a href="http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/">http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,12 +516,12 @@ Authors: [[Chandra Thapa]], [[">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Federated-Learning/">
-                                    <span class="chip bg-color">Federated Learning</span>
+                                <a href="/tags/LoRA/">
+                                    <span class="chip bg-color">LoRA</span>
                                 </a>
                             
-                                <a href="/tags/Split-Learning/">
-                                    <span class="chip bg-color">Split Learning</span>
+                                <a href="/tags/PEFT/">
+                                    <span class="chip bg-color">PEFT</span>
                                 </a>
                             
                         </div>
@@ -590,17 +564,18 @@ Authors: [[Chandra Thapa]], [[">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/17/Parameter-Efficient-Transfer-Learning/">
+                <a href="/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Parameter-Efficient Transfer Learning">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Low-Parameter Federated Learning with Large Language Models">
                         
-                        <span class="card-title">Parameter-Efficient Transfer Learning</span>
+                        <span class="card-title">Low-Parameter Federated Learning with Large Language Models</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -610,34 +585,35 @@ Authors: [[Chandra Thapa]], [[">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/PMLR/" class="post-category">
-                                    PMLR
+                            <a href="/categories/arXiv/" class="post-category">
+                                    arXiv
                                 </a>
                             
-                            <a href="/categories/PMLR/2019/" class="post-category">
-                                    2019
+                            <a href="/categories/arXiv/2023/" class="post-category">
+                                    2023
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Fine-Tune/">
-                        <span class="chip bg-color">Fine Tune</span>
+                    <a href="/tags/LoRA/">
+                        <span class="chip bg-color">LoRA</span>
                     </a>
                     
-                    <a href="/tags/Transfer-Learning/">
-                        <span class="chip bg-color">Transfer Learning</span>
+                    <a href="/tags/PEFT/">
+                        <span class="chip bg-color">PEFT</span>
                     </a>
                     
                 </div>
@@ -651,13 +627,13 @@ Authors: [[Chandra Thapa]], [[">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/10/Just-Fine-tune-twice/">
+                <a href="/2023/11/06/FederatedScope-LLM-A-Comprehensive-Package-for-Fine-tuning-Large-Language-Models-in-Federated-Learning/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Just Fine-tune twice">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning">
                         
-                        <span class="card-title">Just Fine-tune twice</span>
+                        <span class="card-title">FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -668,7 +644,7 @@ Authors: [[Chandra Thapa]], [[">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-06
                             </span>
                         <span class="publish-author">
                             
@@ -678,8 +654,8 @@ Authors: [[Chandra Thapa]], [[">
                                     arXiv
                                 </a>
                             
-                            <a href="/categories/arXiv/2022/" class="post-category">
-                                    2022
+                            <a href="/categories/arXiv/2023/" class="post-category">
+                                    2023
                                 </a>
                             
                             
@@ -693,12 +669,8 @@ Authors: [[Chandra Thapa]], [[">
                         <span class="chip bg-color">LLM</span>
                     </a>
                     
-                    <a href="/tags/Fine-Tune/">
-                        <span class="chip bg-color">Fine Tune</span>
-                    </a>
-                    
-                    <a href="/tags/Differential-Privacy/">
-                        <span class="chip bg-color">Differential Privacy</span>
+                    <a href="/tags/Fine-tuning/">
+                        <span class="chip bg-color">Fine-tuning</span>
                     </a>
                     
                 </div>

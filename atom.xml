@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-06T14:45:42.388Z</updated>
+  <updated>2023-11-09T14:17:52.566Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Low-Parameter Federated Learning with Large Language Models</title>
+    <link href="http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/"/>
+    <id>http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/</id>
+    <published>2023-11-09T14:16:12.000Z</published>
+    <updated>2023-11-09T14:17:52.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;Low-Parameter-Federated-Learning-with-Large-Language-Models&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/arXiv/2023/"/>
+    
+    
+    <category term="LoRA" scheme="http://lunan0320.cn/tags/LoRA/"/>
+    
+    <category term="PEFT" scheme="http://lunan0320.cn/tags/PEFT/"/>
+    
+  </entry>
   
   <entry>
     <title>FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning</title>

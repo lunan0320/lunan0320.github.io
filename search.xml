@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Low-Parameter Federated Learning with Large Language Models</title>
+      <link href="/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/"/>
+      <url>/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Low-Parameter-Federated-Learning-with-Large-Language-Models"><a href="#Low-Parameter-Federated-Learning-with-Large-Language-Models" class="headerlink" title="Low-Parameter Federated Learning with Large Language Models"></a>Low-Parameter Federated Learning with Large Language Models</h1></li><li><p>Metadata</p><ul><li><ul><li>Tags: #LLM #Federated-Learning</li></ul></li><li><ul><li>Authors: [[Jingang Jiang]], [[Xiangyang Liu]], [[Chenyou Fan]]</li></ul></li></ul></li><li><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2></li></ul><p>We study few-shot Natural Language Understanding (NLU) tasks with Large Language Models (LLMs) in federated learning (FL) scenarios. It is a challenging task due to limited labeled data and communication capacities in FL, especially with mobile devices. Recent studies show LLMs can be prompted to perform few-shot NLU tasks like sentiment analysis and arithmetic reasoning. However, the huge sizes of LLMs result in high computation and communication costs, making classical FL schemes impractical. To address these challenges, we propose Low-Parameter Federated Learning (LP-FL). LP-FL combines few-shot prompt learning from LLMs with efficient communication and federating techniques. Our approach enables federated clients to assign soft labels to unlabeled data using gradually learned knowledge from the global model. Through iterative soft-label assigning, we continually expand the labeled set during the FL process. Additionally, to reduce computation and communication costs, LP-FL utilizes the Low-Rank Adaptation (LoRA) technique for compact learnable parameter construction, efficient local model fine-tuning, and affordable global model federation. LP-FL consistently outperforms Full-Parameter Federated Learning (FP-FL) in sentiment analysis tasks across various FL settings. Its resistance to overfitting allows LP-FL to equal or surpass centralized training in few-shot scenarios.</p><ul><li>笔记</li><li>Zotero links<ul><li><ul><li><a href="zotero://select/items/1_32PQFISQ">Local library</a></li></ul></li><li><ul><li>PDF Attachments</li></ul></li><li><p><a href="zotero://open-pdf/library/items/27V2MPCM">Jiang 等 - 2023 - Low-Parameter Federated Learning with Large Langua.pdf</a></p></li></ul></li></ul><h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p><strong>Challenges</strong> of LLM in FL:</p><ul><li>limited labeled data </li><li>communication capacities</li></ul><p>Low-Parameter Federated Learning (LP-FL):</p><blockquote><p>combines few-shot prompt learning from LLMs with efficient communication and federating techniques</p></blockquote><ul><li>clients 从 global model 的 knowledge 将 soft labels 应用到 unlabeled data，以此来扩展 labeled set</li><li>Low-Rank Adaptation (LoRA) technique, efficient local model fine-tuning<br>追求一种有效的微调方法，以最小的参数微调达到理想的结果</li></ul><p>Use cases: data is often unlabeled, distributed learning with <strong>few-shot labeled</strong> data, achieve effective fine-tuning of a global model.</p><p>Contributions:</p><ol><li>consider an under-studied task of fine-tuning LLMs with distributed devices with limited communications and local computational powers.</li><li>fine-tune the LLMs by adding task descriptions to the input examples for text sentiment classification. semi-supervised method to augment the dataset.</li><li>fine-tuning a small subset of the local model parameters then federate averaging over all clients.</li></ol><h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h2><ol><li>使用 small labeled data fine-tuning the global model. (Train LoRA in clients side)</li><li>server performs FedAvg on the LoRA parameters and retransmits the updated LoRA to clients.</li><li>client updates their local model using the received LoRA, and select a portion of the unlabeled data for annotation （逐渐使用 unlabeled data 扩展 labeled set）<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107092244-20231109221636349.png" alt="image.png"></li></ol><p>M 是 LLM<br>V 是词汇量的规模<br>$T_k$ is the labeled set, $U_k$ is the unlabeled set<br>sequence $x&#x3D;(s_1,\cdots,s_n)$ ,$s_j\in V$<br>使用 P (x) 将带有mask token 的任务描述短语添加到 input sequence x<br>利用 LLM $M$ 预测 P(x) 中 mask token 位置的每个 $v\in V$ 的概率<br>给定序列 x，计算带有 label $l\in L$ 的score</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095731-20231109221636426.png" alt="image.png"></p><p>通过 softmax 函数获取标签上的概率分布,比较真实单词的预测概率，并使用标准交叉熵损失来衡量预测</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095910.png" alt="image.png"></p><p>To address the communication burden arising from the substantial parameter size of the LLM, we utilize the Parameter-Efficient Fine-Tuning technique known as Low-Rank Adaptation (LoRA)</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107100050-20231109221636595.png" alt="image.png"></p><p>对 clients 训练得到的 LoRA，执行 FedAvg 更新<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107092717-20231109221636695.png" alt="image.png"></p><h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231107095109-20231109221636819.png" alt="image.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> arXiv </category>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LoRA </tag>
+            
+            <tag> PEFT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning</title>
       <link href="/2023/11/06/FederatedScope-LLM-A-Comprehensive-Package-for-Fine-tuning-Large-Language-Models-in-Federated-Learning/"/>
       <url>/2023/11/06/FederatedScope-LLM-A-Comprehensive-Package-for-Fine-tuning-Large-Language-Models-in-Federated-Learning/</url>
