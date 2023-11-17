@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-09T14:17:52.566Z</updated>
+  <updated>2023-11-17T14:06:12.328Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>FedPEAT Parameter-Efficient Fine Tuning, and Emulator Assisted Tuning</title>
+    <link href="http://lunan0320.cn/2023/11/17/FedPEAT-Parameter-Efficient-Fine-Tuning-and-Emulator-Assisted-Tuning/"/>
+    <id>http://lunan0320.cn/2023/11/17/FedPEAT-Parameter-Efficient-Fine-Tuning-and-Emulator-Assisted-Tuning/</id>
+    <published>2023-11-17T14:04:06.000Z</published>
+    <updated>2023-11-17T14:06:12.328Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/arXiv/2023/"/>
+    
+    
+    <category term="PEFT" scheme="http://lunan0320.cn/tags/PEFT/"/>
+    
+    <category term="Emulator Assisted Tuning" scheme="http://lunan0320.cn/tags/Emulator-Assisted-Tuning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Low-Parameter Federated Learning with Large Language Models</title>
     <link href="http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/"/>
     <id>http://lunan0320.cn/2023/11/09/Low-Parameter-Federated-Learning-with-Large-Language-Models/</id>
     <published>2023-11-09T14:16:12.000Z</published>
-    <updated>2023-11-09T14:17:52.566Z</updated>
+    <updated>2023-11-09T14:18:57.458Z</updated>
     
     
       
