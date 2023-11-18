@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-17T14:06:12.328Z</updated>
+  <updated>2023-11-18T14:07:31.791Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RAIL-KD</title>
+    <link href="http://lunan0320.cn/2023/11/18/RAIL-KD/"/>
+    <id>http://lunan0320.cn/2023/11/18/RAIL-KD/</id>
+    <published>2023-11-18T14:06:20.000Z</published>
+    <updated>2023-11-18T14:07:31.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RAIL-KD-RAndom-Intermediate-Layer-Mapping-for-Knowledge-Distillation&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2021" scheme="http://lunan0320.cn/categories/arXiv/2021/"/>
+    
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+  </entry>
   
   <entry>
     <title>FedPEAT Parameter-Efficient Fine Tuning, and Emulator Assisted Tuning</title>

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>RAIL-KD</title>
+      <link href="/2023/11/18/RAIL-KD/"/>
+      <url>/2023/11/18/RAIL-KD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RAIL-KD-RAndom-Intermediate-Layer-Mapping-for-Knowledge-Distillation"><a href="#RAIL-KD-RAndom-Intermediate-Layer-Mapping-for-Knowledge-Distillation" class="headerlink" title="RAIL-KD: RAndom Intermediate Layer Mapping for Knowledge Distillation"></a>RAIL-KD: RAndom Intermediate Layer Mapping for Knowledge Distillation</h1><h2 id="Metadata"><a href="#Metadata" class="headerlink" title="Metadata"></a>Metadata</h2><ul><li>Authors: [[Md Akmal Haidar]], [[Nithin Anchuri]], [[Mehdi Rezagholizadeh]], [[Abbas Ghaddar]], [[Philippe Langlais]], [[Pascal Poupart]]</li><li>Date: [[2021-10-01]]</li><li>Date Added: [[2023-11-17]]</li><li>URL: <a href="http://arxiv.org/abs/2109.10164">http://arxiv.org/abs/2109.10164</a></li><li>Topics: [[KD]]</li><li>Tags: #Computer-Science—Computation-and-Language, #zotero, #literature-notes, #reference</li><li>PDF Attachments<ul><li><a href="zotero://open-pdf/library/items/FIN6PDV6">Full Text PDF</a></li></ul></li></ul><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Intermediate layer knowledge distillation (KD) can improve the standard KD technique (which only targets the output of teacher and student models) especially over large pre-trained language models. However, intermediate layer distillation suffers from excessive computational burdens and engineering efforts required for setting up a proper layer mapping. To address these problems, we propose a RAndom Intermediate Layer Knowledge Distillation (RAIL-KD) approach in which, intermediate layers from the teacher model are selected randomly to be distilled into the intermediate layers of the student model. This randomized selection enforce that: all teacher layers are taken into account in the training process, while reducing the computational cost of intermediate layer distillation. Also, we show that it act as a regularizer for improving the generalizability of the student model. We perform extensive experiments on GLUE tasks as well as on out-of-domain test sets. We show that our proposed RAIL-KD approach outperforms other state-of-the-art intermediate layer KD methods considerably in both performance and training-time.</p><h2 id="Zotero-links"><a href="#Zotero-links" class="headerlink" title="Zotero links"></a>Zotero links</h2><ul><li><a href="zotero://select/items/1_DG6IB26W">Local library</a></li><li><a href="http://zotero.org/users/11178219/items/DG6IB26W">Cloud library</a></li></ul><h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>standard KD technique only targets the output of teacher and student models</p><p>However, intermediate layer distillation suffers from excessive <strong>computational burdens</strong> and <strong>layer mapping</strong>.</p><p>RAndom Intermediate Layer Knowledge Distillation (RAIL-KD), intermediate layers from the teacher model are selected randomly to be distilled into the intermediate layers of the student model.</p><p>In the original KD technique: the teacher output predictions are used as soft labels for supervising the training of the student.</p><p><strong>intermediate layer distillation (ILD)</strong> enhances the knowledge transfer beyond logits matching.</p><p>mapping intermediate layer representations of both models to a common space.</p><p>层选择是随机进行的，因此教师的所有中间层都有机会被选择进行蒸馏。</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231118135143.png"></p><p>对比几种主流的 intermediate layer distillation：<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231118135736.png"></p><h3 id="RAIL-KD"><a href="#RAIL-KD" class="headerlink" title="RAIL-KD"></a>RAIL-KD</h3><p>traditional intermediate layer distillation techniques：<br>    keep the selected layers of the teacher for distillation fixed during training</p><p>RAIL-KD：<br>    a few intermediate layers from the teacher model are selected randomly for distillation.</p><p>randomly select m out of n layers<br>$(X,y)$ 代表 sample，$X&#x3D;{x_0,…,x_{L-1}}$, L 是序列长度<br>输入X的对于 teacher 和 student 的 intermediate representation：<br>$H_X^T &#x3D; {H_{1,X}^T,…,H_{m,X}^T}$<br>$H_X^{S_{\theta}} &#x3D; {H_{1,X}^{S_{\theta}},…,H_{m,X}^{S_{\theta}}}$<br>其中，$H_{i,X}^T &#x3D; \cup_{k&#x3D;0}^{L-1} {H_{i,x_k}^T}\in R^{L\times d_1}$.    $H_{i,X}^{S_{\theta}} &#x3D; \cup_{k&#x3D;0}^{L-1} {H_{i,x_k}^{S_{\theta}}}\in R^{L\times d_1}$</p><h4 id="Layer-wise-RAIL-KD"><a href="#Layer-wise-RAIL-KD" class="headerlink" title="Layer-wise RAIL-KD"></a>Layer-wise RAIL-KD</h4><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231118154502.png"></p><h4 id="Concatenated-RAIL-KD"><a href="#Concatenated-RAIL-KD" class="headerlink" title="Concatenated RAIL-KD"></a>Concatenated RAIL-KD</h4><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231118154528.png"></p><h4 id="Training-Loss"><a href="#Training-Loss" class="headerlink" title="Training Loss"></a>Training Loss</h4><p>$L_{CE}$ is the original cross-entropy loss<br>$L_{KD}$ distill the knowledge from the output logits of the teacher model T to the output logits of the student model $S_{\theta}$<br>$\lambda_1 + \lambda_2 + \lambda_3 &#x3D; 1$<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231118154546.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> arXiv </category>
+          
+          <category> 2021 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Knowledge Distillation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FedPEAT Parameter-Efficient Fine Tuning, and Emulator Assisted Tuning</title>
       <link href="/2023/11/17/FedPEAT-Parameter-Efficient-Fine-Tuning-and-Emulator-Assisted-Tuning/"/>
       <url>/2023/11/17/FedPEAT-Parameter-Efficient-Fine-Tuning-and-Emulator-Assisted-Tuning/</url>
