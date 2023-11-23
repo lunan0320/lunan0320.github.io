@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-18T14:07:31.791Z</updated>
+  <updated>2023-11-23T13:54:00.123Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HeteroFL</title>
+    <link href="http://lunan0320.cn/2023/11/23/HeteroFL/"/>
+    <id>http://lunan0320.cn/2023/11/23/HeteroFL/</id>
+    <published>2023-11-23T13:51:12.000Z</published>
+    <updated>2023-11-23T13:54:00.123Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;HeteroFL-Computation-and-Communication-Efficient-Federated-Learning-for-Heterogeneous-Clients&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ICLR" scheme="http://lunan0320.cn/categories/ICLR/"/>
+    
+    <category term="2021" scheme="http://lunan0320.cn/categories/ICLR/2021/"/>
+    
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Heterogeneity" scheme="http://lunan0320.cn/tags/Heterogeneity/"/>
+    
+  </entry>
   
   <entry>
     <title>RAIL-KD</title>

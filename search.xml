@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>HeteroFL</title>
+      <link href="/2023/11/23/HeteroFL/"/>
+      <url>/2023/11/23/HeteroFL/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="HeteroFL-Computation-and-Communication-Efficient-Federated-Learning-for-Heterogeneous-Clients"><a href="#HeteroFL-Computation-and-Communication-Efficient-Federated-Learning-for-Heterogeneous-Clients" class="headerlink" title="HeteroFL: Computation and Communication Efficient Federated Learning for Heterogeneous Clients"></a>HeteroFL: Computation and Communication Efficient Federated Learning for Heterogeneous Clients</h1></li><li><p>Metadata</p><ul><li><ul><li>Tags: #Heterogeneity #Federated-Learning</li></ul></li><li><ul><li>Authors: [[Enmao Diao]], [[Jie Ding]], [[Vahid Tarokh]]</li></ul></li></ul></li><li><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2></li></ul><p>Federated Learning (FL) is a method of training machine learning models on private data distributed over a large number of possibly heterogeneous clients such as mobile phones and IoT devices. In this work, we propose a new federated learning framework named HeteroFL to address heterogeneous clients equipped with very different computation and communication capabilities. Our solution can enable the training of heterogeneous local models with varying computation complexities and still produce a single global inference model. For the first time, our method challenges the underlying assumption of existing work that local models have to share the same architecture as the global model. We demonstrate several strategies to enhance FL training and conduct extensive empirical evaluations, including five computation complexity levels of three model architecture on three datasets. We show that adaptively distributing subnetworks according to clients’ capabilities is both computation and communication efficient.</p><ul><li>笔记</li><li>Zotero links<ul><li><ul><li><a href="zotero://select/items/1_XJUQ4SML">Local library</a></li></ul></li><li><ul><li>PDF Attachments</li></ul></li><li><p><a href="zotero://open-pdf/library/items/D6VFU9M5">Full Text PDF</a></p></li></ul></li></ul><h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>HeteroFL to address heterogeneous clients equipped with very different <strong>computation</strong> and <strong>communication</strong> capabilities</p><p>之前的方法默认假设 server 和 clients 的模型架构是相同的，由于 indigent client &#x2F; stragglers 的存在，这极大限制了 global model complexity</p><p>In practice, the computation and communication capabilities of each client may vary significantly and even dynamically</p><ul><li>local model 不再需要和 global model 共享相同的架构</li><li>adaptively distributing subnetworks according to clients’ capabilities is both computation and communication efficient. 根据客户的能力自适应地分配子网络，计算和通信效率都很高。</li></ul><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>we consider local models to have similar architecture but can shrink their complexity within the same model class.</p><p>为了简化异构的过程：<br>local model parameters to be a subset of global model parameters</p><p>但是有新的问题：<br>how to find the optimal way to select subsets of global model parameters?</p><p>现有的方法：<br>modulate the size of deep neural networks by varying the width and depth of networks，we choose to vary the width of hidden channels.</p><p>本文提出：</p><p>global model $W_g\in R^{d_g\times k_g}$</p><p>$d_g$ is the output channel size of this layer<br>$k_g$ is the input channel size of this layer</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231120172904.png"></p><p>multiple computation complexity levels 多个复杂度等级</p><p>$W_l^p\subset W_l^{p-1}\cdots \subset W_l^1$</p><p>数字越大，表示模型越小</p><p>设 r 为隐藏通道收缩率 $d_l^p &#x3D; r^{p-1}d_g$  $k_l^p &#x3D; r^{p-1}k_g$</p><p>由此可得，local model parameters size $|W_l^p|&#x3D; r^{2(p-1)|W_g|}$，模型的压缩率是 $R &#x3D; \frac{|W_l^p|}{|W_g|} &#x3D; r^{2(p-1)}$<br>根据本地客户端的 corresponding capabilities，自适应地分配全局模型参数子集。</p><p>假设每个复杂度水平对应的 clients 的数量是：${m_1,\cdots,m_p}$</p><p>global aggregation:</p><p><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231120173930.png"></p><p>$W_l^{p-1} \setminus W_l^p$ 表示包括 $p-1$ 复杂度的，不包括 $p$ 复杂度的</p><p>$W_l^p$ 是最小的模型参数</p><p>the global model parameters W t g is constructed from the union of all disjoint sets of the partition<br>全局模型参数 $W_t^g$ 是由分区的所有互不相交的集合构成的</p><p>模型越小，与自己参与 FedAvg 的 local model 越多，<br>较大的局部模型参数执行较少的全局聚合，小型局部模型可以从全局聚合中获益更多。</p><h4 id="Static-Batch-Normalization"><a href="#Static-Batch-Normalization" class="headerlink" title="Static Batch Normalization"></a>Static Batch Normalization</h4><p>sBN 不跟踪运行估计值，只是对批处理数据进行归一化处理。不跟踪本地运行统计数据，因为本地模型的大小也可能动态变化<br>训练过程结束后，服务器会依次查询本地客户端，并累积更新全局 BN 统计数据。</p><h4 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h4><p>现有的方法是 dropout<br>dropout is usually attached after the activation layer<br>本文直接从 global model 选择 local model parameters<br>在参数层之后、sBN 层和激活层之前添加了一个 Scaler 模块。<br>在训练阶段，表征的缩放比例为 $1&#x2F;r^{p-1}$<br>global model 聚合之后，可以直接被用于推理，无需缩放<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231121094519.png"></p><p>$\phi()$ 是非线性激活层，类似 ReLU<br><img src="https://cdn.jsdelivr.net/gh/lunan0320/pics@main/images/202311/20231121112741.png"></p><p>本地能力信息 $L_m$ 是对 computation and communication 能力的抽象。<br>本地的算力是发送给 server 的，服务器就能知道应分配给客户端的模型复杂度。</p><h3 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h3><p>five different computation complexity levels {a, b, c, d, e}, hidden channel shrinkage ratio r &#x3D; 0.5.<br>实验中，使用的是离散复杂度收缩率 0.5, 0.25, 0.125, and 0.0625，例如 a 是全参数，b-e依次是0.5, 0.25, 0.125, and 0.0625的收缩率</p><p>每个 client 都有一个初始的计算复杂度水平<br>1、Fix 固定每个 client 的复杂度水平<br>2、Dynamic 随机改变客户端模型复杂度的分配</p><p>client selection： uniformly sample from all possible available levels for every active client at each communication round.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ICLR </category>
+          
+          <category> 2021 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Federated Learning </tag>
+            
+            <tag> Heterogeneity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RAIL-KD</title>
       <link href="/2023/11/18/RAIL-KD/"/>
       <url>/2023/11/18/RAIL-KD/</url>

@@ -384,11 +384,11 @@
                 </a>
                 
                 
-                <a href="/tags/Federated-Learning/" title="Federated Learning: 6">
+                <a href="/tags/Federated-Learning/" title="Federated Learning: 7">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Federated Learning" style="background-color: #E8F8F5;">Federated Learning
-                        <span class="tag-length">6</span>
+                        <span class="tag-length">7</span>
                     </span>
                 </a>
                 
@@ -527,6 +527,15 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/Heterogeneity/" title="Heterogeneity: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Heterogeneity" style="background-color: #FEF9E7;">Heterogeneity
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -595,7 +604,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">18.5k</span>
+                        class="white-color">19.6k</span>
             
             
             
@@ -921,7 +930,31 @@ $(function () {
 </body>
 
 </html>
-         } else if (language === 'zh-HK') {
+y.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
                                 yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
                             }
                             document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
