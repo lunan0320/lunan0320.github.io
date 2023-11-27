@@ -384,11 +384,11 @@
                 </a>
                 
                 
-                <a href="/tags/Federated-Learning/" title="Federated Learning: 7">
+                <a href="/tags/Federated-Learning/" title="Federated Learning: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Federated Learning" style="background-color: #E8F8F5;">Federated Learning
-                        <span class="tag-length">7</span>
+                        <span class="tag-length">8</span>
                     </span>
                 </a>
                 
@@ -536,6 +536,24 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/Foundation-Model/" title="Foundation Model: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Foundation Model" style="background-color: #D5F5E3;">Foundation Model
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Survey/" title="Survey: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Survey" style="background-color: #D7BDE2;">Survey
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -604,7 +622,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.6k</span>
+                        class="white-color">21.3k</span>
             
             
             
@@ -930,7 +948,46 @@ $(function () {
 </body>
 
 </html>
-y.getSeconds();
+    
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2020";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
                         var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
                         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
                         var diff = t2 - t1;

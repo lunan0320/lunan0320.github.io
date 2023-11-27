@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-11-23T13:54:00.123Z</updated>
+  <updated>2023-11-27T14:35:49.830Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FM with FL</title>
+    <link href="http://lunan0320.cn/2023/11/27/FM-with-FL/"/>
+    <id>http://lunan0320.cn/2023/11/27/FM-with-FL/</id>
+    <published>2023-11-27T14:33:33.000Z</published>
+    <updated>2023-11-27T14:35:49.830Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;When-Foundation-Model-Meets-Federated-Learning-Motivations-Challenges-and-Future-Directions&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
+    
+    <category term="2023" scheme="http://lunan0320.cn/categories/arXiv/2023/"/>
+    
+    
+    <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
+    
+    <category term="Foundation Model" scheme="http://lunan0320.cn/tags/Foundation-Model/"/>
+    
+    <category term="Survey" scheme="http://lunan0320.cn/tags/Survey/"/>
+    
+  </entry>
   
   <entry>
     <title>HeteroFL</title>
@@ -585,33 +617,6 @@
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
     
     <category term="Knowledge Fusion" scheme="http://lunan0320.cn/tags/Knowledge-Fusion/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FetchSGD-Sketching</title>
-    <link href="http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/"/>
-    <id>http://lunan0320.cn/2022/11/16/FetchSGD-Sketching/</id>
-    <published>2022-11-16T03:34:40.000Z</published>
-    <updated>2023-11-04T14:01:57.039Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;FetchSGD-Communication-Efficient-Federated-Learning-with-Sketching&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="PMLR" scheme="http://lunan0320.cn/categories/PMLR/"/>
-    
-    <category term="2020" scheme="http://lunan0320.cn/categories/PMLR/2020/"/>
-    
-    
-    <category term="Federated learning" scheme="http://lunan0320.cn/tags/Federated-learning/"/>
     
   </entry>
   
