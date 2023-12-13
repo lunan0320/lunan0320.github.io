@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-12-13T11:10:05.032Z</updated>
+  <updated>2023-12-13T14:03:36.277Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Curriculum Temperature for Knowledge Distillation</title>
+    <link href="http://lunan0320.cn/2023/12/13/Curriculum-Temperature-for-Knowledge-Distillation/"/>
+    <id>http://lunan0320.cn/2023/12/13/Curriculum-Temperature-for-Knowledge-Distillation/</id>
+    <published>2023-12-13T14:01:59.000Z</published>
+    <updated>2023-12-13T14:03:36.277Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Curriculum-Temperature-for-Knowledge-Distillation&quot;&gt;&lt;a href=&quot;#Curriculum-Temperature-for-Knowledge-Distillation&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="AAAI" scheme="http://lunan0320.cn/categories/AAAI/"/>
+    
+    <category term="2022" scheme="http://lunan0320.cn/categories/AAAI/2022/"/>
+    
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="GAN" scheme="http://lunan0320.cn/tags/GAN/"/>
+    
+  </entry>
   
   <entry>
     <title>Swing Distillation A Privacy-Preserving Knowledge Distillation Framework</title>
@@ -584,38 +613,6 @@
     <category term="Federated Learning" scheme="http://lunan0320.cn/tags/Federated-Learning/"/>
     
     <category term="Split Learning" scheme="http://lunan0320.cn/tags/Split-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Just Fine-tune twice</title>
-    <link href="http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/"/>
-    <id>http://lunan0320.cn/2023/10/10/Just-Fine-tune-twice/</id>
-    <published>2023-10-10T15:38:23.000Z</published>
-    <updated>2023-11-04T14:05:59.518Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&quot;Just-Fine-tune-Twice-Selective-Differential-Privacy-for-Large-Language-Models&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
-    
-    <category term="2022" scheme="http://lunan0320.cn/categories/arXiv/2022/"/>
-    
-    
-    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
-    
-    <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
-    
-    <category term="Differential Privacy" scheme="http://lunan0320.cn/tags/Differential-Privacy/"/>
     
   </entry>
   
