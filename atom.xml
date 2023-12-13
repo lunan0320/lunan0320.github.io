@@ -6,7 +6,7 @@
   <link href="http://lunan0320.cn/atom.xml" rel="self"/>
   
   <link href="http://lunan0320.cn/"/>
-  <updated>2023-12-03T14:51:38.945Z</updated>
+  <updated>2023-12-13T11:10:05.032Z</updated>
   <id>http://lunan0320.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swing Distillation A Privacy-Preserving Knowledge Distillation Framework</title>
+    <link href="http://lunan0320.cn/2023/12/13/Swing-Distillation-A-Privacy-Preserving-Knowledge-Distillation-Framework/"/>
+    <id>http://lunan0320.cn/2023/12/13/Swing-Distillation-A-Privacy-Preserving-Knowledge-Distillation-Framework/</id>
+    <published>2023-12-13T11:05:21.000Z</published>
+    <updated>2023-12-13T11:10:05.032Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Swing-Distillation-A-Privacy-Preserving-Knowledge-Distillation-Framework&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="NeurIPS" scheme="http://lunan0320.cn/categories/NeurIPS/"/>
+    
+    <category term="2022" scheme="http://lunan0320.cn/categories/NeurIPS/2022/"/>
+    
+    
+    <category term="Knowledge Distillation" scheme="http://lunan0320.cn/tags/Knowledge-Distillation/"/>
+    
+    <category term="Privacy Preserving" scheme="http://lunan0320.cn/tags/Privacy-Preserving/"/>
+    
+  </entry>
   
   <entry>
     <title>Knowledge Distillation A Survey</title>
@@ -383,7 +412,7 @@
     <link href="http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/"/>
     <id>http://lunan0320.cn/2023/11/01/Distilling-the-Knowledge-in-a-Neural-Network/</id>
     <published>2023-11-01T15:23:38.000Z</published>
-    <updated>2023-11-04T13:56:31.665Z</updated>
+    <updated>2023-12-13T11:09:00.673Z</updated>
     
     
       
@@ -396,9 +425,9 @@
     
     
     
-    <category term="NIPS" scheme="http://lunan0320.cn/categories/NIPS/"/>
+    <category term="NeurIPS" scheme="http://lunan0320.cn/categories/NeurIPS/"/>
     
-    <category term="2014" scheme="http://lunan0320.cn/categories/NIPS/2014/"/>
+    <category term="2014" scheme="http://lunan0320.cn/categories/NeurIPS/2014/"/>
     
     
     <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
@@ -587,38 +616,6 @@
     <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
     
     <category term="Differential Privacy" scheme="http://lunan0320.cn/tags/Differential-Privacy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bert of Theseus</title>
-    <link href="http://lunan0320.cn/2023/10/05/Bert-of-Theseus/"/>
-    <id>http://lunan0320.cn/2023/10/05/Bert-of-Theseus/</id>
-    <published>2023-10-05T15:35:05.000Z</published>
-    <updated>2023-11-04T14:07:45.761Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&quot;BERT-of-Theseus-Compressing-BERT-by-Progressive-Module-Replacing&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="arXiv" scheme="http://lunan0320.cn/categories/arXiv/"/>
-    
-    <category term="2020" scheme="http://lunan0320.cn/categories/arXiv/2020/"/>
-    
-    
-    <category term="LLM" scheme="http://lunan0320.cn/tags/LLM/"/>
-    
-    <category term="Bert" scheme="http://lunan0320.cn/tags/Bert/"/>
-    
-    <category term="Fine Tune" scheme="http://lunan0320.cn/tags/Fine-Tune/"/>
     
   </entry>
   
