@@ -56,33 +56,7 @@
     </div><!-- /.article-wrap -->
   </article>
 </div><!-- /#main -->
-
-<!-- 
-<div class="footer-wrap">
-  {% if site.related_posts.size %}<div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/articles">View all articles</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:3 %}
-      {% assign match = false %}
-      {% for category in post.categories %}
-        {% if page.categories contains category %}
-          {% assign match = true %}
-        {% endif %}
-      {% endfor %}
-      {% if match %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->{% endif %}
-  <footer>
-    {% include footer.html %}
-  </footer>
-</div> -->
-<!-- /.footer-wrap -->
-
-{% include scripts.html %}	        
+     
 
 </body>
 </html>
