@@ -8,10 +8,10 @@ layout: page
 
 Here is **Nan Yan (闫楠)**.<br>
 
-I am a graduate student in the Department of Computer Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). 
+I am a second-year graduate student in the Department of Computer Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). 
 Before that, I received my B.Eng. degree in School of Computer Science and Engineering from Shandong University (SDU) in 2023.
 
-If you are interested in any aspect of me, I am always open to discussions and collaborations. Feel free to reach out to me at - nanyan [at] whu.edu.cn
+If you are interested in any aspect of me, I am always open to discussions and collaborations. Feel free to reach out to me at - <font color="#428bca">nanyan [at] whu.edu.cn</font>
 
 **<font color="#990000">I am actively seeking a PhD position for 2026 Fall admission. If you have any information, please contact me. Thank you!</font>**
 
@@ -35,10 +35,10 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Publications
 
-- [<font color="#428bca">Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning</font>](https://lunan0320.github.io/file/papers/Nan_INFOCOM2024)
+- **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
   **Nan Yan**, Yuqing Li\*, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang
-  IEEE Conference on Computer Communications (INFOCOM), 2024. ([<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE))
+  *IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM2024)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM2024-slides)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)]
 
 
 ##  Scholarships and Honors
