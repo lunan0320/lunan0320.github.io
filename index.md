@@ -38,7 +38,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
   **Nan Yan**, Yuqing Li\*, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang
-  *IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM2024)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM2024-slides)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)]
+  *IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)]
 
 
 ##  Scholarships and Honors
