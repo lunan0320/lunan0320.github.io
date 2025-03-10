@@ -4,7 +4,7 @@ layout: page
 
 # About Me
 
-<img src="https://caihanlin.com/caihanlin.jpg" class="floatpic">
+<img src="https://lunan0320.github.io/images/photo/photo2" class="floatpic">
 
 Here is **Nan Yan (闫楠)**.<br>
 
