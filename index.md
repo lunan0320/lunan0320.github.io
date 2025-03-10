@@ -11,9 +11,6 @@ Here is **Nan Yan (闫楠)**.<br>
 I am a graduate student in the Department of Computer Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). 
 Before that, I received my B.Eng. degree in School of Computer Science and Engineering from Shandong University (SDU) in 2023.
 
-
-<br>
-
 If you are interested in any aspect of me, I am always open to discussions and collaborations. Feel free to reach out to me at - nanyan [at] whu.edu.cn
 
 **<font color="#990000">I am actively seeking a PhD position for 2026 Fall admission. If you have any information, please contact me. Thank you!</font>**
@@ -54,7 +51,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - The Power of Role Models Academy Person of the Year, SDU (2023)
 -  Excellent Student Cadre, SDU (2022)
 - Second Class Scholarship, SDU (2020, 2022)
-- Merit-Based Scholarship, SDU (2020, 2022$\times$3)
+- Merit-Based Scholarship, SDU (2020, 2022×3)
 
 ##  Competition Awards
 
