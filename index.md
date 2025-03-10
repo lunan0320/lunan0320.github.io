@@ -46,6 +46,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - National Scholarship, Ministry of Education, China (2024)
 - Metrit Student, WHU (2024)
 -  First Class Scholarship, WHU (2024)
+- Cybersecurity Academy Student Innovation Grant Program (2023)
 - Outstanding Graduate Award, SDU (2023)
 - Alumni Council Representative, SDU (2023)
 - The Power of Role Models Academy Person of the Year, SDU (2023)
