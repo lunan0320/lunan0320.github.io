@@ -4,7 +4,7 @@ layout: page
 
 # About Me
 
-<img src="https://lunan0320.github.io/images/photo/photo2" class="floatpic">
+<img src="images\photo\photo2.jpg" class="floatpic">
 
 Here is **Nan Yan (闫楠)**.<br>
 
