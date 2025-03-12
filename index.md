@@ -8,7 +8,7 @@ layout: page
 
 Here is **Nan Yan (闫楠)**.<br>
 
-I am a second-year graduate student in the Department of Computer Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). 
+I am a second-year graduate student in the Department of Computer Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). I also work closely with [<font color="#428bca">Prof. Jing Chen</font>](https://cse.whu.edu.cn/info/1101/1784.htm) and [<font color="#428bca">Prof. Xiong Wang</font>](https://wangxionghome.github.io/).
 Before that, I received my B.Eng. degree in School of Computer Science and Engineering from Shandong University (SDU) in 2023.
 
 If you are interested in any aspect of me, I am always open to discussions and collaborations. Feel free to reach out to me at - <font color="#428bca">nanyan [at] whu.edu.cn</font>
