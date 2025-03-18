@@ -19,7 +19,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Research Interests
 
-- AI Security
+- Trustworthy AI
 - Federated Learning
 - Privacy Preserving Machine Learning
 
