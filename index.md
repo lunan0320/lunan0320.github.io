@@ -37,8 +37,8 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
-  **Nan Yan**, Yuqing Li\*, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang
-  *IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)]
+**Nan Yan**, Yuqing Li\*, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang
+*IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)]
 
 
 ##  Scholarships and Honors
@@ -63,16 +63,16 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ##  Patents and Software Copyrights
 
-- ''Large language model training method and system based on elastic federated low-rank
+- "Large language model training method and system based on elastic federated low-rank
 
   adaptive fine-tuning'', China Patent Application CN119443311A, PatentPending (Feb 2025)
 
-- ''Method for constructing a vertical federated learning system based on participant selection and parameter freezing'', China Patent Application CN202411465068.7, PatentPending (Jan 2025)
+- "Method for constructing a vertical federated learning system based on participant selection and parameter freezing'', China Patent Application CN202411465068.7, PatentPending (Jan 2025)
 
-- ''Differential privacy-based heterogeneous federal fine tuning language model construction method and system'', China Patent Application CN119150357A, PatentPending (Dec 2024)
+- "Differential privacy-based heterogeneous federal fine tuning language model construction method and system'', China Patent Application CN119150357A, PatentPending (Dec 2024)
 
-- ''Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0'', China Software Copyrights 2024SR1516588 (Oct 2024)
+- "Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0'', China Software Copyrights 2024SR1516588 (Oct 2024)
 
-- ''Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption'', China Patent Application CN117892322A, PatentPending (Apr 2024)
+- "Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption'', China Patent Application CN117892322A, PatentPending (Apr 2024)
 
-- ''Network traffic obfuscation method, device, equipment and medium'', China Patent Application CN117749402A, PatentPending (Mar 2024)
+- "Network traffic obfuscation method, device, equipment and medium'', China Patent Application CN117749402A, PatentPending (Mar 2024)
