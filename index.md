@@ -76,7 +76,3 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - ''Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption'', China Patent Application CN117892322A, PatentPending (Apr 2024)
 
 - ''Network traffic obfuscation method, device, equipment and medium'', China Patent Application CN117749402A, PatentPending (Mar 2024)
-
-
-
-### 
