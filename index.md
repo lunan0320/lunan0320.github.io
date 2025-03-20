@@ -43,15 +43,15 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ##  Scholarships and Honors
 
-- National Scholarship, Ministry of Education, China (2024)
+- National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024)
 - Metrit Student, WHU (2024)
--  First Class Scholarship, WHU (2024)
+-  First Class Scholarship (Award Rate: 5% school-wide), WHU (2024)
 - Cybersecurity Academy Student Innovation Grant Program (2023)
 - Outstanding Graduate Award, SDU (2023)
-- Alumni Council Representative, SDU (2023)
-- The Power of Role Models Academy Person of the Year, SDU (2023)
+- Alumni Council Representative (Dept. CSE, 6/101), SDU (2023)
+- The Power of Role Models Academy Person of the Year (Dept. CSE, Top 1), SDU (2023)
 -  Excellent Student Cadre, SDU (2022)
-- Second Class Scholarship, SDU (2020, 2022)
+- Second Class Scholarship (Award Rate: 10% school-wide), SDU (2020, 2022)
 - Merit-Based Scholarship, SDU (2020, 2022×3)
 
 ##  Competition Awards
@@ -61,3 +61,22 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - First Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, North China Division (2022)
 - First Prize of China Undergraduate Mathematical Contest in Modeling, Shandong Province (2021)
 
+##  Patents and Software Copyrights
+
+- ``Large language model training method and system based on elastic federated low-rank
+
+  adaptive fine-tuning'', China Patent Application CN119443311A, PatentPending (Feb 2025)
+
+- ``Method for constructing a vertical federated learning system based on participant selection and parameter freezing'', China Patent Application CN202411465068.7, PatentPending (Jan 2025)
+
+- ``Differential privacy-based heterogeneous federal fine tuning language model construction method and system'', China Patent Application CN119150357A, PatentPending (Dec 2024)
+
+- ``Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0'', China Software Copyrights 2024SR1516588 (Oct 2024)
+
+- ``Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption'', China Patent Application CN117892322A, PatentPending (Apr 2024)
+
+- ``Network traffic obfuscation method, device, equipment and medium'', China Patent Application CN117749402A, PatentPending (Mar 2024)
+
+
+
+### 
