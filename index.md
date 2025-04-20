@@ -77,4 +77,6 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - &ldquo;Network traffic obfuscation method, device, equipment and medium&rdquo;, China Patent Application CN117749402A, PatentPending (Mar 2024)
 
-<a href="https://clustrmaps.com/site/1c589" title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=SyeUVfbLgTPj_Jd0Sk1e10UKgOSeqim_lijx_SJdDeA&cl=ffffff" /></a >
+<div style="text-align: center;">
+  <a href="https://clustrmaps.com/site/1c589" title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=SyeUVfbLgTPj_Jd0Sk1e10UKgOSeqim_lijx_SJdDeA&cl=ffffff&t=tt" /></a >
+</div>
