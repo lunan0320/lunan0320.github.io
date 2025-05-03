@@ -29,7 +29,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## News 
 
-- **Apr 2024**: One paper accepted to [<font color="#428bca"> IEEE Transactions on Dependable and Secure Computing (TDSC)</font>](https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8858). Congrats to my collaborators!
+- **Apr 2025**: One paper accepted to [<font color="#428bca"> IEEE Transactions on Dependable and Secure Computing (TDSC)</font>](https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8858). Congrats to my collaborators!
 - **Oct 2024**: Won National Scholarship.
 - **May 2024**: Presented our work [<font color="#428bca">FedPHE</font> ](https://ieeexplore.ieee.org/abstract/document/10621440) at IEEE INFOCOM 2024.
 - **Dec 2023**: One paper accepted to [<font color="#428bca">IEEE INFOCOM 2024</font>](https://infocom2024.ieee-infocom.org/). Congrats to my collaborators!
