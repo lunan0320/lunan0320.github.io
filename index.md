@@ -34,21 +34,21 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - **Apr 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> IEEE Transactions on Dependable and Secure Computing (TDSC)</font>](https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8858). Congrats to my collaborators!
 - **Oct 2024**: 🏆🏆Won National Scholarship.
 - **May 2024**: ✨✨Presented our work [<font color="#428bca">FedPHE</font> ](https://ieeexplore.ieee.org/abstract/document/10621440) at IEEE INFOCOM 2024.
-- **Dec 2023**: <img src="file/icons/confetty.png" class="floatpic" style="width:30px; height:auto;"><img src="file/icons/confetty.png" class="floatpic" style="width:30px; height:auto;">One paper got accepted to [<font color="#428bca">IEEE INFOCOM 2024</font>](https://infocom2024.ieee-infocom.org/). Congrats to my collaborators!
+- **Dec 2023**: 🎉🎉One paper got accepted to [<font color="#428bca">IEEE INFOCOM 2024</font>](https://infocom2024.ieee-infocom.org/). Congrats to my collaborators!
 
 ## Publications
 
-- 📎**EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models**
+- **EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models**
 
-**Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025 [<font color="#428bca">media</font>]
+  **Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025 [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA)]
 
-- 📎**FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption**
+- **FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption**
 
-Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025, [[html](https://ieeexplore.ieee.org/abstract/document/10989521)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (The first author is the advisor)
+  Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025, [[html](https://ieeexplore.ieee.org/abstract/document/10989521)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (The first author is the advisor)
 
-- 📎**Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
+- **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
-**Nan Yan**, Yuqing Li, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang, *in IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/XoV_rBOEaz9ruhvX6h6Ztw)]
+  **Nan Yan**, Yuqing Li, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang, *in IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/XoV_rBOEaz9ruhvX6h6Ztw)]
 
 ## Experience
 
