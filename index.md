@@ -56,7 +56,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
   Project: Agent security
   
-- **Research Intern**, Penn State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025
+- **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025
 
   Project: Static code analysis of agent memory
 
