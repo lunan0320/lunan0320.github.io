@@ -44,7 +44,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - **FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption**
 
-  Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025, [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/abstract/document/10989521)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (The first author is the advisor)
+  Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025, [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/abstract/document/10989521)] [[code](https://github.com/lunan0320/FedPHE)] [[media](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (<font color="#cc011f">The first author is the advisor</font>)
 
 - **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
@@ -52,9 +52,13 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Experience
 
-- **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), Summer 2025
+- **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025
 
   Project: Agent security
+  
+- **Research Intern**, Penn State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025
+
+  Project: Static code analysis of agent memory
 
 
 ##  Scholarships and Honors
