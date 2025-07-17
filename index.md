@@ -41,7 +41,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - **EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models**
 
-  **Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025 [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA)]
+  **Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025 [[<font color="#428bca">media1</font>](https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA)]  [[<font color="#428bca">media2</font>](https://news.whu.edu.cn/info/1015/483347.htm)] [[<font color="#428bca">media3</font>](https://mp.weixin.qq.com/s/xZT-dVgy0cAg3s_CjqWcEw)]
 
 - **FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption**
 
