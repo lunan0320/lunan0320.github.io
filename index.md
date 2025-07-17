@@ -10,7 +10,7 @@ Here is **Nan Yan (闫楠)**.<br>
 
 I am a second-year graduate student in the Department of Cyber Science and Engineering at the Wuhan University (WHU), advised by [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). I also work closely with [<font color="#428bca">Prof. Jing Chen</font>](https://cse.whu.edu.cn/info/1101/1784.htm) and [<font color="#428bca">Prof. Xiong Wang</font>](https://wangxionghome.github.io/). Before that, I received my B.Eng. degree in School of Cyber Science and Engineering from Shandong University (SDU) in 2023.
 
-My research interests lie in **Trustworthy AI**, with a particular focus on studying the security, safety, and privacy of machine learning systems. I work on developing innovative solutions for privacy-preserving federated learning, and I am especially interested in emerging challenges in the security of large language models (LLMs) and AI agents.
+My research interests lie in **Trustworthy AI**, with a particular focus on studying the security, safety, and privacy of machine learning systems. I work on developing innovative solutions for privacy-preserving federated learning, and I am especially interested in emerging challenges in the **security** of large language models (**LLMs**) and **AI agents**.
 
 Outside the digital realm, I channel my energy into 🏊swimming and 💪fitness.
 
@@ -30,6 +30,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## News 
 
+- **Jul 2025**: 🎉🎉Receive [<font color="#428bca"> USENIX Security'25 Student Grant</font>](https://www.usenix.org/conference/usenixsecurity25/grants) . Thanks for the generous support!
 - **Jun 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> USENIX Security 2025</font>](https://www.usenix.org/conference/usenixsecurity25). Congrats to my collaborators!
 - **Apr 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> IEEE Transactions on Dependable and Secure Computing (TDSC)</font>](https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8858). Congrats to my collaborators!
 - **Oct 2024**: 🏆🏆Won National Scholarship.
@@ -55,10 +56,8 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025
 
   Project: Agent security
-  
-- **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025
 
-  Project: Static code analysis of agent memory
+<!-- **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025Project: Static code analysis of agent memory -->
 
 
 ##  Scholarships and Honors
