@@ -51,21 +51,17 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
   **Nan Yan**, Yuqing Li, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang, *in IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/XoV_rBOEaz9ruhvX6h6Ztw)]
 
-## Experience
-
-- **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025
-
-  Project: Agent security
+<!-- **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 Project: Agent security -->
 
 <!-- **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025Project: Static code analysis of agent memory -->
 
 
 ##  Scholarships and Honors
 
+- Cybersecurity Academy Student Innovation Grant Program (2023. 2025)
 - National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024)
 - Metrit Student, WHU (2024)
 -  First Class Scholarship (Award Rate: 5% school-wide), WHU (2024)
-- Cybersecurity Academy Student Innovation Grant Program (2023)
 - Outstanding Graduate Award, SDU (2023)
 - Alumni Council Representative (Dept. CSE, 6/101), SDU (2023)
 - The Power of Role Models Academy Person of the Year (Dept. CSE, Top 1), SDU (2023)
