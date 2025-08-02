@@ -1,11 +1,12 @@
-<!-- It is not recommended to modify this code, unless you are a Pro-->
-<!-- Lastly modified by Hanlin CAI in 2023/04/26 -->
+<!-- Lastly modified by NanYan in 2025/08/2 -->
 
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 {% if site.owner.twitter %}<!-- Twitter Card and Open Graph meta -->
+<meta name="robots" content="index, follow">
+
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
 <meta name="twitter:creator" content="@{{ site.owner.twitter }}">
