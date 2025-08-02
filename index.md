@@ -41,11 +41,11 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - **EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models**
 
-  **Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025 [[<font color="#428bca">media1</font>](https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA)]  [[<font color="#428bca">media2</font>](https://news.whu.edu.cn/info/1015/483347.htm)] [[<font color="#428bca">media3</font>](https://mp.weixin.qq.com/s/xZT-dVgy0cAg3s_CjqWcEw)]
+  **Nan Yan**, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li, *in Proc. USENIX Security*, 2025. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-EmbedX-USENIX Security25.pdf)] [[<font color="#428bca">appendix</font>](https://lunan0320.github.io/file/papers/NanYan-EmbedX-USENIX Security25-Artifact.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/EmbedX)] [[media1](https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA)] [[<font color="#428bca">media2</font>](https://news.whu.edu.cn/info/1015/483347.htm)] [[<font color="#428bca">media3</font>](https://mp.weixin.qq.com/s/xZT-dVgy0cAg3s_CjqWcEw)]
 
 - **FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption**
 
-  Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025, [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/abstract/document/10989521)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (<font color="#cc011f">The first author is the advisor</font>)
+  Yuqing Li, **Nan Yan**, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li, *in IEEE Transactions on Dependable and Secure Computing (TDSC)*, 2025. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-FedPHE-TDSC25.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[html](https://ieeexplore.ieee.org/abstract/document/10989521)]  [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew)] (<font color="#cc011f">The first author is the advisor</font>)
 
 - **Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning**
 
