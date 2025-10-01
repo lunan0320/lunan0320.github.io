@@ -58,6 +58,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ##  Scholarships and Honors
 
+- USENIX Security'25 Student Grant (2025)
 - Cybersecurity Academy Student Innovation Grant Program (2023. 2025)
 - National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024)
 - Metrit Student, WHU (2024)
@@ -71,6 +72,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ##  Competition Awards
 
+- Second Prize of the 1-st National Open Source Security Award Program, Cyber Security Association, China (2025)
 - Second Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, China (2022)
 - Second Prize of The 15-th National College Student Information Security Competition, Cyber Security Association, China (2022)
 - First Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, North China Division (2022)
