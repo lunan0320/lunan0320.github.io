@@ -87,18 +87,11 @@ Project: Agent security
 
 ##  Patents and Software Copyrights
 
-- &ldquo;Differential privacy-based heterogeneous federal fine tuning language model construction method and system&rdquo;, China Patent Application ZL 2024 1 1379992.3, PatentGrant (Sep 2025)&ldquo;
-
-- “Large language model training method and system based on elastic federated low-rank
-
-  adaptive fine-tuning&rdquo;, China Patent Application CN119443311A, PatentPending (Feb 2025)”
-
+- &ldquo;Differential privacy-based heterogeneous federal fine tuning language model construction method and system&rdquo;, China Patent Application ZL 2024 1 1379992.3, PatentGrant (Sep 2025)
+- “Large language model training method and system based on elastic federated low-rank adaptive fine-tuning&rdquo;, China Patent Application CN119443311A, PatentPending (Feb 2025)
 - &ldquo;Method for constructing a vertical federated learning system based on participant selection and parameter freezing&rdquo;, China Patent Application CN202411465068.7, PatentPending (Jan 2025)
-
 - &ldquo;Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0&rdquo;, China Software Copyrights 2024SR1516588 (Oct 2024)
-
 - &ldquo;Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption&rdquo;, China Patent Application CN117892322A, PatentPending (Apr 2024)
-
 - &ldquo;Network traffic obfuscation method, device, equipment and medium&rdquo;, China Patent Application CN117749402A, PatentPending (Mar 2024)
 
 <div style="text-align: center;">
