@@ -395,22 +395,19 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 @media only screen and (min-width: 37.5em) {
   #main article,
   #index {
-    float: none;            /* 取消浮动，允许居中 */
-    width: 95%;             /* 更宽 */
-    max-width: 800px;      /* 想更宽可改为 1400px 或 1600px */
-    margin: 0 auto;         /* 居中 */
-    padding: 0 2%;
+    float: none;                 /* 取消浮动 */
+    width: 66.6667%;             /* 中间 2/3 */
+    margin: 0 auto;              /* 两侧各 1/6 的留白 */
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
   }
 }
 
+/* 特大屏保持同样比例（可按需调整） */
 @media only screen and (min-width: 86.375em) {
   #main article,
   #index {
-    float: none;
-    width: 85%;             /* 大屏再宽一些 */
-    max-width: 1000px;      /* 可按需调整 */
-    margin: 0 auto;
-    padding: 0 2%;
+    width: 66.6667%;
   }
 }
