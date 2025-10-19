@@ -259,10 +259,10 @@ html{background-color:#ffffff;font-family:'PT Serif',serif;font-color:#333332;fo
 #main:before,#main:after{content:"";display:table;}
 #main:after{clear:both;}
 
-/* Update in 28 Aug 2023 by Hanlin */
-.wide {
+
+/* .wide {
     width: 90% !important;
-  }
+  } */
 /*#main article{margin:0 auto;width:100%;display:inline;float:left;width:90%;margin-left:8.333333333333334%;margin-right:8.333333333333334%;margin-bottom:2em;}
 #index{margin:0 auto;width:100%;display:inline;float:left;width:90%;margin-left:8.333333333333334%;margin-right:8.333333333333334%;margin-bottom:2em;}#index article h2{font-size:24px;font-size:1.3333333333333333rem;margin-bottom:1.2375rem;margin-bottom:0;}
 #index article p+p{text-indent:0;}
@@ -270,7 +270,7 @@ html{background-color:#ffffff;font-family:'PT Serif',serif;font-color:#333332;fo
 #main article{
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;       /* 最大宽度，可根据需要改为 1000px / 1400px 等 */
+  max-width: 1400px;       /* 最大宽度，可根据需要改为 1000px / 1400px 等 */
   padding: 0 5%;           /* 两侧内边距，避免内容贴边 */
   box-sizing: border-box;  /* 使 padding 不影响 max-width 计算 */
   margin-bottom: 2em;
@@ -278,7 +278,7 @@ html{background-color:#ffffff;font-family:'PT Serif',serif;font-color:#333332;fo
 #index{
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 5%;
   box-sizing: border-box;
   margin-bottom: 2em;
