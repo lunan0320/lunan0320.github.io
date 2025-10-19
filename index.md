@@ -30,11 +30,14 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## News 
 
-- **Jul 2025**: 🎉🎉Receive [<font color="#428bca"> USENIX Security'25 Student Grant</font>](https://www.usenix.org/conference/usenixsecurity25/grants) . Thanks for the generous support!
-- **Jun 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> USENIX Security 2025</font>](https://www.usenix.org/conference/usenixsecurity25). Congrats to my collaborators!
+- **Oct 2025**: 🏆🏆Won National Scholarship!
+- **Aug 2025**: 🏆🏆Won Second Prize of the 1-st National Open Source Security Award Program, [<font color="#428bca">codebase</font>](https://github.com/lunan0320/Pioneer) !
+- **Aug 2025**: 🎉🎉Receive [<font color="#428bca">USENIX Security'25 Student Grant</font>](https://www.usenix.org/conference/usenixsecurity25/grants) . Thanks for the generous support!
+- **Jul 2025**: 🎉🎉Receive [<font color="#428bca">Cyberspace Security Innovation Grant</font>](https://zzjh.org.cn/#/) . Thanks for the generous support!
+- **Jun 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> 34th USENIX Security, 2025</font>](https://www.usenix.org/conference/usenixsecurity25). Congrats to my collaborators!
 - **Apr 2025**: 🎉🎉One paper got accepted to [<font color="#428bca"> IEEE Transactions on Dependable and Secure Computing (TDSC)</font>](https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8858). Congrats to my collaborators!
-- **Oct 2024**: 🏆🏆Won National Scholarship.
-- **May 2024**: ✨✨Presented our work [<font color="#428bca">FedPHE</font> ](https://ieeexplore.ieee.org/abstract/document/10621440) at IEEE INFOCOM 2024.
+- **Oct 2024**: 🏆🏆Won National Scholarship!
+- **May 2024**: ✨✨Presented our work [<font color="#428bca">FedPHE</font> ](https://ieeexplore.ieee.org/abstract/document/10621440) at IEEE INFOCOM 2024!
 - **Dec 2023**: 🎉🎉One paper got accepted to [<font color="#428bca">IEEE INFOCOM 2024</font>](https://infocom2024.ieee-infocom.org/). Congrats to my collaborators!
 
 ## Publications
@@ -63,10 +66,10 @@ Project: Agent security
 ##  Scholarships and Honors
 
 - USENIX Security'25 Student Grant (2025)
-- Cybersecurity Academy Student Innovation Grant Program (2023. 2025)
-- National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024)
-- Metrit Student, WHU (2024)
--  First Class Scholarship (Award Rate: 5% school-wide), WHU (2024)
+- Cyberspace Security Innovation Grant (2023, 2025)
+- National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024, 2025)
+- Metrit Student (Ranking: Top 1%) , WHU (2024, 2025)
+-  First Class Scholarship (Award Rate: 5% school-wide), WHU (2024, 2025)
 - Outstanding Graduate Award, SDU (2023)
 - Alumni Council Representative (Dept. CSE, 6/101), SDU (2023)
 - The Power of Role Models Academy Person of the Year (Dept. CSE, Top 1), SDU (2023)
@@ -80,17 +83,17 @@ Project: Agent security
 - Second Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, China (2022)
 - Second Prize of The 15-th National College Student Information Security Competition, Cyber Security Association, China (2022)
 - First Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, North China Division (2022)
-- First Prize of China Undergraduate Mathematical Contest in Modeling, Shandong Province (2021)
+- First Prize of The 31-th China Undergraduate Mathematical Contest in Modeling, Shandong Province (2021)
 
 ##  Patents and Software Copyrights
 
-- &ldquo;Large language model training method and system based on elastic federated low-rank
+- &ldquo;Differential privacy-based heterogeneous federal fine tuning language model construction method and system&rdquo;, China Patent Application ZL 2024 1 1379992.3, PatentGrant (Sep 2025)&ldquo;
 
-  adaptive fine-tuning&rdquo;, China Patent Application CN119443311A, PatentPending (Feb 2025)
+- “Large language model training method and system based on elastic federated low-rank
+
+  adaptive fine-tuning&rdquo;, China Patent Application CN119443311A, PatentPending (Feb 2025)”
 
 - &ldquo;Method for constructing a vertical federated learning system based on participant selection and parameter freezing&rdquo;, China Patent Application CN202411465068.7, PatentPending (Jan 2025)
-
-- &ldquo;Differential privacy-based heterogeneous federal fine tuning language model construction method and system&rdquo;, China Patent Application CN119150357A, PatentPending (Dec 2024)
 
 - &ldquo;Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0&rdquo;, China Software Copyrights 2024SR1516588 (Oct 2024)
 
