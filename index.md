@@ -65,8 +65,9 @@ Project: Agent security
 
 ##  Scholarships and Honors
 
+- BYD Scholarship (Top 3 in Dept.CSE), WHU (2025)
 - USENIX Security'25 Student Grant (2025)
-- Cyberspace Security Innovation Grant (2023, 2025)
+- Cyberspace Security Innovation Grant, TOPSEC’23 & Huawei’25 (2023, 2025)
 - National Scholarship (Top 0.2% nationwide), Ministry of Education, China (2024, 2025)
 - Metrit Student (Ranking: Top 1%) , WHU (2024, 2025)
 -  First Class Scholarship (Award Rate: 5% school-wide), WHU (2024, 2025)
