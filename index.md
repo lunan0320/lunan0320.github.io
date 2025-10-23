@@ -8,7 +8,7 @@ layout: page
 
 Here is **Nan Yan (闫楠)**.<br>
 
-I am a third-year graduate student in the Department of Cyber Science and Engineering at the Wuhan University (WHU), under the supervision of [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/) and [<font color="#428bca">Prof. Jing Chen</font>](https://cse.whu.edu.cn/info/1101/1784.htm), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). I also work closely with [<font color="#428bca">Prof. Bo Li</font>](https://www.cse.ust.hk/~bli/)  and [<font color="#428bca">Prof. Xiong Wang</font>](https://wangxionghome.github.io/). Before that, I received my B.Eng. degree in School of Cyber Science and Engineering from Shandong University (SDU) in 2023.
+I am a third-year graduate student in the Department of Cyber Science and Engineering at the Wuhan University (WHU), under the supervision of [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/) and [<font color="#428bca">Prof. Jing Chen</font>](https://cse.whu.edu.cn/info/1101/1784.htm), within [<font color="#428bca">Data Security Lab</font>](https://datasec.whu.edu.cn/). I also work closely with [<font color="#428bca">Prof. Wei Wang</font>](https://www.cse.ust.hk/~weiwa/)  and [<font color="#428bca">Prof. Xiong Wang</font>](https://wangxionghome.github.io/). Before that, I received my B.Eng. degree in School of Cyber Science and Engineering from Shandong University (SDU) in 2023.
 
 My research interests lie in **Trustworthy AI**, with a particular focus on studying the security, safety, and privacy of machine learning systems. I work on developing innovative solutions for privacy-preserving federated learning, and I am especially interested in emerging challenges in the **security** of large language models (**LLMs**) and **AI agents**.
 
@@ -54,13 +54,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
   **Nan Yan**, Yuqing Li, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, and Wei Wang, *in IEEE Conference on Computer Communications (INFOCOM)*, 2024. [[<font color="#428bca">pdf</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24.pdf)] [[<font color="#428bca">code</font>](https://github.com/lunan0320/FedPHE)] [[<font color="#428bca">slides</font>](https://lunan0320.github.io/file/papers/NanYan-INFOCOM24-slides.pdf)] [[<font color="#428bca">html</font>](https://ieeexplore.ieee.org/document/10621440)] [[<font color="#428bca">media</font>](https://mp.weixin.qq.com/s/XoV_rBOEaz9ruhvX6h6Ztw)]
 
-## Experiences
-
-**Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 
-
-Project: Agent security 
-
-<!-- **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025Project: Static code analysis of agent memory -->
+<!--Experiences **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 Project: Agent security  **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025Project: Static code analysis of agent memory -->
 
 
 ##  Scholarships and Honors
