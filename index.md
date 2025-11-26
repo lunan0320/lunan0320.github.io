@@ -58,7 +58,9 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Experiences 
 
-**Research Intern**: Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 
+**Research Intern**: 
+
+Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 
 
 Project: Agent security
 
