@@ -56,6 +56,12 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 <!--Experiences **Research Intern**, Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 Project: Agent security  **Research Intern**, Pennsylvania State University, working with [<font color="#428bca">Prof. Peng Liu</font>](https://s2.ist.psu.edu/pliu/), 2025Project: Static code analysis of agent memory -->
 
+## Experiences 
+
+**Research Intern**: Rice University, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), 2025 
+
+Project: Agent security
+
 
 ##  Scholarships and Honors
 
