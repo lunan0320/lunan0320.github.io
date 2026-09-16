@@ -6,7 +6,7 @@ layout: page
 
 <img src="images\photo\photo2.jpg" class="floatpic">
 
-Here is **Nan Yan (闫楠)**.<br>
+Here is **Nan Yan**.<br>
 
 I am a first-year PhD student in the Department of Computer Science at Northwestern University, under the supervision of [<font color="#428bca">Prof. Yan Chen</font>](https://users.cs.northwestern.edu/~ychen/). Before that, I received my M.Eng. degree in Wuhan University, collaborating with [<font color="#428bca">Prof. Yuqing Li</font>](https://liyuqingwhu.github.io/lyq/) and [<font color="#428bca">Prof. Jing Chen</font>](https://cse.whu.edu.cn/info/1101/1784.htm), and received my B.Eng. degree from Shandong University.
 
@@ -47,6 +47,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 ## Publications
 - **Federated LoRA Fine-Tuning with Pipelined Error-Mitigated Aggregation and Matrix-Wise Freezing**
+
   Haoran Wang, Xiong Wang, Yuqing Li, Jing Chen, Junyi Zhang, **Nan Yan**, Kun He, Wei Wang, *in Findings of ACL*, 2026. [[<font color="#428bca">pdf</font>](https://aclanthology.org/2026.findings-acl.284.pdf)] [[<font color="#428bca">code</font>](https://github.com/whr819987540/iFLoRA)]
 
 - **Efficient and Differentially Private Federated LLM Fine-Tuning on Heterogeneous Clients**
@@ -74,13 +75,17 @@ If you are interested in any aspect of me, I am always open to discussions and c
 ## Experiences 
 > **Microsoft**: 
 >
-> *Research Intern*, Mentor: Xiaoting Qin and Fangkai Yang, April 2026 - September 2026
+> *Research Intern*, Mentor: Xiaoting Qin and Fangkai Yang
+>
+> April 2026 - September 2026
 >
 > Project: Agent security in prompt injection
 
 > **Rice University**: 
 >
-> *Research Intern*, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/), June 2025 - February 2026
+> *Research Intern*, working with [<font color="#428bca">Prof. Jiarong Xing</font>](https://jxing.me/)
+>
+> June 2025 - February 2026
 >
 > Project: Agent security in memory poisoning attack
 
