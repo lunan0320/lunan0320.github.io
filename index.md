@@ -26,7 +26,7 @@ If you are interested in any aspect of me, I am always open to discussions and c
 
 - **Security of generative AI and LLM agents**: Exploring the security of large language models (LLMs), including backdoor attacks, jailbreak techniques, and emerging threats in LLM-powered agents.
 - **Privacy**: Investigating the use of Differential Privacy (DP) in the fine-tuning of LLMs to enhance privacy guarantees.
-- **Federated Learning**: Enhancing the efficiency and robustness of federated learning systems, with a focus on privacy-preserving techniques such as Homomorphic Encryption (HE) and DP.
+<!-- - **Federated Learning**: Enhancing the efficiency and robustness of federated learning systems, with a focus on privacy-preserving techniques such as Homomorphic Encryption (HE) and DP. -->
 
 ---
 
@@ -112,14 +112,14 @@ If you are interested in any aspect of me, I am always open to discussions and c
 - First Prize of The 7-th National College Cryptography Mathematics Contest, Chinese Association for Cryptologic Research, North China Division (2022)
 - First Prize of The 31-th China Undergraduate Mathematical Contest in Modeling, Shandong Province (2021)
 
-##  Patents and Software Copyrights
+<!-- ##  Patents and Software Copyrights
 
 - &ldquo;Differential privacy-based heterogeneous federal fine tuning language model construction method and system&rdquo;, China Patent Application ZL 2024 1 1379992.3, PatentGrant (Sep 2025)
 - &ldquo;“Large language model training method and system based on elastic federated low-rank adaptive fine-tuning&rdquo;, China Patent Application CN119443311A, PatentPending (Feb 2025)
 - &ldquo;Method for constructing a vertical federated learning system based on participant selection and parameter freezing&rdquo;, China Patent Application CN202411465068.7, PatentPending (Jan 2025)
 - &ldquo;Cross-silo heterogeneous federated learning system based on homomorphic encryption V1.0&rdquo;, China Software Copyrights 2024SR1516588 (Oct 2024)
 - &ldquo;Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption&rdquo;, China Patent Application CN117892322A, PatentPending (Apr 2024)
-- &ldquo;Network traffic obfuscation method, device, equipment and medium&rdquo;, China Patent Application CN117749402A, PatentPending (Mar 2024)
+- &ldquo;Network traffic obfuscation method, device, equipment and medium&rdquo;, China Patent Application CN117749402A, PatentPending (Mar 2024) -->
 
 <div style="text-align: center;">
   <a href="https://clustrmaps.com/site/1c589" title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=SyeUVfbLgTPj_Jd0Sk1e10UKgOSeqim_lijx_SJdDeA&cl=ffffff&t=tt" /></a >
