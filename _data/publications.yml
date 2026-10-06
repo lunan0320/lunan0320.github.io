@@ -1,0 +1,98 @@
+- id: memincept
+  title: "MemIncept: Steering LLM Agents via Cooperative Stealthy Memory Injections"
+  authors: [Nan Yan, Qian Lou, Jiarong Xing]
+  venue: ICML
+  year: 2026
+  featured: true
+  topic: Agent security
+  summary: Studying how cooperative, stealthy memory injections can steer LLM agents.
+  links:
+    - label: PDF
+      url: /file/papers/NanYan-ICML26.pdf
+    - label: Code
+      url: https://github.com/lunan0320/MemIncept
+
+- id: ip-fedlora
+  title: Efficient and Differentially Private Federated LLM Fine-Tuning on Heterogeneous Clients
+  authors: [Nan Yan, Yuqing Li, Jing Chen, Xiong Wang, Wei Wang, Kun He, Ruiying Du, Shuhua Li]
+  venue: KDD
+  year: 2026
+  featured: true
+  topic: Privacy-preserving ML
+  summary: Bringing efficiency and differential privacy to federated LLM fine-tuning across heterogeneous clients.
+  links:
+    - label: PDF
+      url: /file/papers/NanYan-KDD26.pdf
+    - label: Code
+      url: https://github.com/lunan0320/iP-FedLoRA
+    - label: Talk
+      url: https://www.youtube.com/watch?v=f8mWUZ_Oabg
+
+- id: embedx
+  title: "EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models"
+  authors: [Nan Yan, Yuqing Li, Xiong Wang, Jing Chen, Kun He, Bo Li]
+  venue: USENIX Security
+  year: 2025
+  featured: true
+  topic: LLM security
+  summary: Investigating embedding-based backdoors that generalize across triggers in large language models.
+  links:
+    - label: PDF
+      url: /file/papers/NanYan-EmbedX-USENIX%20Security25.pdf
+    - label: Code
+      url: https://github.com/lunan0320/EmbedX
+    - label: Talk
+      url: https://www.youtube.com/watch?v=gORZlaRLYPM
+    - label: WHU News
+      url: https://news.whu.edu.cn/info/1015/483347.htm
+    - label: WeChat article 1
+      url: https://mp.weixin.qq.com/s/HXNWzYXjpwvp0jdKn38XaA
+    - label: WeChat article 2
+      url: https://mp.weixin.qq.com/s/xZT-dVgy0cAg3s_CjqWcEw
+
+- id: iflora
+  title: Federated LoRA Fine-Tuning with Pipelined Error-Mitigated Aggregation and Matrix-Wise Freezing
+  authors: [Haoran Wang, Xiong Wang, Yuqing Li, Jing Chen, Junyi Zhang, Nan Yan, Kun He, Wei Wang]
+  venue: Findings of ACL
+  year: 2026
+  featured: false
+  links:
+    - label: PDF
+      url: https://aclanthology.org/2026.findings-acl.284.pdf
+    - label: Code
+      url: https://github.com/whr819987540/iFLoRA
+
+- id: fedphe
+  title: "FedPHE: A Secure and Efficient Federated Learning via Packed Homomorphic Encryption"
+  authors: [Yuqing Li, Nan Yan, Jing Chen, Xiong Wang, Jianan Hong, Kun He, Wei Wang, Bo Li]
+  venue: IEEE TDSC
+  year: 2025
+  featured: false
+  note: The first author is the advisor.
+  links:
+    - label: PDF
+      url: /file/papers/NanYan-FedPHE-TDSC25.pdf
+    - label: Code
+      url: https://github.com/lunan0320/FedPHE
+    - label: Publisher
+      url: https://ieeexplore.ieee.org/abstract/document/10989521
+    - label: WeChat article
+      url: https://mp.weixin.qq.com/s/PbtUnfAdehsoR-ZfR8Y1ew
+
+- id: fedphe-infocom
+  title: Efficient and Straggler-Resistant Homomorphic Encryption for Heterogeneous Federated Learning
+  authors: [Nan Yan, Yuqing Li, Jing Chen, Xiong Wang, Jiannan Hong, Kun He, Wei Wang]
+  venue: IEEE INFOCOM
+  year: 2024
+  featured: false
+  links:
+    - label: PDF
+      url: /file/papers/NanYan-INFOCOM24.pdf
+    - label: Code
+      url: https://github.com/lunan0320/FedPHE
+    - label: Slides
+      url: /file/papers/NanYan-INFOCOM24-slides.pdf
+    - label: Publisher
+      url: https://ieeexplore.ieee.org/document/10621440
+    - label: WeChat article
+      url: https://mp.weixin.qq.com/s/XoV_rBOEaz9ruhvX6h6Ztw

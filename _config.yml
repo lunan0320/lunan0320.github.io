@@ -1,75 +1,51 @@
 title: Nan Yan
-# tagline: Here is personal website of Hanlin Cai. Powered by Jekyll, based on the Minimal Mistakes theme.
-# description: Two roads diverged in woods, I took the one less traveled by.
-#Comment out url when working locally to resolve base urls correctly
+description: >-
+  Nan Yan is a PhD student at Northwestern University studying RSI and AI agent
+  security and exploring AI for Science (AI4Science).
 url: https://lunan0320.github.io
+baseurl: ""
+lang: en
+social_image: /images/social-preview.jpg
 
-# Owner/author information
 owner:
   name: Nan Yan
   avatar: photo/photo1.jpg
-  # bio: Two roads diverged in woods, I took the one less traveled by.
   email: nanyan@u.northwestern.edu
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  # twitter: lancecai2002
   github: lunan0320
   linkedin: nan-yan-31a26837a
   scholar: https://scholar.google.com.hk/citations?user=q-18YfAAAAAJ
-  # facebook: caihanlin2002
-  # instagram: lancecai2002
-  # lastfm:
-  # tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus:
 
-# Analytics and webmaster tools stuff goes here
-#https://search.google.com/search-console/ownership
 google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
+analytics:
+  google: G-T5N5JY1E21
+  counter: 4c8f7caa-2b55-46cd-a995-2c4633303773
 
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-# bing_verify: ""
-
-# Links to include in top navigation
-# For external links add external: true
 links:
-  - title: 
-    url: /
-  # - title: Publications
-  #   url: /publications/
-  # - title: Awards
-  #   url: /awards/
+  - title: About
+    url: /#about
+  - title: Publications
+    url: /#publications
+  - title: Experience
+    url: /#experience
+  - title: Honors
+    url: /#honors
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: China/Beijing
+timezone: America/Chicago
 future: true
 highlighter: rouge
-# markdown: kramdown
-# markdown: redcarpet
-# pygments: true
-
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
+markdown: kramdown
+permalink: /:categories/:title
 
 kramdown:
+  input: GFM
   auto_ids: true
-  footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
 
-  # coderay:
-  #   coderay_line_numbers:
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
-
-
-# disqus settings:
-disqus:
-  shortname: lancecai
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
+exclude:
+  - .idea
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - assets/less

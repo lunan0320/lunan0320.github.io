@@ -1,0 +1,13 @@
+# macOS and local IDE settings
+.DS_Store
+.idea/
+
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local Bundler configuration and installed gems
+.bundle/
+vendor/bundle/

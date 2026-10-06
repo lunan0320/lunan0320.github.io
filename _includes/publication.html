@@ -1,0 +1,19 @@
+{% assign paper = include.paper %}
+<li class="publication{% if paper.featured %} publication-featured{% endif %}" id="{{ paper.id }}">
+  <div class="publication-venue">
+    <span class="venue-name">{{ paper.venue | escape }}</span>
+    <span class="publication-year">{{ paper.year }}</span>
+  </div>
+  <div class="publication-body">
+    {% if paper.topic %}<p class="publication-topic">{{ paper.topic | escape }}</p>{% endif %}
+    <h3>{{ paper.title | escape }}</h3>
+    <p class="publication-authors">{% for author in paper.authors %}{% if author == site.owner.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    {% if paper.summary %}<p class="publication-summary">{{ paper.summary | escape }}</p>{% endif %}
+    {% if paper.note %}<p class="publication-note">{{ paper.note | escape }}</p>{% endif %}
+    <ul class="publication-links" aria-label="Resources for {{ paper.title | escape }}">
+      {% for link in paper.links %}
+      <li><a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}" aria-label="{{ link.label | escape }}: {{ paper.title | escape }}">{{ link.label | escape }}<span aria-hidden="true"> &nearr;</span></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</li>
