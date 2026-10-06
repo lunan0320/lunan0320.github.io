@@ -93,7 +93,7 @@ last_modified_at: 2026-10-05
   </div>
   <div class="experience-grid">
     <article class="experience-card">
-      <p class="experience-date"><time datetime="2026-04">Apr 2026</time> &ndash; <time datetime="2026-09">Sep 2026</time></p>
+      <p class="experience-date"><time datetime="2026-04">Apr 2026</time> &ndash; <time datetime="2026-10">Oct 2026</time></p>
       <h3 class="experience-brand"><img class="experience-logo" src="{{ '/images/logo/microsoft.png' | relative_url }}" alt="Microsoft" width="216" height="46" loading="lazy" decoding="async"></h3>
       <p class="experience-role">Research Intern</p>
       <p>Mentors: Xiaoting Qin and Fangkai Yang</p>

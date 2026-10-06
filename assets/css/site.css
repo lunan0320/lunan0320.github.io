@@ -94,7 +94,7 @@ ul {
 }
 
 .site-shell {
-  width: min(1080px, calc(100% - 96px));
+  width: min(960px, calc(100% - 96px));
   margin-inline: auto;
 }
 
