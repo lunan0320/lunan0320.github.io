@@ -2,10 +2,10 @@
 {% if visitor_map_id != '' %}
 <figure class="visitor-map" id="visitors" aria-label="Visitor map">
   <div class="visitor-map-widget">
-    <script async id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;ct=ffffff&amp;w=a"></script>
+    <script async id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;ct=ffffff&amp;w=a&amp;t=tt"></script>
     <noscript>
       <a class="visitor-map-fallback" href="{{ site.visitor_map.url | default: 'https://mapmyvisitors.com/' | escape }}">
-        <img src="https://mapmyvisitors.com/map.png?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;w=360" alt="World map of website visitor locations on MapMyVisitors" width="360" height="201" decoding="async">
+        <img src="https://mapmyvisitors.com/map.png?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;w=360&amp;t=tt" alt="World map with total website pageviews on MapMyVisitors" width="360" height="188" decoding="async">
       </a>
     </noscript>
   </div>

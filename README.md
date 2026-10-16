@@ -81,7 +81,9 @@ builds omit the widget entirely. No visitor data is fabricated. Once enabled,
 the map uses the official `map.js` widget with a purple background, white land
 areas, and automatic width. It loads asynchronously on each visit and falls back
 to the provider's map image when JavaScript is disabled. The official widget
-loads its own jQuery dependency. Availability and visitor data depend on
+loads its own jQuery dependency. Both embeds use `t=tt` to display the provider's
+all-time **Total Pageviews**, rather than its default monthly count. Availability
+and visitor data depend on
 MapMyVisitors; local preview requests also contact that service. Previous
 ClustrMaps statistics are not migrated automatically.
 
