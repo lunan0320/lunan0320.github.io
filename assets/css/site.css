@@ -590,6 +590,52 @@ summary:hover {
   font-variant-numeric: tabular-nums;
 }
 
+.visitor-map {
+  width: min(100%, 360px);
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.visitor-map-fallback {
+  display: block;
+}
+
+.visitor-map-fallback img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.visitor-map #mapmyvisitors-widget {
+  max-width: 100%;
+}
+
+/* The widget otherwise keeps its initial pixel dimensions after a resize. */
+.visitor-map .mapmyvisitors-map {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 2.04 / 1;
+  background-size: 100% 100%;
+}
+
+.visitor-map-setup {
+  padding: 20px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.visitor-map-setup strong {
+  color: var(--ink);
+}
+
+.visitor-map-setup > a {
+  display: block;
+  margin-top: 12px;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;

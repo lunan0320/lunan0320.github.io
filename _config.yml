@@ -20,6 +20,11 @@ analytics:
   google: G-T5N5JY1E21
   counter: 4c8f7caa-2b55-46cd-a995-2c4633303773
 
+visitor_map:
+  # Use the d= value from this website's MapMyVisitors embed code.
+  id: "6F22C_prGAOvmYj-h5XvTDAJZMxXDkGIW8VCqWWOQKo"
+  url: https://mapmyvisitors.com/web/1c8w9
+
 links:
   - title: About
     url: /#about

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI Security & AI for Science
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-15
 ---
 
 <section class="hero" id="about" aria-labelledby="about-title">
@@ -135,6 +135,8 @@ last_modified_at: 2026-10-05
   </details>
 </section>
 
+{% include visitor-map.html %}
+
 {% comment %}
 Previously hidden material is retained here and is not published.
 
@@ -160,6 +162,4 @@ Patents and Software Copyrights
 - "Method and device for constructing cross-silo heterogeneous federated learning system based on homomorphic encryption", China Patent Application CN117892322A, PatentPending (Apr 2024)
 - "Network traffic obfuscation method, device, equipment and medium", China Patent Application CN117749402A, PatentPending (Mar 2024)
 
-Disabled visitor map: https://clustrmaps.com/site/1c589
-https://www.clustrmaps.com/map_v2.png?d=SyeUVfbLgTPj_Jd0Sk1e10UKgOSeqim_lijx_SJdDeA&cl=ffffff&t=tt
 {% endcomment %}

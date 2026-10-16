@@ -12,7 +12,9 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4000
 ```
 
 Open <http://127.0.0.1:4000>. Jekyll rebuilds the site when source files change.
-Local previews do not load analytics. To generate the production site:
+Local previews do not load Google Analytics or Counter. Once configured, the
+MapMyVisitors widget loads in both local previews and production. To generate the
+production site:
 
 ```sh
 JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
@@ -62,6 +64,28 @@ colors and proportions. Sources:
 The logos belong to their respective institutions and identify the listed
 research experience.
 
+## Visitor map
+
+The homepage supports [MapMyVisitors](https://mapmyvisitors.com/) through
+`_includes/visitor-map.html`. The former ClustrMaps embed is no longer loaded.
+
+To enable the map, sign in at <https://mapmyvisitors.com/add> and create a Map
+Counter for `https://lunan0320.github.io/`. Copy the value of the `d` parameter
+from its generated embed code into `visitor_map.id` in `_config.yml`. If the
+service provides a statistics-page link, set `visitor_map.url` to that link.
+This is a public widget identifier, not your account password. Do not reuse a
+demo ID or the former provider's ID.
+
+Until the ID is supplied, local previews show a setup notice and production
+builds omit the widget entirely. No visitor data is fabricated. Once enabled,
+the map uses the official `map.js` widget with a purple background, white land
+areas, and automatic width. It loads asynchronously on each visit and falls back
+to the provider's map image when JavaScript is disabled. The official widget
+loads its own jQuery dependency. Availability and visitor data depend on
+MapMyVisitors; local preview requests also contact that service. Previous
+ClustrMaps statistics are not migrated automatically.
+
 News and honors use native HTML disclosure controls; publication resources,
-including media links, are visible in a single wrapping row. The homepage works
-without JavaScript. Analytics are loaded only in production.
+including media links, are visible in a single wrapping row. The main content
+works without JavaScript. Google Analytics and Counter are loaded only in
+production.

@@ -1,0 +1,19 @@
+{% assign visitor_map_id = site.visitor_map.id | default: '' | strip %}
+{% if visitor_map_id != '' %}
+<figure class="visitor-map" id="visitors" aria-label="Visitor map">
+  <div class="visitor-map-widget">
+    <script async id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;ct=ffffff&amp;w=a"></script>
+    <noscript>
+      <a class="visitor-map-fallback" href="{{ site.visitor_map.url | default: 'https://mapmyvisitors.com/' | escape }}">
+        <img src="https://mapmyvisitors.com/map.png?d={{ visitor_map_id | url_encode }}&amp;cl=ffffff&amp;co=4e2a84&amp;w=360" alt="World map of website visitor locations on MapMyVisitors" width="360" height="201" decoding="async">
+      </a>
+    </noscript>
+  </div>
+</figure>
+{% elsif jekyll.environment != 'production' %}
+<aside class="visitor-map visitor-map-setup" id="visitors" aria-labelledby="visitor-map-setup-title">
+  <p id="visitor-map-setup-title"><strong>MapMyVisitors setup required</strong></p>
+  <p>Create a map for {{ site.url | escape }}, then add the generated map ID to <code>visitor_map.id</code> in <code>_config.yml</code>.</p>
+  <a href="https://mapmyvisitors.com/add">Set up visitor map &nearr;</a>
+</aside>
+{% endif %}
