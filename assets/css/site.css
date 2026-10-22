@@ -590,6 +590,19 @@ summary:hover {
   font-variant-numeric: tabular-nums;
 }
 
+.services-list {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.services-list li + li {
+  margin-top: 12px;
+}
+
+.services-list li::marker {
+  color: var(--accent);
+}
+
 .visitor-map {
   width: min(100%, 360px);
   margin: 0 auto 40px;

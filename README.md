@@ -25,9 +25,9 @@ not publish the website.
 
 ## Updating content
 
-- `index.md`: biography, experience, and honors. Keep `last_modified_at` current
-  when updating the homepage. Previously hidden material remains in a Liquid
-  comment and is not included in the generated HTML.
+- `index.md`: biography, experience, honors, and professional services. Keep
+  `last_modified_at` current when updating the homepage. Previously hidden
+  material remains in a Liquid comment and is not included in the generated HTML.
 - `_data/publications.yml`: papers, author order, and resource links. Place media
   links after PDF, Code, and other resources in the same `links` list.
   `featured: true` places a paper in Selected work; every other paper remains

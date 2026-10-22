@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI Security & AI for Science
-last_modified_at: 2026-10-15
+last_modified_at: 2026-10-21
 ---
 
 <section class="hero" id="about" aria-labelledby="about-title">
@@ -133,6 +133,19 @@ last_modified_at: 2026-10-15
       <li><span><strong>The Power of Role Models Academy Person of the Year</strong><span class="honor-detail">Top 1 in the Department of CSE &middot; Shandong University</span></span><span class="honor-year">2023</span></li>
     </ul>
   </details>
+</section>
+
+<section class="content-section" id="professional-services" aria-labelledby="professional-services-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Academic community</p>
+      <h2 id="professional-services-title">Professional Services</h2>
+    </div>
+  </div>
+  <ul class="services-list">
+    <li><strong>Conference Reviewer</strong>: ICLR 2027, ICLR Workshop 2027</li>
+    <li><strong>External Reviewer</strong>: NDSS 2027, AsiaCCS 2026</li>
+  </ul>
 </section>
 
 {% include visitor-map.html %}
